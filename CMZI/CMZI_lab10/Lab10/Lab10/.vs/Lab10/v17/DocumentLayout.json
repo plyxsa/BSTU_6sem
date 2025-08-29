@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\CMZI\\CMZI_lab10\\Lab10\\Lab10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{221583B5-2633-4E43-95E7-1C05CAF039F8}|Lab10\\Lab10.csproj|d:\\uni\\cmzi\\cmzi_lab10\\lab10\\lab10\\lab10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{221583B5-2633-4E43-95E7-1C05CAF039F8}|Lab10\\Lab10.csproj|solutionrelative:lab10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Uni\\CMZI\\CMZI_lab10\\Lab10\\Lab10\\Lab10\\Program.cs",
+              "RelativeDocumentMoniker": "Lab10\\Program.cs",
+              "ToolTip": "D:\\Uni\\CMZI\\CMZI_lab10\\Lab10\\Lab10\\Lab10\\Program.cs",
+              "RelativeToolTip": "Lab10\\Program.cs",
+              "ViewState": "AgIAAOgBAAAAAAAAAAAAAPYBAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:25:05.857Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\CMZI\\CMZI_lab9\\Lab9\\Lab9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFA1F08C-0C08-4692-826B-3C0F64707061}|Lab9\\Lab9.csproj|d:\\uni\\cmzi\\cmzi_lab9\\lab9\\lab9\\lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFA1F08C-0C08-4692-826B-3C0F64707061}|Lab9\\Lab9.csproj|solutionrelative:lab9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Uni\\CMZI\\CMZI_lab9\\Lab9\\Lab9\\Lab9\\Program.cs",
+              "RelativeDocumentMoniker": "Lab9\\Program.cs",
+              "ToolTip": "D:\\Uni\\CMZI\\CMZI_lab9\\Lab9\\Lab9\\Lab9\\Program.cs",
+              "RelativeToolTip": "Lab9\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T14:15:57.731Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.AssemblyInfoInputs.cache
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.AssemblyInfo.cs
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.csproj.CoreCompileInputs.cache
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\bin\Debug\net8.0\CMZI_lab6.exe
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\bin\Debug\net8.0\CMZI_lab6.deps.json
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\bin\Debug\net8.0\CMZI_lab6.runtimeconfig.json
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\bin\Debug\net8.0\CMZI_lab6.dll
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\bin\Debug\net8.0\CMZI_lab6.pdb
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.dll
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\refint\CMZI_lab6.dll
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.pdb
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\CMZI_lab6.genruntimeconfig.cache
+D:\Uni\CMZI\CMZI_lab6\CMZI_lab6\CMZI_lab6\obj\Debug\net8.0\ref\CMZI_lab6.dll
