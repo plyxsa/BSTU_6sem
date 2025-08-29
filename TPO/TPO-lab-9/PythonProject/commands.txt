@@ -1,0 +1,26 @@
+простой запуск:
+pytest tests/test_kufar_pom.py
+
+pytest tests/test_kufar_pom.py --browser chrome --headless --html=reports/demo_headless_report.html
+
+pytest tests/test_kufar_pom.py --browser chrome --html=reports/demo_visible_report.html
+
+куки:
+pytest -k test_cookie_operations tests/test_kufar_pom.py -s
+
+запуск конкретного теста:
+pytest tests/test_kufar_pom.py::test_login_success_attempt --html=reports/demo_failed_report.html --self-contained-html
+
+pytest tests/test_kufar_pom.py::test_login_success_attempt --html=reports/demo_report.html --self-contained-html
+
+параметры:
+pytest -k test_search_item tests/test_kufar_pom.py -s
+
+метки:
+pytest -m smoke tests/test_kufar_pom.py
+
+порядок:
+pytest tests/test_kufar_pom.py -s
+
+фулл:
+pytest tests/test_kufar_pom.py --browser chrome --html=reports/final_demonstration_report.html --self-contained-html

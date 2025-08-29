@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="PlushFood.Views.UserControls.ReturnEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PlushFood.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ID заказа -->
+        <TextBlock Text="ID заказа" Grid.Row="0" Grid.Column="0" Margin="0,5,0,0"
+                   VerticalAlignment="Center" Foreground="{DynamicResource SecondaryBrush}"/>
+        <TextBlock Text="{Binding SelectedReturn.OrderID}"
+                 VerticalAlignment="Center"
+                 Grid.Row="0" Grid.Column="1" Margin="5" Height="30" />
+
+        <!-- Причина -->
+        <TextBlock Text="Причина" Grid.Row="1" Grid.Column="0" Margin="0,5,0,0"
+                   VerticalAlignment="Center" Foreground="{DynamicResource SecondaryBrush}"/>
+        <TextBlock Text="{Binding SelectedReturn.Reason}"
+                 VerticalAlignment="Center"
+                 Grid.Row="1" Grid.Column="1" Margin="5" Height="30"/>
+
+        <!-- Дата возврата -->
+        <TextBlock Text="Дата возврата" Grid.Row="2" Grid.Column="0" Margin="0,5,0,0"
+                   VerticalAlignment="Center" Foreground="{DynamicResource SecondaryBrush}"/>
+        <TextBlock Text="{Binding SelectedReturn.ReturnDate, StringFormat={}{0:dd.MM.yyyy}}"
+                 VerticalAlignment="Center"
+                 Grid.Row="2" Grid.Column="1" Margin="5" Height="30"/>
+
+        <!-- Статус -->
+        <TextBlock Text="Статус" Grid.Row="3" Grid.Column="0" Margin="0,5,0,0"
+                   VerticalAlignment="Center" Foreground="{DynamicResource SecondaryBrush}"/>
+        <ComboBox ItemsSource="{Binding ReturnStatuses}"
+                  SelectedItem="{Binding SelectedReturn.Status, Mode=TwoWay}"
+                  VerticalAlignment="Center"
+                  Grid.Row="3" Grid.Column="1" Margin="5" Height="30"/>
+
+        <!-- Кнопки управления -->
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Сохранить" Margin="5" Command="{Binding SaveReturnCommand}" Width="100" Height="35" />
+        </StackPanel>
+    </Grid>
+</UserControl>
