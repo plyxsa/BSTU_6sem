@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SAML 2.0 Based SSO with Active Directory Federation Services (ADFS) and mod_shib &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../../_static/" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating Branded ownCloud Clients" href="../clients/index.html" />
+    <link rel="prev" title="Shibboleth Integration" href="user_auth_shibboleth.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Enterprise Features</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../firewall/index.html">Firewall Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ransomware-protection/index.html">Ransomware Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_management/index.html">File Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../external_storage/index.html">External Storage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">User Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="user_auth_shibboleth.html">Shibboleth Integration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SAML 2.0 Based SSO with Active Directory Federation Services (ADFS) and mod_shib</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../clients/index.html">Creating Branded ownCloud Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/index.html">Logging Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_branding/index.html">Server Branding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="user_auth_shibboleth.html" title="Previous Chapter: Shibboleth Integration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Shibboleth In...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../clients/index.html" title="Next Chapter: Creating Branded ownCloud Clients"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Creating Bran... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="saml-2-0-based-sso-with-active-directory-federation-services-adfs-and-mod-shib">
+<h1>SAML 2.0 Based SSO with Active Directory Federation Services (ADFS) and mod_shib<a class="headerlink" href="#saml-2-0-based-sso-with-active-directory-federation-services-adfs-and-mod-shib" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>Before you can setup SAML 2.0 based <abbr title="Single Sign-On">SSO</abbr> with <a class="reference external" href="https://msdn.microsoft.com/en-us/library/bb897402.aspx">Active Directory Federation Services (ADFS)</a> and mod_shib, ask your ADFS admin for the relevant server URLs.
+These are:</p>
+<ul class="simple">
+<li>The SAML 2.0 single sign-on service URL, e.g., <code class="docutils literal"><span class="pre">https://&lt;ADFS</span> <span class="pre">server</span> <span class="pre">FQDN&gt;/ADFS/ls</span></code></li>
+<li>The IdP metadata URL, e.g., <code class="docutils literal"><span class="pre">https://&lt;ADFS</span> <span class="pre">server</span> <span class="pre">FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.xml</span></code></li>
+</ul>
+<p>Then, make sure that the web server is accessible with a trusted certificate:</p>
+<div class="code console highlight-default"><div class="highlight"><pre><span></span>$ sudo a2enmod ssl
+$ sudo a2ensite default-ssl
+$ sudo service apache2 restart
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Firstly, install <a class="reference external" href="https://packages.ubuntu.com/search?keywords=libapache2-mod-shib">mod_shib</a>.
+You can do this using the following command:</p>
+<div class="code console highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get install libapache2-mod_shib2
+</pre></div>
+</div>
+<p>This will install packages needed for mod_shib, including <code class="docutils literal"><span class="pre">shibd</span></code>.
+Then, generate certificates for the <code class="docutils literal"><span class="pre">shibd</span></code> daemon by running the following command:</p>
+<div class="code console highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">shib</span><span class="o">-</span><span class="n">keygen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-and-filter-the-adfs-metadata">
+<h2>Download and Filter the ADFS Metadata<a class="headerlink" href="#download-and-filter-the-adfs-metadata" title="Permalink to this headline">¶</a></h2>
+<p>The metadata provided by ADFS cannot be automatically imported, and must be cleaned up before using it with the file based MetadataProvider.
+To do so, use <code class="docutils literal"><span class="pre">adfs2fed.php</span></code>, as in the following command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">php apps/user_shibboleth/tools/adfs2fed.php \</span>
+<span class="go">   https://&lt;ADFS server FQDN&gt;/FederationMetadata/2007-06/FederationMetadata.xml \</span>
+<span class="go">   &lt;AD-Domain&gt; &gt; /etc/shibboleth/filtered-metadata.xml</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-shibd">
+<h2>Configure shibd<a class="headerlink" href="#configure-shibd" title="Permalink to this headline">¶</a></h2>
+<p>Next, you need to configure <code class="docutils literal"><span class="pre">shibd</span></code>.
+To do this, in <code class="docutils literal"><span class="pre">/etc/shibboleth/shibboleth2.xml</span></code>:</p>
+<ol class="arabic">
+<li><p class="first">Use the URL of the ownCloud instance as the <code class="docutils literal"><span class="pre">entityID</span></code> in the <code class="docutils literal"><span class="pre">ApplicationDefaults</span></code>, e.g.,</p>
+<div class="code xml highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ApplicationDefaults</span> <span class="n">entityID</span><span class="o">=</span><span class="s2">&quot;https://&lt;owncloud server FQDN&gt;/login/saml&quot;</span> <span class="n">REMOTE_USER</span><span class="o">=</span><span class="s2">&quot;eppn upn&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">https://&lt;owncloud</span> <span class="pre">server</span> <span class="pre">FQDN&gt;/login/saml</span></code> is just an example.  Adjust &lt;owncloud server FQDN&gt; to the full qualified domain name of your server.</p>
+</div>
+</li>
+<li><p class="first">Configure the SSO to use the <code class="docutils literal"><span class="pre">entityID</span></code> from the <code class="docutils literal"><span class="pre">filtered-metadata.xml</span></code>, e.g.,</p>
+<div class="code xml highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">SSO</span> <span class="n">entityID</span><span class="o">=</span><span class="s2">&quot;https://&lt;ADFS server FQDN&gt;/&lt;URI&gt;/&quot;</span><span class="o">&gt;</span>
+    <span class="n">SAML2</span>
+<span class="o">&lt;/</span><span class="n">SSO</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Grab &lt;ADFS server FQDN&gt;/&lt;URI&gt;/ from the filtered-metadata.xml.</p>
+</div>
+</li>
+<li><p class="first">Configure an XML <code class="docutils literal"><span class="pre">MetadataProvider</span></code> with the local <code class="docutils literal"><span class="pre">filtered-metadata.xml</span></code> file:</p>
+<div class="code xml highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">MetadataProvider</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;XML&quot;</span> <span class="n">file</span><span class="o">=</span><span class="s2">&quot;/etc/shibboleth/filtered-metadata.xml&quot;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="metadata-available">
+<h2>Metadata Available<a class="headerlink" href="#metadata-available" title="Permalink to this headline">¶</a></h2>
+<p>Under <code class="docutils literal"><span class="pre">https://&lt;owncloud</span> <span class="pre">server</span> <span class="pre">FQDN&gt;/Shibboleth.sso/Metadata</span></code> shibd exposes the Metadata that is needed by ADFS to add the SP as a Relying party.</p>
+</div>
+<div class="section" id="adfs">
+<h2>ADFS<a class="headerlink" href="#adfs" title="Permalink to this headline">¶</a></h2>
+<p>This part needs to be done by an ADFS administrator.
+Let him do his job while you continue with the Apache configuration below.</p>
+<div class="section" id="add-a-relying-party-using-metadata">
+<h3>Add a Relying Party Using Metadata<a class="headerlink" href="#add-a-relying-party-using-metadata" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference external" href="https://technet.microsoft.com/en-us/library/gg317734(v=ws.10).aspx">AD FS 2.0 Step-by-Step Guide</a> step 2.</p>
+</div>
+<div class="section" id="configure-adfs-to-send-the-userprincipalname-in-the-saml-token">
+<h3>Configure ADFS to send the userPrincipalName in the SAML token<a class="headerlink" href="#configure-adfs-to-send-the-userprincipalname-in-the-saml-token" title="Permalink to this headline">¶</a></h3>
+<p>If you have control over ADFS make it send the <code class="docutils literal"><span class="pre">UPN</span></code> and <code class="docutils literal"><span class="pre">Group</span></code> by adding the following LDAP claim rule:</p>
+<ul class="simple">
+<li>Map <code class="docutils literal"><span class="pre">User</span> <span class="pre">Principal</span> <span class="pre">Name</span></code> to <code class="docutils literal"><span class="pre">UPN</span></code></li>
+<li>Map <code class="docutils literal"><span class="pre">Token</span> <span class="pre">Groups</span> <span class="pre">-</span> <span class="pre">Unqualified</span> <span class="pre">Names</span></code> and map it to <code class="docutils literal"><span class="pre">Group</span></code></li>
+</ul>
+<p>Change shibd <code class="docutils literal"><span class="pre">attribute-map.xml</span></code> to</p>
+<div class="code xml highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Attributes</span> <span class="n">xmlns</span><span class="o">=</span><span class="s2">&quot;urn:mace:shibboleth:2.0:attribute-map&quot;</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Attribute</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;upn&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Attributes</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>That will make the <code class="docutils literal"><span class="pre">userPrincipalName</span></code> available as the environment variable <code class="docutils literal"><span class="pre">upn</span></code>.</p>
+</div>
+</div>
+<div class="section" id="apache2">
+<h2>Apache2<a class="headerlink" href="#apache2" title="Permalink to this headline">¶</a></h2>
+<p>To protect ownCloud with shibboleth you need to protect the URL with a mod_shib based <code class="docutils literal"><span class="pre">auth</span></code>.
+Currently, <a class="reference external" href="https://doc.owncloud.org/server/10.0/admin_manual/enterprise/user_management/user_auth_shibboleth.html#the-apache-shibboleth-module">we recommend protecting only the login page</a>.</p>
+<div class="section" id="user-shibboleth">
+<h3>user_shibboleth<a class="headerlink" href="#user-shibboleth" title="Permalink to this headline">¶</a></h3>
+<p>When the app is enabled and ownCloud is protected by mod_shib, due to the Apache 2 configuration, you should be forced to authenticate against an ADFS.
+After a successful authentication you will be redirected to the ownCloud login page, where you can login as the administrator.
+Double check you have a valid SAML session by browsing to <a class="reference external" href="https:/">https:/</a>/&lt;owncloud server FQDN&gt;/Shibboleth.sso/Session.</p>
+<p>In the “User Authentication” settings for Shibboleth the <code class="docutils literal"><span class="pre">upn</span></code> environment variables will be filled with the authenticated user’s <code class="docutils literal"><span class="pre">userPrincipalName</span></code> in the “Server Environment” section.</p>
+<p>Use <code class="docutils literal"><span class="pre">upn</span></code> as <code class="docutils literal"><span class="pre">uid</span></code> and set the app mode to ‘SSO Only’ by running:
+.. code-block:: console</p>
+<blockquote>
+<div>occ shibboleth:mode ssoonly
+occ shibboleth:mapping -u upn</div></blockquote>
+<p><code class="docutils literal"><span class="pre">displayName</span></code> and email are only relevant for <code class="docutils literal"><span class="pre">autoprovisioning</span></code> mode.
+Add Claims in ADFS and map them in the <code class="docutils literal"><span class="pre">attribute-map.xml</span></code> if needed.</p>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Close the browser tab to kill the session.</li>
+<li>Then visit <code class="docutils literal"><span class="pre">https://&lt;owncloud</span> <span class="pre">server</span> <span class="pre">FQDN&gt;</span></code> again.</li>
+<li>You should be logged in automatically.</li>
+<li>Close the tab or delete the cookies to log out.</li>
+<li>To make the logout work see the Logout section in this document.</li>
+</ul>
+</div>
+<div class="section" id="configuring-sso">
+<h2>Configuring  SSO<a class="headerlink" href="#configuring-sso" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>On the ADFS Server:</dt>
+<dd><ul class="first last">
+<li>Add “Windows Authentication” to the “Service” -&gt; “Authentication Methods” for “Intranet”</li>
+<li>Run the following Powershell script for Firefox:</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span># Save the list of currently supported browser user-agents to a variable
+$browsers=Get-ADFSProperties | Select -ExpandProperty WIASupportedUseragents
+
+# Add Mozilla/5.0 user-agent to the list
+$browsers+=&quot;Mozilla/5.0&quot;
+
+# Apply the new list
+Set-ADFSProperties -WIASupportedUseragents $browsers
+
+# Turn off Extended Protection
+#Set-ADFSProperties –ExtendedProtectionTokenCheck None
+
+# Restart the AD FS service
+Restart-Service ADFSsrv
+</pre></div>
+</div>
+<ul class="simple">
+<li>On the Windows client:<ul>
+<li>For Internet Explorer, Edge, and Chrome<ul>
+<li>In the “Internet Settings” -&gt; “Security” -&gt; “Local Intranet”</li>
+<li>Click on “Sites”</li>
+<li>Click on “Advanced”</li>
+<li>Add your ADFS machine with <code class="docutils literal"><span class="pre">https://&lt;ADFS</span> <span class="pre">server</span> <span class="pre">FQDN&gt;/</span></code> and click OK.</li>
+<li>Click on “customize level”</li>
+<li>Find “User Authentication”</li>
+<li>Check “Automatic login only for Intranet zone”</li>
+</ul>
+</li>
+<li>For Firefox<ul>
+<li>Open “<a class="reference external" href="about:config">about:config</a>”</li>
+<li>Accept the warning</li>
+<li>Search for <code class="docutils literal"><span class="pre">network.negotiate-auth.trusted-uris</span></code> and set it to the FQDN of your ADFS server</li>
+<li>Search for <code class="docutils literal"><span class="pre">network.automatic-ntlm-auth.trusted-uris</span></code> and set it to the FQDN of your ADFS server</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Now if you logged into the domain and open your ownCloud server in the browser of your choice you should get directly to your ownCloud files without a login.</p>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal"><span class="pre">/etc/shibboleth/shibd.logger</span></code> set the overall behavior to debug:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># set overall behavior</span>
+<span class="na">log4j.rootCategory</span><span class="o">=</span><span class="s">DEBUG, shibd_log, warn_log</span>
+<span class="k">[...]</span>
+</pre></div>
+</div>
+<p>After a restart <code class="docutils literal"><span class="pre">/var/log/shibbloeth/shibd.log</span></code> will show the parsed SAML requests and also which claims / attributes were found and mapped, or why not.</p>
+</div>
+<div class="section" id="browsers">
+<h2>Browsers<a class="headerlink" href="#browsers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>For Chrome there is a <a class="reference external" href="https://chrome.google.com/webstore/detail/saml-chrome-panel/paijfdbeoenhembfhkhllainmocckace">SAML Chrome Panel</a> that allows checking the SAML messages in the developer tools reachable via F12.</li>
+<li>For Firefox there is <a class="reference external" href="https://addons.mozilla.org/de/firefox/addon/saml-tracer/">SAML tracer</a></li>
+<li>In the Network tab of the developer extension make sure that “preserve logs” is enabled in order to see the redirects without wiping the existing network requests</li>
+</ul>
+</div>
+<div class="section" id="logout">
+<h2>Logout<a class="headerlink" href="#logout" title="Permalink to this headline">¶</a></h2>
+<p>In SAML scenarios the session is held on the SP as well as the IdP.
+Killing the SP session will redirect you to the IdP where you are still logged in, causing another redirect that creates a new SP session, making logout impossible.
+Killing only the IdP session will allow you to use the SP session until it expires.</p>
+<p>There are multiple ways to deal with this:</p>
+<ol class="arabic simple">
+<li>By default ownCloud shows a popup telling the user to close the browser tab. That kills the SP session. If the whole browser is closed the IdP may still use a Kerberos-based authentication to provide SSO in effect making logout impossible.</li>
+<li>Hide the logout action in the personal menu via CSS. This forces users to log out at the IdP.</li>
+</ol>
+</div>
+<div class="section" id="oauth2">
+<h2>OAuth2<a class="headerlink" href="#oauth2" title="Permalink to this headline">¶</a></h2>
+<p>In upcoming versions the clients will use OAuth2 to obtain a device specific token to prevent session expiry, making the old <code class="docutils literal"><span class="pre">/oc-shib/remote.php/nonshib-webdav</span></code> obsolete</p>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://technet.microsoft.com/en-us/library/gg317734%28v=ws.10%29.aspx">ADFS 2.0 Step-by-Step Guide: Federation with Shibboleth 2 and the InCommon Federation</a></li>
+<li><a class="reference external" href="https://social.technet.microsoft.com/wiki/contents/articles/1439.ad-fs-how-to-invoke-a-ws-federation-sign-out.aspx">ADFS: How to Invoke a WS-Federation Sign-Out</a></li>
+<li><a class="reference external" href="https://blog.kloud.com.au/2014/10/29/shibboleth-service-provider-integration-with-adfs/">Shibboleth Service Provider Integration with ADFS</a></li>
+<li><a class="reference external" href="https://github.com/rohe/pysfemma/blob/master/tools/adfs2fed.py">https://github.com/rohe/pysfemma/blob/master/tools/adfs2fed.py</a></li>
+<li><a class="reference external" href="https://technet.microsoft.com/de-de/library/gg317734(v=ws.10).aspx#BKMK_EditClaimRulesforRelyingPartyTrust">https://technet.microsoft.com/de-de/library/gg317734(v=ws.10).aspx#BKMK_EditClaimRulesforRelyingPartyTrust</a></li>
+<li><a class="reference external" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPApplication#NativeSPApplication-BasicConfiguration(Version2.4andAbove">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPApplication#NativeSPApplication-BasicConfiguration(Version2.4andAbove</a>)</li>
+<li><a class="reference external" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPMetadataProvider#NativeSPMetadataProvider-XMLMetadataProvider">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPMetadataProvider#NativeSPMetadataProvider-XMLMetadataProvider</a></li>
+<li><a class="reference external" href="https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPServiceSSO">https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPServiceSSO</a></li>
+</ul>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="user_auth_shibboleth.html" title="Previous Chapter: Shibboleth Integration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Shibboleth In...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../clients/index.html" title="Next Chapter: Creating Branded ownCloud Clients"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Creating Bran... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

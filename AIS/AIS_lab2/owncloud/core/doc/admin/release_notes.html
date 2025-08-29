@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Release Notes &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="_static/" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What’s New in ownCloud 10.0.10" href="whats_new_admin.html" />
+    <link rel="prev" title="Introduction" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-10">Changes in 10.0.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#official-php-7-2-support">Official PHP 7.2 Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-local-user-creation-flow">New Local User Creation Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#http-api-for-search">HTTP API for Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#native-brute-force-protection">Native Brute-Force Protection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#improved-reliability-for-uploads-via-web-interface-on-unreliable-connections">Improved Reliability for Uploads Via Web Interface on Unreliable Connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-option-to-prevent-sharing-with-specific-system-groups">New Option to Prevent Sharing With Specific System Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-options-for-the-occ-command-to-reset-user-passwords">New Options for the occ Command to Reset User Passwords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-default-minimum-supported-desktop-client-version">New Default Minimum Supported Desktop Client Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-option-to-configure-the-language-of-mail-notifications-for-public-links">New Option to Configure the Language of Mail Notifications for Public Links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#theming-changes">Theming Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-notable-changes">Other Notable Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solved-known-issues">Solved Known Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Known Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-developers">For Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-9">Changes in 10.0.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-features">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swift-objectstore-deprecation">SWIFT Objectstore deprecation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-options-to-display-imprint-and-privacy-policy">New options to display Imprint and Privacy Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-behavior-of-exclude-groups-from-sharing-option">Changed behavior of “Exclude groups from sharing” option</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changes-to-the-sharing-autocomplete-mechanism">Changes to the sharing autocomplete mechanism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#improvements-for-occ-user-list">Improvements for <em>occ user:list</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-events-for-audit-logging">Additional events for audit logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#theming-improvements-and-changes">Theming improvements and changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Solved known issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">Known issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">For developers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-8">Changes in 10.0.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#php-5-6-deprecation">PHP 5.6 deprecation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal-note-for-public-link-mail-notification">Personal note for public link mail notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-mail-notifications-feature">New mail notifications feature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ldap-related-improvements">LDAP-related improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-events-for-audit-logging">New events for audit logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-command-to-verify-and-repair-file-checksums">New command to verify and repair file checksums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-config-setting-to-specify-minimum-characters-for-sharing-autocomplete">New config setting to specify minimum characters for sharing autocomplete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-option-to-granularly-configure-public-link-password-enforcement">New option to granularly configure public link password enforcement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-option-to-exclude-apps-from-integrity-check">New option to exclude apps from integrity check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-occ-command-to-modify-user-details">New occ command to modify user details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#occ-files-scan-can-now-be-executed-for-groups">occ files:scan can now be executed for groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-configurable-default-format-for-syslog">New configurable default format for syslog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-config-option-to-enable-fallback-to-http-for-federated-shares">New config option to enable fallback to HTTP for federated shares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#migration-related-to-auth-tokens-app-passwords">Migration related to auth_tokens (app passwords)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-behavior-of-e-mail-autocomplete-for-public-link-share-dialog">Changed behavior of e-mail autocomplete for public link share dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notifications-sent-by-occ-can-now-include-links">Notifications sent by <em>occ</em> can now include links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global-option-for-cors-domains">Global option for CORS domains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mail-template-editor-is-now-unbundled">Mail Template Editor is now unbundled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">Known issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">For developers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-7">Changes in 10.0.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id51">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-6">Changes in 10.0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-5">Changes in 10.0.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technology-preview-for-php-7-2-support">Technology preview for PHP 7.2 support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#php-intl-now-is-a-hard-requirement">php-intl now is a hard requirement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changed-only-allow-a-single-active-theme-app">Changed: Only allow a single active theme app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removed-old-dropbox-external-storage-backend-dropbox-api-v1">Removed old Dropbox external storage backend (Dropbox API v1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-only-set-cors-headers-on-webdav-endpoint-when-origin-header-is-specified">Fixed: Only set CORS headers on WebDAV endpoint when Origin header is specified</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixes-and-improvements-for-the-mail-template-editor">Fixes and improvements for the Mail Template Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id54">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-4">Changes in 10.0.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#more-granular-sharing-restrictions">More granular sharing restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configurable-solution-for-indistinguishable-user-display-names">Configurable solution for indistinguishable user display names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added-occ-files-scan-repair-mode-to-repair-filecache-inconsistencies">Added “occ files:scan” repair mode to repair filecache inconsistencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-mode-for-occ-security-routes">Detailed mode for “occ security:routes”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added-mode-of-operations-to-differentiate-between-single-instance-or-clustered-setup">Added mode of operations to differentiate between single-instance or clustered setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#added-occ-dav-cleanup-chunks-command-to-clean-up-expired-uploads">Added occ dav:cleanup-chunks command to clean up expired uploads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#administrators-can-now-exclude-files-from-integrity-check-in-config-php">Administrators can now exclude files from integrity check in config.php</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modification-time-value-of-files-is-now-64-bits-long">Modification time value of files is now 64 bits long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updated-minimum-supported-browser-versions">Updated minimum supported browser versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">Known issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resolved-known-issues">10.0.3 resolved known issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id59">Known issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-3">Changes in 10.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-1">Changes in 10.0.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#infrastructure">Infrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id62">Known Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10-0-0">Changes in 10.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-9-1">Changes in 9.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-9-0">Changes in 9.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enterprise-9-0">Enterprise 9.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-8-2">Changes in 8.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-8-1">Changes in 8.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enterprise-8-1">Enterprise 8.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-8-0">Changes in 8.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-ldap-port-configuration">Manual LDAP Port Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-preview-icon-on-text-files">No Preview Icon on Text Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-federated-cloud-share-cannot-be-reshared-with-local-users">Remote Federated Cloud Share Cannot be Reshared With Local Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manually-migrate-encryption-keys-after-upgrade">Manually Migrate Encryption Keys after Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-server-not-supported">Windows Server Not Supported</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#php-5-3-support-dropped">PHP 5.3 Support Dropped</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disable-apache-multiviews">Disable Apache Multiviews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#owncloud-does-not-follow-symlinks">ownCloud Does Not Follow Symlinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-commas-in-group-names">No Commas in Group Names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hebrew-file-names-too-large-on-windows">Hebrew File Names Too Large on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-drive-large-files-fail-with-500-error">Google Drive Large Files Fail with 500 Error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#encrypting-large-numbers-of-files">Encrypting Large Numbers of Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enterprise-8-0">Enterprise 8.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-7-0">Changes in 7.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id70">Manual LDAP Port Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ldap-search-performance-improved">LDAP Search Performance Improved</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protecting-owncloud-on-iis-from-data-loss">Protecting ownCloud on IIS from Data Loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#antivirus-application-modes">Antivirus Application Modes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enable-only-for-specific-groups-fails">“Enable Only for Specific Groups” Fails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changes-to-file-previews">Changes to File Previews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gb-limit-on-sftp-transfers">4GB Limit on SFTP Transfers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#not-enough-space-available-on-file-upload">“Not Enough Space Available” on File Upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-more-expiration-date-on-local-shares">No More Expiration Date On Local Shares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zero-quota-not-read-only">Zero Quota Not Read-Only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enterprise-7-0">Enterprise 7.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration/index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="index.html" title="Previous Chapter: Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Introduction</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="whats_new_admin.html" title="Next Chapter: What’s New in ownCloud 10.0.10"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">What’s New in... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#release-notes-label"><span class="std std-ref">Changes in 10.0.10</span></a></li>
+<li><a class="reference internal" href="#id22"><span class="std std-ref">Changes in 10.0.9</span></a></li>
+<li><a class="reference internal" href="#id45"><span class="std std-ref">Changes in 10.0.8</span></a></li>
+<li><a class="reference internal" href="#id50"><span class="std std-ref">Changes in 10.0.7</span></a></li>
+<li><a class="reference internal" href="#id52"><span class="std std-ref">Changes in 10.0.6</span></a></li>
+<li><a class="reference internal" href="#id53"><span class="std std-ref">Changes in 10.0.5</span></a></li>
+<li><a class="reference internal" href="#id56"><span class="std std-ref">Changes in 10.0.4</span></a></li>
+<li><a class="reference internal" href="#id60"><span class="std std-ref">Changes in 10.0.3</span></a></li>
+<li><a class="reference internal" href="#id61"><span class="std std-ref">Changes in 10.0.1</span></a></li>
+<li><a class="reference internal" href="#id63"><span class="std std-ref">Changes in 10.0.0</span></a></li>
+<li><a class="reference internal" href="#id64"><span class="std std-ref">Changes in 9.1</span></a></li>
+<li><a class="reference internal" href="#id65"><span class="std std-ref">Changes in 9.0</span></a></li>
+<li><a class="reference internal" href="#id66"><span class="std std-ref">Changes in 8.2</span></a></li>
+<li><a class="reference internal" href="#id67"><span class="std std-ref">Changes in 8.1</span></a></li>
+<li><a class="reference internal" href="#id68"><span class="std std-ref">Changes in 8.0</span></a></li>
+<li><a class="reference internal" href="#id69"><span class="std std-ref">Changes in 7.0</span></a></li>
+</ul>
+<div class="section" id="changes-in-10-0-10">
+<span id="release-notes-label"></span><h2>Changes in 10.0.10<a class="headerlink" href="#changes-in-10-0-10" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.10 that need your attention. You can also read <a class="reference external" href="https://owncloud.org/changelog/server/">the full ownCloud Server changelog</a> for further details on what has changed.</p>
+<div class="section" id="official-php-7-2-support">
+<h3>Official PHP 7.2 Support<a class="headerlink" href="#official-php-7-2-support" title="Permalink to this headline">¶</a></h3>
+<p>After announcing the future deprecation of PHP 5.6 and 7.0 with the <a class="reference external" href="https://doc.owncloud.com/server/10.0/admin_manual/release_notes.html#php-5-6-deprecation">10.0.8 release</a>, ownCloud Server now follows up by officially adding PHP 7.2 support. The Server Core and all apps maintained by ownCloud have received a full QA cycle and are proven to work reliably with PHP 7.2.</p>
+<p>ownCloud Server is also being prepared for PHP 7.3, which is <a class="reference external" href="https://wiki.php.net/todo/php73">scheduled to become available by the end of 2018</a>. If you are still using versions 5.6 or 7.0, please plan an upgrade to 7.2 soon. See the <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/installation/system_requirements.html#officially-recommended-supported-options">system requirements in the ownCloud Documentation</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With PHP 7.2 some extensions have changed. If you have not yet upgraded, you need to install <code class="docutils literal"><span class="pre">php-openssl</span></code>. See <a class="reference external" href="https://github.com/owncloud/core/issues/30337">#30337</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="new-local-user-creation-flow">
+<h3>New Local User Creation Flow<a class="headerlink" href="#new-local-user-creation-flow" title="Permalink to this headline">¶</a></h3>
+<p>In previous versions, administrators created local users by entering a username and a password. In many cases this is undesirable, as administrators set the password for new users and need to provide it via a second communication channel. For this reason the local user creation flow has been changed to expect a username and an email address, which will be used to send an activation link to new users.</p>
+<p>This way user creation is easier and more secure as new users are informed automatically and can choose a password in self-service. For cases where administrators want to set the initial password, it’s possible to deviate from the default by setting the option “<em>Set a password for new users</em>” on the bottom left settings cog. The former option “<em>Send email to new users</em>” has been removed, as this change made it obsolete.</p>
+</div>
+<div class="section" id="http-api-for-search">
+<h3>HTTP API for Search<a class="headerlink" href="#http-api-for-search" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud Server 10.0.10 introduces an HTTP API for search functionality. It enables the use of search terms to query the server and the delivery of search results via HTTP (WebDAV). In upcoming releases, ownCloud clients will make use of it to search content on the server, without the need to have them available locally.</p>
+<p>In combination with the Full-Text Search integration, which is soon to be released as an ownCloud Server extension (Community Edition), HTTP API for Search will boost usability and productivity for users. For example, they will be able to search through all the content which they store in their account and quickly find files on their smartphones.</p>
+</div>
+<div class="section" id="native-brute-force-protection">
+<h3>Native Brute-Force Protection<a class="headerlink" href="#native-brute-force-protection" title="Permalink to this headline">¶</a></h3>
+<p>Together with the new server version, another security-enhancing extension is available, <a class="reference external" href="https://marketplace.owncloud.com/apps/brute_force_protection">Brute Force Protection</a>. This extension is tasked with preventing attackers from guessing user passwords (brute-force attack) by delaying subsequent failed login attempts for a user account from the same IP address.</p>
+<p>While in the past similar functionality was only achievable via third party applications, such as <em>Fail2Ban</em>, this extension provides the functionality natively, configurable by ownCloud administrators on the Security settings section.</p>
+<p>The new extension supersedes the former <a class="reference external" href="https://marketplace.owncloud.com/apps/security">Security</a> extension together with the new <a class="reference external" href="https://marketplace.owncloud.com/apps/password_policy">Password Policy</a> extension, which <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#password-history-and-expiration">has been released with ownCloud Server 10.0.9</a>. This community-contributed extension is well-tested, but out of ownCloud’s general support scope. However, individual support can be obtained on request.</p>
+</div>
+<div class="section" id="improved-reliability-for-uploads-via-web-interface-on-unreliable-connections">
+<h3>Improved Reliability for Uploads Via Web Interface on Unreliable Connections<a class="headerlink" href="#improved-reliability-for-uploads-via-web-interface-on-unreliable-connections" title="Permalink to this headline">¶</a></h3>
+<p>The reliability of the file upload feature in the ownCloud web interface has been improved. When uploading larger amounts of data on unreliable connections (e.g., on the train or with mobile data) you have to deal with interruptions and timeouts, which in the past required users to restart stalled uploads from the beginning in the worst case.</p>
+<p>On top of ownCloud’s chunking mechanism, which splits large files into pieces and uploads them separately, there’s new logic that takes care of retrying stalled chunks. With this, uploads can now continue from the point they froze when a connection becomes available again.</p>
+</div>
+<div class="section" id="new-option-to-prevent-sharing-with-specific-system-groups">
+<h3>New Option to Prevent Sharing With Specific System Groups<a class="headerlink" href="#new-option-to-prevent-sharing-with-specific-system-groups" title="Permalink to this headline">¶</a></h3>
+<p>System groups in ownCloud can have many purposes. They can be used for sharing with many users at once, for feature and access restrictions, or for storage mounts to specific users - just to name a few. In some cases, especially in larger deployments, it’s undesirable that groups which are used for other purposes are also available for sharing. To prevent users from sharing with such groups, administrators can now blacklist the respective system groups using the option “<em>Exclude groups from receiving shares</em>” in the administration settings “<em>Sharing</em>” section.</p>
+</div>
+<div class="section" id="new-options-for-the-occ-command-to-reset-user-passwords">
+<h3>New Options for the occ Command to Reset User Passwords<a class="headerlink" href="#new-options-for-the-occ-command-to-reset-user-passwords" title="Permalink to this headline">¶</a></h3>
+<p>The occ command <code class="docutils literal"><span class="pre">user:resetpassword</span></code> allows system administrators to reset or change user passwords. It has been extended to provide the additional options <code class="docutils literal"><span class="pre">--send-email</span></code> and <code class="docutils literal"><span class="pre">--output-link</span></code>, which can be used to send a password reset link to the user via mail and output the password reset link to the command line, respectively. This change is in line with the new local user creation flow, which is explained above, and can also be used for further processing with scripts. See the ownCloud Documentation and the <code class="docutils literal"><span class="pre">--help</span></code> option for more information.</p>
+</div>
+<div class="section" id="new-default-minimum-supported-desktop-client-version">
+<h3>New Default Minimum Supported Desktop Client Version<a class="headerlink" href="#new-default-minimum-supported-desktop-client-version" title="Permalink to this headline">¶</a></h3>
+<p>To ensure clean and reliable operation of the ownCloud platform it is important to stay up-to-date with the latest releases for the server as well as the clients. To take care of compatibility between the server and desktop clients, the minimum version the server will accept connections from has been raised to version <code class="docutils literal"><span class="pre">2.3.3</span></code>. While it’s recommended to keep up with later versions, this is the new default value. It can be changed by altering the config.php parameter <code class="docutils literal"><span class="pre">'minimum.supported.desktop.version'</span> <span class="pre">=&gt;</span> <span class="pre">'2.3.3',</span></code> if absolutely necessary.</p>
+</div>
+<div class="section" id="new-option-to-configure-the-language-of-mail-notifications-for-public-links">
+<h3>New Option to Configure the Language of Mail Notifications for Public Links<a class="headerlink" href="#new-option-to-configure-the-language-of-mail-notifications-for-public-links" title="Permalink to this headline">¶</a></h3>
+<p>Usually ownCloud renders mail notifications in the language of the recipients, when they are known. For the <a class="reference external" href="https://doc.owncloud.com/server/10.0/admin_manual/release_notes.html#personal-note-for-public-link-mail-notification">recently improved feature</a> to send public links with a personal note directly from the user interface, the recipients’ language can’t be determined automatically, it just knows the recipients’ mail addresses.</p>
+<p>ownCloud therefore uses the language of the user who sent the notification, which can have the drawback that recipients can’t understand them. This is still the default behavior but administrators can now change it via a dropdown menu “<em>Language used for public mail notifications for shared files</em>” in the settings “<em>Sharing</em>” section.</p>
+</div>
+<div class="section" id="theming-changes">
+<h3>Theming Changes<a class="headerlink" href="#theming-changes" title="Permalink to this headline">¶</a></h3>
+<p>Mail templates for share notifications do not strip line breaks from the personal note anymore. This affects the HTML (<code class="docutils literal"><span class="pre">core/templates/mail.php</span></code>) and plain text (<code class="docutils literal"><span class="pre">core/templates/altmail.php</span></code>) mail templates. The default templates shipped with ownCloud Server 10.0.10 have been modified to accommodate these changes. If your custom theme overrides these templates, you have to follow up with the changes:</p>
+<ul class="simple">
+<li>Replace the following line of the HTML template</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">p($l-&gt;t(&quot;Personal</span> <span class="pre">note</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">sender:</span> <span class="pre">%s.&quot;,</span> <span class="pre">[$_['personal_note']]));</span></code></p>
+<p>with</p>
+<p><code class="docutils literal"><span class="pre">print_unescaped($l-&gt;t(&quot;Personal</span> <span class="pre">note</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">sender:</span> <span class="pre">&lt;br&gt;</span> <span class="pre">%s.&quot;,</span> <span class="pre">$_['personal_note']));</span></code>.</p>
+<ul class="simple">
+<li>Replace the following line of the plain text template</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">print_unescaped($l-&gt;t(&quot;Personal</span> <span class="pre">note</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">sender:</span> <span class="pre">%s.&quot;,</span> <span class="pre">[$_['personal_note']]));</span></code></p>
+<p>with</p>
+<p><code class="docutils literal"><span class="pre">print_unescaped($l-&gt;t(&quot;Personal</span> <span class="pre">note</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">sender:</span> <span class="pre">\n</span> <span class="pre">%s.&quot;,</span> <span class="pre">$_['personal_note']));</span></code>.</p>
+</div>
+<div class="section" id="other-notable-changes">
+<h3>Other Notable Changes<a class="headerlink" href="#other-notable-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Allow automated SSL certificate verifications for CAs other than Let’s Encrypt. See <a class="reference external" href="https://github.com/owncloud/core/issues/31858">#31858</a> for further details.</li>
+<li>“/” and “%” are now valid characters in group names. See <a class="reference external" href="https://github.com/owncloud/core/issues/31109">#31109</a> for further details.</li>
+<li>New audit events for login action with token or Apache. See <a class="reference external" href="https://github.com/owncloud/core/issues/31985">_#31985</a> for further details.</li>
+<li>Log entries for exceeding user quota: Loglevel changed to “debug” (Insufficient storage exception is now logged with “debug” log level).</li>
+<li>The app for embedding external sites to the app launcher (“<em>external</em>”) now supports icons that originate from theme apps.</li>
+<li>The occ command to deactivate storage encryption (<code class="docutils literal"><span class="pre">occ</span> <span class="pre">encryption:decrypt-all</span></code>) has received stability improvements and can now read the required recovery key from an environment variable which is very helpful for a scripted per-user decryption process.</li>
+</ul>
+</div>
+<div class="section" id="solved-known-issues">
+<h3>Solved Known Issues<a class="headerlink" href="#solved-known-issues" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud Server 10.0.10 takes care of <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#id10">10.0.9 known issues</a> and provides remedies for several others:</p>
+<ul class="simple">
+<li>The Password Policy extension now works with two- or multi-factor authentication extensions. See <a class="reference external" href="https://github.com/owncloud/core/issues/32058">#32058</a> for further details.</li>
+<li>The <code class="docutils literal"><span class="pre">Versions</span></code> feature now works also when the <code class="docutils literal"><span class="pre">Comments</span></code> app is disabled. See <a class="reference external" href="https://github.com/owncloud/core/issues/32208">#32208</a> for further details.</li>
+<li>E-mail addresses with subdomains with hyphens are now also accepted for public link emails. See <a class="reference external" href="https://github.com/owncloud/core/issues/32281">#32281</a> for further details.</li>
+<li>Allow null in “Origin” header for third party clients that send it with WebDAV. See <a class="reference external" href="https://github.com/owncloud/core/issues/32189">#32189</a> for further details.</li>
+<li>Properly log failed message when token based authentication is enforced (fail2ban). See <a class="reference external" href="https://github.com/owncloud/core/issues/31948">#31948</a> for further details.</li>
+<li>Deleting a user now also properly deletes their external storages and storage assignations. See <a class="reference external" href="https://github.com/owncloud/core/issues/32069">#32069</a> for further details.</li>
+<li>Lockout issues with wrong passwords for Windows Network Drives are mitigated: Fixed mount config in frontend to only load once to avoid side effects. See <a class="reference external" href="https://github.com/owncloud/core/issues/32095">#32095</a> for further details.</li>
+<li>Fixed update issue related to oc_jobs when automatically enabling market app to assist for update in OC 10. See <a class="reference external" href="https://github.com/owncloud/core/pull/32573">#32573</a> for further details.</li>
+<li>Fixed missing migrations in files_sharing app and add indices to improve performance. See <a class="reference external" href="https://github.com/owncloud/core/issues/32562">#32562</a> for further details.</li>
+<li>Fixed issue with spam filters when sending public link emails. See <a class="reference external" href="https://github.com/owncloud/core/issues/32542">#32542</a> for further details.</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Known Issues<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Currently there are no known issues with ownCloud Server 10.0.10.
+This section will be updated in the case that issues become known.</p>
+</div>
+<div class="section" id="for-developers">
+<h3>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Search API for files using WebDAV REPORT and an underlying search provider. See <a class="reference external" href="https://github.com/owncloud/core/issues/31946">#31946</a> and <a class="reference external" href="https://github.com/owncloud/core/issues/32328">#32328</a> for further details.</li>
+<li>Add information whether user can share to capabilities API. See <a class="reference external" href="https://github.com/owncloud/core/issues/31824">#31824</a> for further details.</li>
+<li>Hook <code class="docutils literal"><span class="pre">loadAdditionalScripts</span></code> now also available for public link page. See <a class="reference external" href="https://github.com/owncloud/core/issues/31944">#31944</a> for further details.</li>
+<li>Added URL parameter to files app which opens a specific sidebar tab. See <a class="reference external" href="https://github.com/owncloud/core/issues/32202">#32202</a> for further details.</li>
+<li>Allow slashes in generated resource routes in app framework. See <a class="reference external" href="https://github.com/owncloud/core/issues/31939">#31939</a> for further details.</li>
+<li>The app for embedding external sites to the app launcher (“<em>external</em>”) has been moved to a <a class="reference external" href="https://github.com/owncloud/external">separate repository</a>. It is still bundled with ownCloud Server releases and can be used normally.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-9">
+<span id="id22"></span><h2>Changes in 10.0.9<a class="headerlink" href="#changes-in-10-0-9" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.9 that need your attention. You can also read <a class="reference external" href="https://owncloud.org/changelog/server/">the full ownCloud Server changelog</a> for further details on what has changed.</p>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pending-shares">
+<h4>Pending Shares<a class="headerlink" href="#pending-shares" title="Permalink to this headline">¶</a></h4>
+<p>ownCloud Server 10.0.9 introduces new features to close usability gaps and to give users more control over incoming shares. Previously, shared contents would appear, unannounced, in the receiving user’s file hierarchy, and clients would start synchronizing.</p>
+<p>Incoming shares can now have a pending state, offering the ability to accept or decline (as known from federated sharing). We anticipate that this will provide a better user experience.</p>
+<p>In addition, the <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#new-mail-notifications-feature">recently introduced notifications framework</a> is being used to inform users via mail.</p>
+<p>The bell icon in the web interface and the ownCloud Desktop Client can additionally be used to take action. To switch to the new behavior administrators need to disable the configuration option “Automatically accept new incoming local user shares” in the <em>Sharing</em> settings section. By default the option will be enabled to preserve the known behavior.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Mail notifications do not, currently, support asynchronous batch processing. For this reason, ownCloud will send notification emails directly when initiating shares between users. Due to this limitation, sharing with large groups (&gt; 50 users) can take some time and might cause load peaks. When operating installations with large groups, it is, therefore, not yet recommended to enable the feature.</p>
+</div>
+</div>
+<div class="section" id="overview-of-pending-rejected-shares">
+<h4>Overview of pending &amp; rejected shares<a class="headerlink" href="#overview-of-pending-rejected-shares" title="Permalink to this headline">¶</a></h4>
+<p>In addition to the “<em>Pending Shares</em>” feature, ownCloud Server now provides the means to view “<em>accepted</em>”, “<em>pending</em>” and <em>“rejected</em>” incoming shares. Leveraging the “<em>Shared with you</em>” filter in the left sidebar of the files view users can now list all incoming shares, their respective states and have the ability to switch between the states easily.</p>
+<p>This improvement not only empowers users to accept rejected shares subsequently but also to restore shares that have been unshared before without requiring the owner to share it again.</p>
+</div>
+<div class="section" id="password-history-and-expiration">
+<h4>Password history and expiration<a class="headerlink" href="#password-history-and-expiration" title="Permalink to this headline">¶</a></h4>
+<p>To prepare ownCloud Server for new capabilities in the authentication process, we have introduced an authentication middleware, and a new major version of the <a class="reference external" href="https://marketplace.owncloud.com/apps/password_policy">Password Policy</a> extension is now available.</p>
+<div class="section" id="the-authentication-middleware">
+<h5>The Authentication Middleware<a class="headerlink" href="#the-authentication-middleware" title="Permalink to this headline">¶</a></h5>
+<p>It:</p>
+<ol class="arabic simple">
+<li>Offers a defined way of inserting mandatory functionality between user authentication and user account access. For example, forcing users to accept legal agreements.</li>
+<li>Affords the ability to interact with the user during the login process, such as retrieving user details like their email address.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The authentication middleware is <em>currently</em> focused on offering new features for the Password Policy extension.</p>
+</div>
+</div>
+<div class="section" id="the-password-policy-extension">
+<h5>The Password Policy Extension<a class="headerlink" href="#the-password-policy-extension" title="Permalink to this headline">¶</a></h5>
+<p><a class="reference external" href="https://marketplace.owncloud.com/apps/password_policy">The Password Policy Extension</a> has got a new major release and has been relicensed (OCL =&gt; GPLv2) to be available for community and standard subscription users as well. It now supports password expiration and history policies for user accounts.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These features don’t apply to users imported from LDAP or other backends but only for local users created by administrators or the <a class="reference external" href="https://marketplace.owncloud.com/apps/guests">Guests</a> extension.</p>
+</div>
+<p>Imposing password expiration and history policies enhances security for a number of reasons.
+For example, by forcing users to choose a new password, they can be prevented from using one or more of their previous passwords.
+In doing this, it encourages them to not use a previous password, which may be known to attackers.</p>
+<p>Two further examples are manually expiring passwords and configuring the number of days that have to pass since the last change before the password expires.
+These help ensure that users change their passwords on a semi-regular basis, making them harder to crack.</p>
+<p>However, we encourage administrators to always consider the implication of their password policies, so that they strike an appropriate balance between security and usability.
+For example, a high frequency of password changes, for instance, might increase security but could also decrease user satisfaction.</p>
+<p>To help ensure a good user experience it is possible to configure:</p>
+<ul class="simple">
+<li>Email notifications.</li>
+<li>Internal notifications (they appear on the web interface and clients).</li>
+<li>The password history count.</li>
+<li>The days before reminder notification are sent.</li>
+</ul>
+<p>Users will always be informed when passwords have expired.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the above two password practices <a class="reference external" href="https://pages.nist.gov/800-63-3/sp800-63b.html">are discouraged by NIST</a>, ownCloud is now fully
+compliant with common password guidelines in enterprise scenarios.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When users employ tokens for client authentication, which can be configured
+on the user settings page (“App passwords”), those are not affected from
+password policies.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When imposing password expiration policies on an existing installation it is
+necessary to take some further actions. Please consult <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/configuration/server/security/password_policy.html">the ownCloud documentation</a> for guidance.</p>
+</div>
+</div>
+</div>
+<div class="section" id="technology-preview-for-new-s3-objectstore-implementation">
+<h4>Technology preview for new S3 Objectstore implementation<a class="headerlink" href="#technology-preview-for-new-s3-objectstore-implementation" title="Permalink to this headline">¶</a></h4>
+<p>ownCloud Server 10.0.9 comes with the prerequisites to be ready for the new S3 Objectstore implementation “<em>files_primary_s3</em>”, which will massively improve performance, reliability and protocol-related capabilities. The new extension is available as a technology preview via <a class="reference external" href="https://marketplace.owncloud.com">the ownCloud Marketplace</a> and will supersede the current <a class="reference external" href="https://marketplace.owncloud.com/apps/objectstore">Objectstore</a> extension.</p>
+<p>It has received extensive testing and is in very good shape. However, there is no out-of-the-box migration from the current <em>Objectstore</em> to <em>files_primary_s3</em> as this will require individual guidance.</p>
+<p>Due to changes to the Versioning API, <a class="reference external" href="https://marketplace.owncloud.com/apps/ransomware_protection">the ownCloud Ransomware Protection</a> is not yet compatible with <em>files_primary_s3</em>. For now the _Objectstore_ extension will continue to work as usual. Once the new implementation leaves the technology preview state and migrations have been taken care of, the current implementation will be deprecated.</p>
+</div>
+</div>
+<div class="section" id="swift-objectstore-deprecation">
+<h3>SWIFT Objectstore deprecation<a class="headerlink" href="#swift-objectstore-deprecation" title="Permalink to this headline">¶</a></h3>
+<p>As the markets are moving in the direction of <a class="reference external" href="https://www.amazon.com/documentation/s3">the S3 protocol</a> to communicate with object storages, ownCloud will follow this path with a clear focus. To do this, it will be a necessity to deprecate object storage via <a class="reference external" href="https://www.openstack.org/swift">the OpenStack SWIFT protocol</a>.</p>
+<p>The extension will still be available as part of ownCloud Server, but it will neither be maintained nor developed any further by ownCloud, and support will be discontinued. Please make sure to move to the S3 protocol to use object storage as primary storage with future ownCloud Server versions.</p>
+</div>
+<div class="section" id="new-options-to-display-imprint-and-privacy-policy">
+<h3>New options to display Imprint and Privacy Policy<a class="headerlink" href="#new-options-to-display-imprint-and-privacy-policy" title="Permalink to this headline">¶</a></h3>
+<p>To enable GDPR and legal compliance in various jurisdictions for ownCloud providers, it is now possible to specify links to Imprint and Privacy Policy:</p>
+<ul class="simple">
+<li>In the “<em>General</em>” Administration settings  section</li>
+<li>Via the following OCC commands:<ul>
+<li><code class="docutils literal"><span class="pre">php</span> <span class="pre">occ</span> <span class="pre">config:app:set</span> <span class="pre">core</span> <span class="pre">legal.imprint_url</span> <span class="pre">&lt;link&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">php</span> <span class="pre">occ</span> <span class="pre">config:app:set</span> <span class="pre">core</span> <span class="pre">legal.privacy_policy_url</span> <span class="pre">&lt;link&gt;</span></code></li>
+</ul>
+</li>
+</ul>
+<p>These links can be displayed on all pages of the ownCloud web interface and in the footer of mail notifications. When using one of the default themes provided by ownCloud, as well as the default mail templates, configured links will be automatically included.</p>
+<p>For customized themes or mail templates, actions are required to include the links.
+These are:</p>
+<ol class="arabic simple">
+<li>Add the following at the end of each HTML template to add the footer:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;?php</span> <span class="pre">print_unescaped($this-&gt;inc('html.mail.footer',</span> <span class="pre">['app'</span> <span class="pre">=&gt;</span> <span class="pre">'core']));</span> <span class="pre">?&gt;</span></code></p>
+<ol class="arabic simple">
+<li>Add the following at the end of each plain text template to add the footer:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;?php</span> <span class="pre">print_unescaped($this-&gt;inc('plain.mail.footer',</span> <span class="pre">['app'</span> <span class="pre">=&gt;</span> <span class="pre">'core']));</span> <span class="pre">?&gt;</span></code></p>
+<ol class="arabic simple">
+<li>In a custom theme, change <code class="docutils literal"><span class="pre">getShortFooter</span></code> and <code class="docutils literal"><span class="pre">getLongFooter</span></code> in <code class="docutils literal"><span class="pre">defaults.php</span></code> <a class="reference external" href="https://github.com/owncloud/theme-example/blob/master/defaults.php#L124">without links</a>  to <a class="reference external" href="https://github.com/owncloud/core/blob/master/lib/private/legacy/defaults.php#L256">include the links</a></li>
+</ol>
+</div>
+<div class="section" id="changed-behavior-of-exclude-groups-from-sharing-option">
+<h3>Changed behavior of “Exclude groups from sharing” option<a class="headerlink" href="#changed-behavior-of-exclude-groups-from-sharing-option" title="Permalink to this headline">¶</a></h3>
+<p>The option “<em>Exclude groups from sharing</em>”, in the administration settings “<em>Sharing</em>” section, enables administrators to exclude groups of users from the ability to initiate file shares. In previous versions this restriction only applied to users who were members of exactly these groups (membership of one or more non-excluded groups bypassed the restriction).</p>
+<p>This behavior has been changed to be both more restrictive and to better cover the expectations of administrators. With ownCloud Server 10.0.9, it will apply to all users who are members of at least one of the excluded groups.</p>
+</div>
+<div class="section" id="changes-to-the-sharing-autocomplete-mechanism">
+<h3>Changes to the sharing autocomplete mechanism<a class="headerlink" href="#changes-to-the-sharing-autocomplete-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>In ownCloud Server 10.0.8, the value for <a class="reference internal" href="#min-chars-for-sharing-autocomplete-label"><span class="std std-ref">minimum characters to trigger the sharing autocomplete mechanism</span></a> has been made configurable and set to <cite>4</cite> by default. As this security-enhancing change came at the expense of usability, and might only be required in special scenarios, the default value has been reverted to <cite>2</cite>.</p>
+<p>For increased security requirements, the <code class="docutils literal"><span class="pre">config.php</span></code> option <code class="docutils literal"><span class="pre">'user.search_min_length'</span> <span class="pre">=&gt;</span> <span class="pre">2</span></code> can be adjusted. To further improve usability, a hint has been added to inform users about the required character count, to get suggestions.</p>
+</div>
+<div class="section" id="improvements-for-occ-user-list">
+<h3>Improvements for <em>occ user:list</em><a class="headerlink" href="#improvements-for-occ-user-list" title="Permalink to this headline">¶</a></h3>
+<p>To improve the usability of the <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:list</span></code> command, the output has been made configurable by using the <code class="docutils literal"><span class="pre">-a</span></code> option, for including certain attributes. This change has mainly been introduced to facilitate automation tasks. Check the <code class="docutils literal"><span class="pre">--help</span></code> option for more information.</p>
+</div>
+<div class="section" id="additional-events-for-audit-logging">
+<h3>Additional events for audit logging<a class="headerlink" href="#additional-events-for-audit-logging" title="Permalink to this headline">¶</a></h3>
+<p>New events are available for audit logging, among others. These include:</p>
+<ul class="simple">
+<li>Changes in user specific settings</li>
+<li>Sending public links via mail; and</li>
+<li>Accepting and rejecting shares</li>
+</ul>
+<p>When logs are forwarded to external analyzers, like Splunk, administrators can check to add the new events. The latest version of the Auditing extension (<code class="docutils literal"><span class="pre">admin_audit</span></code>) is required.</p>
+</div>
+<div class="section" id="theming-improvements-and-changes">
+<h3>Theming improvements and changes<a class="headerlink" href="#theming-improvements-and-changes" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">HTML templates for <code class="docutils literal"><span class="pre">lost</span> <span class="pre">password</span></code> mails have been added. This is important in case a custom theme is used and it needs manual adjustments.</p>
+</li>
+<li><p class="first">The mail notifications framework, <a class="reference internal" href="#new-mail-notifications-feature-label"><span class="std std-ref">introduced with ownCloud Server 10.0.8</span></a>, has been extended to provide a basic framework and notification structure, which can be used by ownCloud features and third party extensions. To support this, mail template wording and structure have been updated. Please review the templates in <code class="docutils literal"><span class="pre">apps/notifications/templates/mail/</span></code> to align them with your needs.</p>
+</li>
+<li><p class="first">Mail templates can now include a footer for HTML (<code class="docutils literal"><span class="pre">core/templates/html.mail.footer.php</span></code>) and plain text mails (<code class="docutils literal"><span class="pre">core/templates/plain.mail.footer.php</span></code>). The default templates shipped with ownCloud Server 10.0.9 contain the respective references. For customized mail templates, it is necessary to manually add the references. To do so:</p>
+<ul>
+<li><p class="first">Add the following at the end of each HTML template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;?php print_unescaped($this-&gt;inc(&#39;html.mail.footer&#39;, [&#39;app&#39; =&gt; &#39;core&#39;])); ?&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the following at the end of each plain text template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;?php print_unescaped($this-&gt;inc(&#39;plain.mail.footer&#39;, [&#39;app&#39; =&gt; &#39;core&#39;])); ?&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">The ownCloud example theme (<code class="docutils literal"><span class="pre">theme-example</span></code>), which can be used as a solid base to create custom themes, is no longer bundled with ownCloud Server. It now lives in it’s own <a class="reference external" href="https://github.com/owncloud/theme-example">repository on GitHub</a>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>Solved known issues<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud Server 10.0.9 takes care of <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#id1">10.0.8 known issues</a>, and provides remedy for several others:</p>
+<ul class="simple">
+<li>Issues with multiple theme apps and the Mail Template Editor <a class="reference external" href="https://github.com/owncloud/core/issues/31478">#31478</a></li>
+<li>OCC command to transfer data between users (<code class="docutils literal"><span class="pre">occ</span> <span class="pre">transfer:ownership</span></code>) works as expected again. Previously, public link shares were not transferred. See <a class="reference external" href="https://github.com/owncloud/core/issues/31176">#31176</a> for further details.</li>
+<li>OCC commands to encrypt (<code class="docutils literal"><span class="pre">occ</span> <span class="pre">encryption:encrypt-all</span></code>) and decrypt (<code class="docutils literal"><span class="pre">occ</span> <span class="pre">encryption:decrypt-all</span></code>) user data work correctly again. Previously, shares might have been lost during the encryption process. See <a class="reference external" href="https://github.com/owncloud/core/issues/31600">#31600</a> and <a class="reference external" href="https://github.com/owncloud/core/issues/31590">#31590</a> for further details.</li>
+<li>Files larger than 10 MB can now properly be uploaded by guest users. See <a class="reference external" href="https://github.com/owncloud/core/issues/31596">#31596</a> for further details.</li>
+<li>Issues with public link dialog when collaborative tags app is disabled has been resolved. See <a class="reference external" href="https://github.com/owncloud/core/issues/31581">#31581</a> for further details.</li>
+<li>Enabling/disabling of users by group administrators in the web UI works again. See <a class="reference external" href="https://github.com/owncloud/core/issues/31489">#31489</a> for further details.</li>
+<li>Issues with file upload using Microsoft EDGE are now circumvented (hard memory limit of 5 GB causing uploads to fail randomly as garbage collection for file chunks did not work properly). See <a class="reference external" href="https://github.com/owncloud/core/pull/31825">#31884</a> for further details.</li>
+</ul>
+</div>
+<div class="section" id="id35">
+<h3>Known issues<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<p>The new Password Policy feature <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#the-password-policy-extension">“Password Expiration”</a>:</p>
+<ul class="simple">
+<li>Does not work together with Multi-Factor Authentication (e.g. <code class="docutils literal"><span class="pre">twofactor_totp</span></code>, <code class="docutils literal"><span class="pre">twofactor_privacyidea</span></code>). Please do not deploy expiration policies yet when Two- or Multi-Factor Authentication extensions are in place. This issue will be solved with the next ownCloud Server release. See <a class="reference external" href="https://github.com/owncloud/core/issues/32059">#32059</a> for more information.</li>
+<li>The new Password Policy feature <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#the-password-policy-extension">“Password Expiration”</a> includes an <em>occ</em> command to manually force password expiration. Please run it directly after imposing expiration policies on an instance with existing users. Currently the command will only work when the policy <em>X days until user password expires</em> has been enabled. This might be confusing and will be solved with the next release of the extension. See <a class="reference external" href="https://github.com/owncloud/password_policy/issues/66">#66</a> for more information.</li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>For developers<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The symfony event for logging has been extended to include the original exception when applicable: <a class="reference external" href="https://github.com/owncloud/core/issues/31623">#31623</a></li>
+<li>Added Symfony event for whenever user settings are changed <a class="reference external" href="https://github.com/owncloud/core/issues/31266">#31266</a></li>
+<li>Added Symfony event for whenever a public link share is sent by email <a class="reference external" href="https://github.com/owncloud/core/issues/31632">#31632</a></li>
+<li>Added Symfony event for whenever local shares are accepted or rejected <a class="reference external" href="https://github.com/owncloud/core/issues/31702">#31702</a></li>
+<li>Added public Webdav API for versions using a new “meta” DAV endpoint <a class="reference external" href="https://github.com/owncloud/core/pull/29207">#31729</a> <a class="reference external" href="https://github.com/owncloud/core/pull/29637">#29637</a></li>
+<li>Added support for retrieving file previews using Webdav endpoint <a class="reference external" href="https://github.com/owncloud/core/pull/29319">#29319</a> <a class="reference external" href="https://github.com/owncloud/core/pull/30192">#30192</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-8">
+<span id="id45"></span><h2>Changes in 10.0.8<a class="headerlink" href="#changes-in-10-0-8" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.8 that need your attention. You can also read <a class="reference external" href="https://owncloud.org/changelog/server/">the full ownCloud Server changelog</a> for further details on what has changed.</p>
+<div class="section" id="php-5-6-deprecation">
+<h3>PHP 5.6 deprecation<a class="headerlink" href="#php-5-6-deprecation" title="Permalink to this headline">¶</a></h3>
+<p>PHP 5.6/7.0 active support has ended on January 19th 2017 / December 3rd 2017 and security support <a class="reference external" href="https://secure.php.net/supported-versions.php">will be dropped by the end of 2018</a>. Many libraries used by ownCloud (including the QA-Suite <em>PHPUnit</em>) will therefore not be maintained actively anymore which forces ownCloud to drop support in one of the next minor server versions as well. Please make sure to upgrade to PHP 7.1 as soon as possible. See the <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/installation/system_requirements.html#officially-recommended-supported-options">system requirements in the ownCloud documentation</a>.</p>
+</div>
+<div class="section" id="personal-note-for-public-link-mail-notification">
+<h3>Personal note for public link mail notification<a class="headerlink" href="#personal-note-for-public-link-mail-notification" title="Permalink to this headline">¶</a></h3>
+<p>One of the usability enhancements of ownCloud Server 10.0.8 is the possibility for users to add a personal note when sending public links via mail. When using customized mail templates it is necessary to either adapt the shipped original template to the customizations or to add the <a class="reference external" href="https://github.com/owncloud/core/blob/stable10/core/templates/mail.php#L21-L25">code block</a> for the personal note to customized templates in order to display the personal note in the mail notifications.</p>
+</div>
+<div class="section" id="new-mail-notifications-feature">
+<span id="new-mail-notifications-feature-label"></span><h3>New mail notifications feature<a class="headerlink" href="#new-mail-notifications-feature" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud Server 10.0.8 introduces a new extensible notification framework. Apart from technical changes under the hood the Notifications app can now also send mails for all notifications that previously were only displayed within the web interfaces (notification bell) or on the Desktop client (notifications API) like incoming federated share or Custom Group notifications, for example. In the <em>“General”</em> settings section users can configure whether they want to receive mails for all notifications, only for those that require an action or decide not to get notifications via mail (by default users will only receive notifications when an action is required).</p>
+</div>
+<div class="section" id="ldap-related-improvements">
+<h3>LDAP-related improvements<a class="headerlink" href="#ldap-related-improvements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>When disabling or deleting user accounts in LDAP, the administrator can choose to either <em>delete</em> or <em>disable</em> respective accounts in ownCloud when executing <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code> (<code class="docutils literal"><span class="pre">-m,</span> <span class="pre">--missing-account-action=MISSING-ACCOUNT-ACTION</span></code>). User accounts that are disabled in ownCloud can now be re-enabled automatically when running <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code> if they are enabled in LDAP. When this behavior is desired administrators just need to add the <code class="docutils literal"><span class="pre">-r,</span> <span class="pre">--re-enable</span></code> option to their cron jobs or when manually executing <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code>.</li>
+<li>Furthermore it is now possible to execute <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code> only for <em>single</em> (<code class="docutils literal"><span class="pre">-u,</span> <span class="pre">--uid=UID</span></code>) or <em>seen</em> (<code class="docutils literal"><span class="pre">-s,</span> <span class="pre">--seenOnly</span></code>) users (users that are present in the database and have logged in at least once). These new options provide more granularity for administrators in terms of managing <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code> performance.</li>
+<li>Another notable change in behavior of <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code> is that administrators now have to explicitly specify the option <code class="docutils literal"><span class="pre">-c,</span> <span class="pre">--showCount</span></code> to display the number of users to be synchronized.</li>
+</ul>
+</div>
+<div class="section" id="new-events-for-audit-logging">
+<h3>New events for audit logging<a class="headerlink" href="#new-events-for-audit-logging" title="Permalink to this headline">¶</a></h3>
+<p>New events have been added to be used for audit logging, among others. These include <em>configuration changes</em> by administrators and users, <em>file comments</em> (<em>add/edit/delete</em>) and <em>updating existing public links</em>. When logs are forwarded to external analyzers like Splunk, administrators can check to add the new events. The latest version of the Auditing extension (<em>admin_audit</em>) is required.</p>
+</div>
+<div class="section" id="new-command-to-verify-and-repair-file-checksums">
+<h3>New command to verify and repair file checksums<a class="headerlink" href="#new-command-to-verify-and-repair-file-checksums" title="Permalink to this headline">¶</a></h3>
+<p>With ownCloud 10 file integrity checking by computing and matching checksums has been introduced to ensure that transferred files arrive at their target in the exact state as their origin. In some rare cases wrong checksums can be written to the database leading to synchronization issues with e.g. the Desktop Client. To mitigate such situations a new command <code class="docutils literal"><span class="pre">occ</span> <span class="pre">files:checksums:verify</span></code> has been introduced. The command recalculates checksums either for all files of a user or for files within a specified path, and compares them with the values in the database. Naturally the command also offers an option to repair incorrect checksum values (<code class="docutils literal"><span class="pre">-r,</span> <span class="pre">--repair</span></code>). Please check the available options by executing <code class="docutils literal"><span class="pre">occ</span> <span class="pre">files:checksums:verify</span> <span class="pre">--help</span></code>. Note: Executing this command might take some time depending on the file count.</p>
+</div>
+<div class="section" id="new-config-setting-to-specify-minimum-characters-for-sharing-autocomplete">
+<span id="min-chars-for-sharing-autocomplete-label"></span><h3>New config setting to specify minimum characters for sharing autocomplete<a class="headerlink" href="#new-config-setting-to-specify-minimum-characters-for-sharing-autocomplete" title="Permalink to this headline">¶</a></h3>
+<p>For security reasons the default value for minimum characters to trigger the sharing autocomplete mechanism has been set to “4” (previously it was set to “2”). This is to prevent people from easily downloading lots of email addresses or user names by requesting their first letters through the API. As it is a trade-off between security and usability for some scenarios this high security level might not be desirable. Therefore the value now is configurable via the <em>config.php</em> option <code class="docutils literal"><span class="pre">'user.search_min_length'</span> <span class="pre">=&gt;</span> <span class="pre">4,</span></code>. Please check which value fits your needs best.</p>
+</div>
+<div class="section" id="new-option-to-granularly-configure-public-link-password-enforcement">
+<h3>New option to granularly configure public link password enforcement<a class="headerlink" href="#new-option-to-granularly-configure-public-link-password-enforcement" title="Permalink to this headline">¶</a></h3>
+<p>With ownCloud 10 the <em>“File Drop”</em> feature has been merged with public link permissions. This kind of public link does not give recipients access to any content, but it gives them the possibility to “drop files”. As a result, it might not always be desirable to enforce password protection for such shares. Given that, passwords for public links can now be enforced based on permissions (<em>read-only, read &amp; write, upload only/File Drop</em>). Please check the administration settings <em>“Sharing”</em> section and configure as desired.</p>
+</div>
+<div class="section" id="new-option-to-exclude-apps-from-integrity-check">
+<h3>New option to exclude apps from integrity check<a class="headerlink" href="#new-option-to-exclude-apps-from-integrity-check" title="Permalink to this headline">¶</a></h3>
+<p>By verifying signature files the <em>integrity check</em> ensures that the code running in an ownCloud instance has not been altered by third parties. Naturally this check can only be successful for code that has been obtained from official ownCloud sources. When providing custom apps (like theme apps) that do not have a signature, the integrity check will fail and notify the administrator. These apps can now be excluded from the <em>integrity check</em> by using the <em>config.php</em> option <code class="docutils literal"><span class="pre">'integrity.ignore.missing.app.signature'</span> <span class="pre">=&gt;</span> <span class="pre">['app_id1',</span> <span class="pre">'app_id2',</span> <span class="pre">'app_id3'],</span></code>. See <em>config.sample.php</em> for more information.</p>
+</div>
+<div class="section" id="new-occ-command-to-modify-user-details">
+<h3>New occ command to modify user details<a class="headerlink" href="#new-occ-command-to-modify-user-details" title="Permalink to this headline">¶</a></h3>
+<p>It is now possible to modify user details like display names or mail addresses via the command <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:modify</span></code>. Please append <code class="docutils literal"><span class="pre">--help</span></code> for more information.</p>
+</div>
+<div class="section" id="occ-files-scan-can-now-be-executed-for-groups">
+<h3>occ files:scan can now be executed for groups<a class="headerlink" href="#occ-files-scan-can-now-be-executed-for-groups" title="Permalink to this headline">¶</a></h3>
+<p>Apart from using the <code class="docutils literal"><span class="pre">occ</span> <span class="pre">files:scan</span></code> command for <em>single users</em> and <em>whole instances</em> it can now be executed for <em>groups</em> using <code class="docutils literal"><span class="pre">-g,</span> <span class="pre">--groups=GROUPS</span></code>. Please append <code class="docutils literal"><span class="pre">--help</span></code> for more information.</p>
+</div>
+<div class="section" id="new-configurable-default-format-for-syslog">
+<h3>New configurable default format for syslog<a class="headerlink" href="#new-configurable-default-format-for-syslog" title="Permalink to this headline">¶</a></h3>
+<p>When using syslog as the log type (<code class="docutils literal"><span class="pre">'log_type'</span> <span class="pre">=&gt;</span> <span class="pre">'syslog',</span></code> in <em>config.php</em>) the default format has been changed to include <em>request IDs</em> for easier debugging. Additionally the log format has been made configurable using <code class="docutils literal"><span class="pre">'log.syslog.format'</span></code> in <em>config.php</em>. If you require a certain log format, please check the new format and <em>config.sample.php</em> on how to change it.</p>
+</div>
+<div class="section" id="new-config-option-to-enable-fallback-to-http-for-federated-shares">
+<h3>New config option to enable fallback to HTTP for federated shares<a class="headerlink" href="#new-config-option-to-enable-fallback-to-http-for-federated-shares" title="Permalink to this headline">¶</a></h3>
+<p>For security reasons federated sharing (sharing between different ownCloud instances) strictly requires HTTPS (SSL/TLS). When this behavior is undesired the insecure fallback to HTTP needs to be enabled explicitly by setting <code class="docutils literal"><span class="pre">'sharing.federation.allowHttpFallback'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span></code> to <code class="docutils literal"><span class="pre">true</span></code> in <em>config.php</em>.</p>
+</div>
+<div class="section" id="migration-related-to-auth-tokens-app-passwords">
+<h3>Migration related to auth_tokens (app passwords)<a class="headerlink" href="#migration-related-to-auth-tokens-app-passwords" title="Permalink to this headline">¶</a></h3>
+<p>Upgrading to 10.0.8 includes migrations related to <em>auth_tokens</em> (<em>app passwords</em>). When users have created <em>app passwords</em> as separate passwords for their clients the upgrade duration will increase depending on user count. Please consider this when planning the upgrade.</p>
+</div>
+<div class="section" id="changed-behavior-of-e-mail-autocomplete-for-public-link-share-dialog">
+<h3>Changed behavior of e-mail autocomplete for public link share dialog<a class="headerlink" href="#changed-behavior-of-e-mail-autocomplete-for-public-link-share-dialog" title="Permalink to this headline">¶</a></h3>
+<p>When the <em>“Sharing”</em> settings option <code class="docutils literal"><span class="pre">Allow</span> <span class="pre">users</span> <span class="pre">to</span> <span class="pre">send</span> <span class="pre">mail</span> <span class="pre">notifications</span> <span class="pre">for</span> <span class="pre">shared</span> <span class="pre">files</span></code> for public links is enabled, users can send public links via mail from within the web interface. The behavior of the autocomplete when entering mail addresses in the public link share dialog has been changed. Previously the autocomplete queried for local users, users from federated address books and contacts from CardDAV/Contacts App. As public links are not intended for sharing between ownCloud users (local/federated), those have been removed. Contacts synchronized via CardDAV or created in the Contacts app will still appear as suggestions.</p>
+</div>
+<div class="section" id="notifications-sent-by-occ-can-now-include-links">
+<h3>Notifications sent by <em>occ</em> can now include links<a class="headerlink" href="#notifications-sent-by-occ-can-now-include-links" title="Permalink to this headline">¶</a></h3>
+<p>The command <code class="docutils literal"><span class="pre">occ</span> <span class="pre">notifications:generate</span></code> can be used to send notifications to individual users or groups. With 10.0.8 it is also capable of including links to such notifications using the <code class="docutils literal"><span class="pre">-l,</span> <span class="pre">--link=LINK</span></code> option. Please append <code class="docutils literal"><span class="pre">--help</span></code> for more information. There is also <a class="reference external" href="https://marketplace.owncloud.com/apps/announcementcenter">Announcementcenter</a> to conduct such tasks from the web interface but it is currently limited to send notifications to all users. For now administrators can use the <em>occ</em> command if more granularity is required.</p>
+</div>
+<div class="section" id="global-option-for-cors-domains">
+<h3>Global option for CORS domains<a class="headerlink" href="#global-option-for-cors-domains" title="Permalink to this headline">¶</a></h3>
+<p>For security reasons ownCloud has a <em>Same-Origin-Policy</em> that prevents requests to ownCloud resources from other domains than the domain the backend server is hosted on. If ownCloud resources should be accessible from other domains, e.g. for a separate web frontend operated on a different domain, administrators can now globally specify policy exceptions via <em>CORS (Cross-Origin Resource Sharing)</em> using <code class="docutils literal"><span class="pre">'cors.allowed-domains'</span></code> in <em>config.php</em>. Please check <em>config.sample.php</em> for more information.</p>
+</div>
+<div class="section" id="mail-template-editor-is-now-unbundled">
+<h3>Mail Template Editor is now unbundled<a class="headerlink" href="#mail-template-editor-is-now-unbundled" title="Permalink to this headline">¶</a></h3>
+<p>The Mail Template Editor has been unbundled from the default apps and is not shipped with the Server anymore. When upgrading ownCloud will try to automatically <a class="reference external" href="https://marketplace.owncloud.com/apps/templateeditor">install the latest version from the ownCloud Marketplace</a> in case the app was installed before. If this is not possible (e.g. no internet connection or clustered setup) you will either need to disable the app (<code class="docutils literal"><span class="pre">occ</span> <span class="pre">app:disable</span> <span class="pre">templateeditor</span></code>) or <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/installation/apps_management_installation.html?highlight=install%20apps#manually-installing-apps">download and install it manually</a>.
+Solved known issues
+~~~~~~~~~~~~~~~~~~~
+- Bogus “Login failed” log entries have been removed (see <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/release_notes.html#changes-in-10-0-7">10.0.7 known issues</a>)
+- The <em>Provisioning API</em> can now properly set default or zero quota
+- User quota settings can be queried through <em>Provisioning API</em>
+- A regression preventing a user from setting their e-mail address in the settings page has been fixed
+- File deletion as a guest user works correctly (trash bin permissions are checked correctly)</p>
+</div>
+<div class="section" id="id48">
+<h3>Known issues<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Issues with multiple theme apps and Mail Template Editor</li>
+</ul>
+<p>As of ownCloud Server 10.0.5 it is only possible to have one theme app enabled simultaneously. When a theme app is enabled and the administrator attempts to enable a second one this will result in an error. However, when also having the Mail Template Editor enabled in this scenario the administrators <em>“General”</em> settings section <a class="reference external" href="https://github.com/owncloud/core/issues/31134">will be displayed incorrectly</a>. As a remedy administrators can either uninstall the second theme app or disable the Mail Template Editor app.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">occ</span> <span class="pre">transfer:ownership</span></code> <a class="reference external" href="https://github.com/owncloud/core/issues/31150">does not transfer public link shares if they were created by the target user (reshare)</a>.</li>
+</ul>
+</div>
+<div class="section" id="id49">
+<h3>For developers<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The global JS variable “oc_current_user” was removed. Please use the public method “OC.getCurrentUser()” instead.</li>
+<li>Lots of new Symfony events have been added for various user actions, see changelog for details. Documentation ticket: &lt;<a class="reference external" href="https://github.com/owncloud/documentation/issues/3738">https://github.com/owncloud/documentation/issues/3738</a>&gt;`_</li>
+<li>When requesting a private link there is a new HTTP response header “Webdav-Location” that contains the Webdav path to the requested file while the “Location” still points at the frontend URL for viewing the file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-7">
+<span id="id50"></span><h2>Changes in 10.0.7<a class="headerlink" href="#changes-in-10-0-7" title="Permalink to this headline">¶</a></h2>
+<p>ownCloud Server 10.0.7 is a hotfix follow-up release that takes care of an <a class="reference external" href="https://github.com/owncloud/core/issues/30157">issue regarding OAuth authentication</a>.</p>
+<p>Please consider the ownCloud Server 10.0.5 release notes.</p>
+<div class="section" id="id51">
+<h3>Known issues<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>When using application passwords, <a class="reference external" href="https://github.com/owncloud/core/issues/30157">log entries related to “Login Failed” will appear</a> and can be ignored. For people using fail2ban or other account locking tools based on log parsing, please apply <a class="reference external" href="https://github.com/owncloud/core/commit/50c78a4bf4c2ab4194f40111b8a34b7e9cc17a14.patch">this patch</a> with <code class="code docutils literal"><span class="pre">patch</span> <span class="pre">-p1</span> <span class="pre">&lt;</span> <span class="pre">50c78a4bf4c2ab4194f40111b8a34b7e9cc17a14.patch</span></code> (<a class="reference external" href="https://github.com/owncloud/core/pull/30591">original pull request here</a>).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-6">
+<span id="id52"></span><h2>Changes in 10.0.6<a class="headerlink" href="#changes-in-10-0-6" title="Permalink to this headline">¶</a></h2>
+<p>ownCloud Server 10.0.6 is a hotfix follow-up release that takes care of an issue during the build process (<a class="reference external" href="https://github.com/owncloud/core/pull/30265">https://github.com/owncloud/core/pull/30265</a>). Please consider the ownCloud Server 10.0.5 release notes.</p>
+</div>
+<div class="section" id="changes-in-10-0-5">
+<span id="id53"></span><h2>Changes in 10.0.5<a class="headerlink" href="#changes-in-10-0-5" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.5 that need your attention. You can also read <a class="reference external" href="https://owncloud.org/changelog/server/">the full ownCloud Server changelog</a> for further details on what has changed.</p>
+<div class="section" id="technology-preview-for-php-7-2-support">
+<h3>Technology preview for PHP 7.2 support<a class="headerlink" href="#technology-preview-for-php-7-2-support" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud catches up with new web technologies. This has mainly been introduced for the open-source community to test and give feedback. PHP 7.2 is not yet supported nor recommended for production scenarios. ownCloud is going to fully support PHP 7.2 with the next major release.</p>
+</div>
+<div class="section" id="php-intl-now-is-a-hard-requirement">
+<h3>php-intl now is a hard requirement<a class="headerlink" href="#php-intl-now-is-a-hard-requirement" title="Permalink to this headline">¶</a></h3>
+<p>Please make sure to have the PHP extension installed before upgrading.</p>
+</div>
+<div class="section" id="changed-only-allow-a-single-active-theme-app">
+<h3>Changed: Only allow a single active theme app<a class="headerlink" href="#changed-only-allow-a-single-active-theme-app" title="Permalink to this headline">¶</a></h3>
+<p>The theming behavior has been changed so that only a single theme can be active concurrently. This change ensures that themes can not interfere in any way (e.g., override default theming in an arbitrary order). Please make sure to have the desired theme enabled after upgrading.</p>
+</div>
+<div class="section" id="removed-old-dropbox-external-storage-backend-dropbox-api-v1">
+<h3>Removed old Dropbox external storage backend (Dropbox API v1)<a class="headerlink" href="#removed-old-dropbox-external-storage-backend-dropbox-api-v1" title="Permalink to this headline">¶</a></h3>
+<p>Please switch to the new <em>External Storage: Dropbox</em> app (<a class="reference external" href="https://marketplace.owncloud.com/apps/files_external_dropbox">https://marketplace.owncloud.com/apps/files_external_dropbox</a>) with Dropbox API v2 support to continue providing Dropbox external storages to your users.</p>
+</div>
+<div class="section" id="fixed-only-set-cors-headers-on-webdav-endpoint-when-origin-header-is-specified">
+<h3>Fixed: Only set CORS headers on WebDAV endpoint when Origin header is specified<a class="headerlink" href="#fixed-only-set-cors-headers-on-webdav-endpoint-when-origin-header-is-specified" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud Server 10.0.4 known issue is resolved.</p>
+</div>
+<div class="section" id="fixes-and-improvements-for-the-mail-template-editor">
+<h3>Fixes and improvements for the Mail Template Editor<a class="headerlink" href="#fixes-and-improvements-for-the-mail-template-editor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Known issues are resolved: Mail Template Editor works again, got support for app themes and additional templates were added for customization.</li>
+<li>Mail Template Editor is still bundled with ownCloud Server but will soon be released as a separate app to ownCloud Marketplace.</li>
+<li>Changelog: <a class="reference external" href="https://github.com/owncloud/templateeditor/blob/release/0.2.0/CHANGELOG.md">https://github.com/owncloud/templateeditor/blob/release/0.2.0/CHANGELOG.md</a></li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h3>Known issues<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>When using application passwords, <a class="reference external" href="https://github.com/owncloud/core/issues/30157">log entries related to “Login Failed” will appear</a>, please upgrade to 10.0.7 and check the fix mentionned in its release notes.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-4">
+<span id="id56"></span><h2>Changes in 10.0.4<a class="headerlink" href="#changes-in-10-0-4" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues in ownCloud Server 10.0.4 that need your attention. You can also read <a class="reference external" href="https://github.com/owncloud/core/blob/stable10/CHANGELOG.md">the full ownCloud Server 10.0.4 changelog</a> for further details on what has changed.</p>
+<div class="section" id="more-granular-sharing-restrictions">
+<h3>More granular sharing restrictions<a class="headerlink" href="#more-granular-sharing-restrictions" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Restrict users to only share with users in their groups</em>” option, in the Sharing settings, restricts users to only share with groups which they are a member of, while simultaneously prohibiting sharing with single users that do not belong to any of the users’ groups.</p>
+<p>To make this more granular, we split this option into two parts and added “<em>Restrict users to only share with groups they are member of</em>”, which differentiates between users and groups. Doing so makes it possible to restrict users from sharing with all users of an installation, limiting them to only being able to share with groups which they are a member of, and vice versa.</p>
+</div>
+<div class="section" id="configurable-solution-for-indistinguishable-user-display-names">
+<h3>Configurable solution for indistinguishable user display names<a class="headerlink" href="#configurable-solution-for-indistinguishable-user-display-names" title="Permalink to this headline">¶</a></h3>
+<p>The ownCloud sharing dialog displays users according to their display name. As users can choose their display name in self-service (which can be disabled in <cite>config.php</cite>) and display names are not unique, it is possible that a user can’t distinguish sharing results. To cover this case the displayed user identifiers are now configurable. In the Sharing settings administrators can now configure the display of either mail addresses or user ids.</p>
+</div>
+<div class="section" id="added-occ-files-scan-repair-mode-to-repair-filecache-inconsistencies">
+<h3>Added “occ files:scan” repair mode to repair filecache inconsistencies<a class="headerlink" href="#added-occ-files-scan-repair-mode-to-repair-filecache-inconsistencies" title="Permalink to this headline">¶</a></h3>
+<p>We recommend to use this command when directed to do so in the upgrade process.
+Please refer to <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/configuration/server/occ_command.html?highlight=occ#the-repair-option">the occ command’s files:scan –repair documentation</a> for more information.</p>
+</div>
+<div class="section" id="detailed-mode-for-occ-security-routes">
+<h3>Detailed mode for “occ security:routes”<a class="headerlink" href="#detailed-mode-for-occ-security-routes" title="Permalink to this headline">¶</a></h3>
+<p>Administrators can use the output of this command when using a network firewall, to check the appropriateness of configured rules or to get assistance when setting up.</p>
+</div>
+<div class="section" id="added-mode-of-operations-to-differentiate-between-single-instance-or-clustered-setup">
+<h3>Added mode of operations to differentiate between single-instance or clustered setup<a class="headerlink" href="#added-mode-of-operations-to-differentiate-between-single-instance-or-clustered-setup" title="Permalink to this headline">¶</a></h3>
+<p>As ownCloud needs to behave differently when operating in a clustered setup versus a single instance setup, the new <cite>config.php</cite> option <code class="docutils literal"><span class="pre">operation.mode</span></code> has been added.
+It can take one of two values: <code class="docutils literal"><span class="pre">single-instance</span></code> and <code class="docutils literal"><span class="pre">clustered-instance</span></code>.
+For example: <code class="docutils literal"><span class="pre">'operation.mode'</span> <span class="pre">=&gt;</span> <span class="pre">'clustered-instance',</span></code>.</p>
+<p>Currently the Market App (ownCloud Marketplace integration) does not support clustered setups and can do harm when used for installing or updating apps.
+The new config setting prevents this and other actions that are undesired in cluster mode.</p>
+<p><strong>When operating in a clustered setup, it is mandatory to set this option.</strong>
+Please check <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html#mode-of-operation">the config_sample_php_parameters documentation</a> for more information.</p>
+</div>
+<div class="section" id="added-occ-dav-cleanup-chunks-command-to-clean-up-expired-uploads">
+<h3>Added occ <a class="reference external" href="dav:cleanup-chunks">dav:cleanup-chunks</a> command to clean up expired uploads<a class="headerlink" href="#added-occ-dav-cleanup-chunks-command-to-clean-up-expired-uploads" title="Permalink to this headline">¶</a></h3>
+<p>When file uploads are interrupted for any reason, already uploaded file parts (chunks) remain in the underlying storage so that the file upload can resume in a future upload attempt.
+However, resuming an upload is only possible until the partial upload is expired and deleted, respectively.</p>
+<p>To clean up chunks (expire and delete) originating from unfinished uploads, administrators can use this newly introduced command.
+The default expiry time is two days, but it can be specified as a parameter to the command.
+<strong>It is recommended to configure CRON to execute this background job regularly</strong>.</p>
+<p>It is not included in the regular ownCloud background jobs so that the administrators have more flexibility in scheduling it.
+Please check <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/configuration/server/background_jobs_configuration.html#cleanupchunks">the background jobs configuration documentation</a> for more information.</p>
+</div>
+<div class="section" id="administrators-can-now-exclude-files-from-integrity-check-in-config-php">
+<h3>Administrators can now exclude files from integrity check in config.php<a class="headerlink" href="#administrators-can-now-exclude-files-from-integrity-check-in-config-php" title="Permalink to this headline">¶</a></h3>
+<p>When administrators did intentional changes to the ownCloud code they now have the ability to exclude certain files from the integrity checker.
+Please check “config.sample.php” for the usage of <code class="docutils literal"><span class="pre">'integrity.excluded.files'</span></code>.</p>
+</div>
+<div class="section" id="modification-time-value-of-files-is-now-64-bits-long">
+<h3>Modification time value of files is now 64 bits long<a class="headerlink" href="#modification-time-value-of-files-is-now-64-bits-long" title="Permalink to this headline">¶</a></h3>
+<p>When upgrading to 10.0.4 migrations may increase update duration dependent on number of files.</p>
+</div>
+<div class="section" id="updated-minimum-supported-browser-versions">
+<h3>Updated minimum supported browser versions<a class="headerlink" href="#updated-minimum-supported-browser-versions" title="Permalink to this headline">¶</a></h3>
+<p>Users with outdated browsers might get warnings.
+See <a class="reference internal" href="installation/system_requirements.html#supported-browsers-label"><span class="std std-ref">the list of supported browser versions</span></a>.</p>
+</div>
+<div class="section" id="id57">
+<h3>Known issues<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>When using application passwords, <a class="reference external" href="https://github.com/owncloud/core/issues/30157">log entries related to “Login Failed” will appear</a>, please upgrade to 10.0.7 and check the fix mentioned in its release notes.</li>
+</ul>
+</div>
+<div class="section" id="resolved-known-issues">
+<h3>10.0.3 resolved known issues<a class="headerlink" href="#resolved-known-issues" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/owncloud/core/issues/29156">SFTP external storages with key pair mode work again</a></li>
+<li><a class="reference external" href="https://github.com/owncloud/core/issues/29240">Added support for MariaDB 10.2.7+</a></li>
+<li><a class="reference external" href="https://github.com/owncloud/core/issues/29049">Encryption panel in admin settings fixed to properly detect current mode after upgrade to ownCloud 10</a></li>
+<li><a class="reference external" href="https://github.com/owncloud/core/pull/29261">Removed double quotes from boolean values in status.php output</a></li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>Known issues<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Impersonate app 0.1.1 does not work with ownCloud Server 10.0.4. Please update to <a class="reference external" href="https://marketplace.owncloud.com/apps/impersonate">Impersonate 0.1.2</a> to be able to use the feature with ownCloud 10.0.4.</li>
+<li><a class="reference external" href="https://github.com/owncloud/core/issues/29793">Mounting ownCloud storage via davfs does not work</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-3">
+<span id="id60"></span><h2>Changes in 10.0.3<a class="headerlink" href="#changes-in-10-0-3" title="Permalink to this headline">¶</a></h2>
+<p>Dear ownCloud administrator, please find below the changes and known issues of ownCloud Server 10.0.3 that need your attention:</p>
+<p><strong>The full ownCloud Server 10.0.3 changelog can be found here: https://github.com/owncloud/core/blob/stable10/CHANGELOG.md</strong></p>
+<ul class="simple">
+<li>It is now possible to directly upgrade from 8.2.11 to 10.0.3 in a single upgrade process.</li>
+<li>Added occ command to list routes which can help administrators setting up network firewall rules.</li>
+<li>‘occ upgrade’ is now verbose by default. Administrators may need to adjust scripts for automated setup/upgrade procedures that rely on ‘occ upgrade’ outputs.</li>
+<li><dl class="first docutils">
+<dt>Reenabled medial search by default</dt>
+<dd><ul class="first last">
+<li>Enables partial search in sharing dialog autocompletion (e.g. a user wants to share with the user “Peter”: Entering “pe” will find the user, entering “ter” will only find the user if the option is enabled)</li>
+<li>New default is set to enabled as there is no performance impact anymore due to the introduction of the user account table in ownCloud Server 10.0.1.</li>
+<li>Please check the setting. You need to disable it explicitly if the functionality is undesired.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>All database columns that use the fileid have been changed to bigint (64-bits). For large instances it is therefore highly recommended to upgrade in order to avoid reaching limits.</li>
+<li><dl class="first docutils">
+<dt>Upgrade and Market app information</dt>
+<dd><ul class="first last">
+<li>Removed “appstoreenabled” setting from config.php. If you want to disable the app store / Marketplace integration, please disable the Market app.</li>
+<li>Added setting ‘upgrade.automatic-app-update’ to config.php to disable automatic app updates with ‘occ upgrade’ when Market app is enabled</li>
+<li>On upgrade from OC &lt; 10 the Market app won’t be enabled if “appstoreenabled”  was false in config.php.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Clustering: Better support of read only config file and apps folder</li>
+<li>Default minimum desktop client version in config.php is now 2.2.4.</li>
+</ul>
+<p><strong>Known issues</strong></p>
+<ul class="simple">
+<li>Added quotes in boolean result values of yourdomain/status.php output</li>
+<li>Setting up SFTP external storages with keypairs does not work. <a class="reference external" href="https://github.com/owncloud/core/issues/28669">https://github.com/owncloud/core/issues/28669</a></li>
+<li>If you have storage encryption enabled, the web UI for encryption will ask again what mode you want to operate with even if you already had a mode selected before. The administrator must select the mode they had selected before. <a class="reference external" href="https://github.com/owncloud/core/issues/28985">https://github.com/owncloud/core/issues/28985</a></li>
+<li>Uploading a folder in Chrome in a way that would overwrite an existing folder can randomly fail (race conditions). <a class="reference external" href="https://github.com/owncloud/core/issues/28844">https://github.com/owncloud/core/issues/28844</a></li>
+<li>Federated shares can not be accepted in WebUI for SAML/Shibboleth users</li>
+<li>For <strong>MariaDB users</strong>: Currently, Doctrine has no support for the breaking changes introduced in MariaDB 10.2.7, and above. If you are on MariaDB 10.2.7 or above, and have encountered the message “1067 Invalid default value for ‘lastmodified’”, <a class="reference external" href="https://gist.github.com/VicDeo/bb0689104baeb5ad2371d3fdb1a013ac/raw/04bb98e08719a04322ea883bcce7c3e778e3afe1/DoctrineMariaDB102.patch">please apply this patch</a> to Doctrine. We expect this bug to be fixed in ownCloud 10.0.4. For more information on the bug, <a class="reference external" href="https://github.com/owncloud/core/issues/28695">check out the related issue</a>.</li>
+<li>When updating from ownCloud &lt; 9.0 the CLI output may hang for some time (potentially up to 20 minutes for big instances) whilst sharing is updated. This can happen in a variety of places during the upgrade and is to be expected. Please be patient as the update is performed and the output will continue as normal.</li>
+</ul>
+</div>
+<div class="section" id="changes-in-10-0-1">
+<span id="id61"></span><h2>Changes in 10.0.1<a class="headerlink" href="#changes-in-10-0-1" title="Permalink to this headline">¶</a></h2>
+<p>Hello ownCloud administrator, please read carefully to be prepared for updates and operations of your ownCloud setup.</p>
+<ul class="simple">
+<li><strong>A new update path:</strong> ownCloud 10.0.1 contains migration logic to allow upgrading directly from 9.0 to 10.0.1.</li>
+<li><strong>Marketplace:</strong> Please create an account for <a class="reference external" href="https://marketplace.owncloud.com">the new marketplace</a>.
+Access to optional ownCloud extensions and enterprise apps will be provided by the marketplace from now on.
+Currently some apps are still shipped with the tarballs / packages and will be moved to the marketplace in the near future.</li>
+<li><strong>Apps:</strong> <em>LDAP</em>, <em>gallery</em>, <em>activity</em>, <em>PDF viewer</em>, and <em>text editor</em> were moved to the marketplace.</li>
+<li><strong>Updates with marketplace:</strong> During the upgrade, enabled apps are also updated by fetching new versions directly from the marketplace. If during an update, sources for some apps are missing, and the ownCloud instance has no access to the marketplace, the administrator needs to disable these apps or manually download and provide the apps before updating.</li>
+<li><strong>App updates:</strong> Third party apps are not disabled anymore when upgrading.</li>
+<li><strong>Upgrade migration test:</strong> The upgrade migration test has been removed; see <a class="reference internal" href="maintenance/manual_upgrade.html#migration-test-label"><span class="std std-ref">Test the Upgrade</span></a>. (Option <code class="docutils literal"><span class="pre">--skip-migration-tests</span></code> removed from update command).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The template editor app is not included in the 10.0.1 release due to technical reasons, but will be distributed via the marketplace. However, you can still <a class="reference internal" href="configuration/server/email_configuration.html#using-email-templates-label"><span class="std std-ref">edit template files manually</span></a>.</p>
+</div>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Settings design:</strong> Admin, personal pages, and app management are now merged together into a single “Settings” entry.</li>
+<li><strong>Disable users:</strong> The ability to disable users in the user management panel has been added.</li>
+<li><strong>Password Policy:</strong> Rules now apply not only to link passwords but also to user passwords.</li>
+</ul>
+</div>
+<div class="section" id="infrastructure">
+<h3>Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Client:</strong> You need to update to <a class="reference external" href="https://doc.owncloud.com/desktop/latest/">the latest desktop client version</a>.</li>
+<li><strong>Cron jobs:</strong> The user account table has been reworked. As a result the Cron job for <a class="reference external" href="configuration/server/occ_command.html#syncing-user-accounts">syncing user backends</a>, e.g., LDAP, needs to be configured.</li>
+<li><strong>Logfiles:</strong> App logs, e.g., auditing and owncloud.log, can now be split, see: <a class="reference external" href="https://doc.owncloud.org/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html#logging">https://doc.owncloud.org/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html#logging</a>.</li>
+</ul>
+</div>
+<div class="section" id="id62">
+<h3>Known Issues<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="converting-the-database-type-doesn-t-work">
+<h4>Converting the Database Type doesn’t work<a class="headerlink" href="#converting-the-database-type-doesn-t-work" title="Permalink to this headline">¶</a></h4>
+<p>Converting a Database from e.g. <code class="docutils literal"><span class="pre">SQLite</span></code> to <code class="docutils literal"><span class="pre">MySQL</span></code> or <code class="docutils literal"><span class="pre">PostgreSQL</span></code> with the <code class="docutils literal"><span class="pre">occ</span> <span class="pre">db:convert-type</span></code> currently doesn’t work. See <a class="reference external" href="https://github.com/owncloud/core/issues/27075">https://github.com/owncloud/core/issues/27075</a> for more info.</p>
+</div>
+<div class="section" id="installing-the-ldap-user-backend-will-trigger-the-installation-twice">
+<h4>Installing the LDAP user backend will trigger the installation twice<a class="headerlink" href="#installing-the-ldap-user-backend-will-trigger-the-installation-twice" title="Permalink to this headline">¶</a></h4>
+<p>This causes an SQL error such as the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo -u www-data ./occ market:install user_ldap</span>
+
+<span class="go">user_ldap: Installing new app ...</span>
+<span class="go">user_ldap: An exception occurred while executing &#39;CREATE TABLE `ldap_user_mapping` (`ldap_dn` VARCHAR(255) DEFAULT &#39;&#39; NOT NULL, `owncloud_name` VARCHAR(255) DEFAULT &#39;&#39; NOT NULL, `directory_uuid` VARCHAR(255) DEFAULT &#39;&#39; NOT NULL, UNIQUE INDEX ldap_dn_users (`ldap_dn`), PRIMARY KEY(`owncloud_name`)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin ENGINE = InnoDB ROW_FORMAT = compressed&#39;:</span>
+
+<span class="go">SQLSTATE[42S01]: Base table or view already exists: 1050 Table &#39;ldap_user_mapping&#39; already exists</span>
+</pre></div>
+</div>
+<p>This can be safely ignored.
+And the app can be used after enabling it.
+Please be aware that when upgrading an existing ownCloud installation that already has <code class="docutils literal"><span class="pre">user_ldap</span></code> this error will not occur.
+It was fixed by <a class="reference external" href="https://github.com/owncloud/core/pull/27982">https://github.com/owncloud/core/pull/27982</a>.
+However, this could happen for other apps as well that use <code class="docutils literal"><span class="pre">database.xml</span></code>.
+If it does please use the same workaround.</p>
+</div>
+<div class="section" id="saml-authentication-only-works-for-users-synced-with-occ-user-sync">
+<h4>SAML authentication only works for users synced with <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span></code><a class="headerlink" href="#saml-authentication-only-works-for-users-synced-with-occ-user-sync" title="Permalink to this headline">¶</a></h4>
+<p>We will re-enable SSO for LDAP users with an update of the app in the market after completing internal testing.</p>
+</div>
+<div class="section" id="the-web-ui-prevents-uninstalling-apps-marked-as-shipped-e-g-user-ldap">
+<h4>The web UI prevents uninstalling apps marked as shipped, e.g., <code class="docutils literal"><span class="pre">user_ldap</span></code><a class="headerlink" href="#the-web-ui-prevents-uninstalling-apps-marked-as-shipped-e-g-user-ldap" title="Permalink to this headline">¶</a></h4>
+<p>To uninstall, disable the app with occ and rm the app directory.</p>
+</div>
+<div class="section" id="moving-files-around-in-external-storages-outside-of-owncloud-will-invalidate-the-metadata">
+<h4>Moving files around in external storages outside of ownCloud will invalidate the metadata<a class="headerlink" href="#moving-files-around-in-external-storages-outside-of-owncloud-will-invalidate-the-metadata" title="Permalink to this headline">¶</a></h4>
+<p>All shares, comments, and tags on the moved files will be lost.</p>
+</div>
+<div class="section" id="existing-ldap-users-only-show-up-in-the-user-management-page-and-the-share-dialog-after-being-synced">
+<h4>Existing LDAP users only show up in the user management page and the share dialog after being synced<a class="headerlink" href="#existing-ldap-users-only-show-up-in-the-user-management-page-and-the-share-dialog-after-being-synced" title="Permalink to this headline">¶</a></h4>
+<p>The account table introduced in ownCloud 10.0.0 significantly reduces LDAP communication overhead.
+Password checks are yet to be accounted for.
+LDAP user metadata in the account table will be updated when users log in or when the administrator runs <code class="docutils literal"><span class="pre">occ</span> <span class="pre">user:sync</span> <span class="pre">&quot;OCA\User_LDAP\User_Proxy&quot;</span></code>.
+We recommend <a class="reference internal" href="configuration/server/background_jobs_configuration.html#cron-job-label"><span class="std std-ref">setting up a nightly Cron job</span></a> to keep metadata of users not actively logging in up to date.</p>
+</div>
+<div class="section" id="error-pages-will-not-use-the-configured-theme-but-will-instead-fall-back-to-the-community-default">
+<h4>Error pages will not use the configured theme but will instead fall back to the community default<a class="headerlink" href="#error-pages-will-not-use-the-configured-theme-but-will-instead-fall-back-to-the-community-default" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="changes-in-10-0-0">
+<span id="id63"></span><h2>Changes in 10.0.0<a class="headerlink" href="#changes-in-10-0-0" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PHP 7.1 support added (supported PHP versions are 5.6 and 7.0+)</li>
+<li>The upgrade migration test has been removed; see <a class="reference internal" href="maintenance/manual_upgrade.html#migration-test-label"><span class="std std-ref">Test the Upgrade</span></a>. (Option <code class="docutils literal"><span class="pre">&quot;--skip-migration-tests&quot;</span></code> removed from update command)</li>
+<li>Requires to use the latest desktop client version 2.3</li>
+<li>Third party apps are not disabled anymore when upgrading</li>
+<li>User account table has been reworked. CRON job for syncing with e.g. LDAP needs to be configured (see <a class="reference external" href="https://doc.owncloud.com/server/latest/admin_manual/configuration/server/occ_command.html#syncing-user-accounts">https://doc.owncloud.com/server/latest/admin_manual/configuration/server/occ_command.html#syncing-user-accounts</a>)</li>
+<li>LDAP app is not released with ownCloud 10.0.0 and will be released on the marketplace after some more QA</li>
+<li>files_drop app is not shipped anymore as it’s integrated with core now. Since migrations are not possible you will have to reconfigure your drop folders (in the ‘Public Link’ section of the sharing dialog of the respective folders).</li>
+<li>SAML/Shibboleth with device-specific app passwords: No migration possible; Users need to regenerate device-specific app passwords in the WebUI and enter those in their clients.</li>
+<li>For security reasons status.php can now be configured in config.php to not return server version information anymore (‘version.hide’; default ‘false’). As clients still depend on version information this is not yet recommended. The default will change to ‘true’ with 10.0.2 once clients are ready.</li>
+<li>Order of owncloud.log entries changed a bit, please review any application (e.g. fail2ban rules) relying on this file</li>
+<li><dl class="first docutils">
+<dt>External storages</dt>
+<dd><ul class="first last">
+<li>FTP external storage moved to a separate app (<a class="reference external" href="https://marketplace.owncloud.com/apps/files_external_ftp">https://marketplace.owncloud.com/apps/files_external_ftp</a>)</li>
+<li>“Local” storage type can now be disabled by sysadmin in config.php (to prevent users mounting the local file system)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Full changelog: <a class="reference external" href="https://github.com/owncloud/core/wiki/ownCloud-10.0-Features">https://github.com/owncloud/core/wiki/ownCloud-10.0-Features</a></p>
+</div>
+<div class="section" id="changes-in-9-1">
+<span id="id64"></span><h2>Changes in 9.1<a class="headerlink" href="#changes-in-9-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>General</strong></p>
+<ul class="simple">
+<li>Background jobs (cron) can now run in parallel</li>
+<li>Update notifications in client via API - You can now be notified in your desktop client
+about available updates for core and apps. The notifications are made available via the
+notifications API.</li>
+<li>Multi-bucket support for primary objectstore integration</li>
+<li>Support for Internet Explorer below version 11 was dropped</li>
+<li>Symlinks pointing outside of the data directory are disallowed. Please use the <a class="reference internal" href="configuration/files/external_storage_configuration_gui.html"><span class="doc">Configuring External Storage (GUI)</span></a>
+with the <a class="reference internal" href="configuration/files/external_storage/local.html"><span class="doc">Local</span></a> storage backend instead.</li>
+<li>Removed <code class="docutils literal"><span class="pre">dav:migrate-calendars</span></code> and <code class="docutils literal"><span class="pre">dav:migrate-addressbooks</span></code> commands for <code class="docutils literal"><span class="pre">occ</span></code>.
+Users planning to upgrade from ownCloud 9.0 or below to ownCloud 9.1 needs to make sure that their
+calendars and address books are correctly migrated <strong>before</strong> continuing to upgrade to 9.1.</li>
+</ul>
+<p><strong>Authentication</strong></p>
+<ul class="simple">
+<li>Pluggable authentication: plugin system that supports different authentication schemes</li>
+<li>Token-based authentication</li>
+<li>Ability to invalidate sessions</li>
+<li>List connected browsers/devices in the personal settings page. Allows the user to disconnect browsers/devices.</li>
+<li>Device-specific passwords/tokens, can be generated in the personal page and revoked</li>
+<li>Disable users and automatically revoke their sessions</li>
+<li>Detect disabled LDAP users or password changes and revoke their sessions</li>
+<li>Log in with email address</li>
+<li>Configuration option to enforce token-based login outside the web UI</li>
+<li>Two Factor authentication plug-in system</li>
+<li>OCC command added to (temporarily) disable/enable two-factor authentication for single users</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The current desktop and mobile client versions do not support two-factor yet, this
+will be added later. It is already possible to generate a device specific password and
+enter that in the current client versions.</p>
+</div>
+<p><strong>Files app</strong></p>
+<ul class="simple">
+<li>Ability to toggle displaying hidden files</li>
+<li>Remember sort order</li>
+<li>Permalinks for internal shares</li>
+<li>Visual cue when dragging in files app</li>
+<li>Autoscroll file list when dragging files</li>
+<li>Upload progress estimate</li>
+</ul>
+<p><strong>Federated sharing</strong></p>
+<ul class="simple">
+<li>Ability to create federated shares with CRUDS permissions</li>
+<li>Resharing a federated share does not create a chain of shares any more but connects the
+share owner’s server to the reshare recipient</li>
+</ul>
+<p><strong>External storage</strong></p>
+<ul class="simple">
+<li>UTF-8 NFD encoding compatibility support for NFD file names stored directly on external
+storages (new mount option in external storage admin page)</li>
+<li>Direct links to the configuration pages for setting up a GDrive or Dropbox application for use with ownCloud</li>
+<li>Some performance and memory usage improvements for GDrive, stream download and chunk upload</li>
+<li>Performance and memory usage improvements for Dropbox with stream download</li>
+<li>GDrive library update provides exponential backoff which will reduce rate limit errors</li>
+</ul>
+<p><strong>Shibboleth</strong></p>
+<ul class="simple">
+<li>The WebDAV endpoint was changed from <code class="docutils literal"><span class="pre">/remote.php/webdav</span></code> to <code class="docutils literal"><span class="pre">/remote.php/dav</span></code>. You need to check your Apache configuration if you have exceptions or rules for WebDAV configured.</li>
+</ul>
+<p><strong>Minor additions</strong></p>
+<ul class="simple">
+<li>Support for print style sheets</li>
+<li>Command line based update will now be suggested if the instance is bigger to avoid potential timeouts</li>
+<li>Web updater will be disabled if LDAP or shibboleth are installed</li>
+<li>DB/application update process now shows better progress information</li>
+<li>Added <code class="docutils literal"><span class="pre">occ</span> <span class="pre">files:scan</span> <span class="pre">--unscanned</span></code> to only scan folders that haven’t yet been explored on external storages</li>
+<li>Chunk cache TTL can now be configured</li>
+<li>Added warning for wrongly configured database transactions, helps prevent “database is locked” issues</li>
+<li>Use a capped memory cache to reduce memory usage especially in background jobs and the file scanner</li>
+<li>Allow login by email</li>
+<li>Respect CLASS property in calendar events</li>
+<li>Allow addressbook export using VCFExportPlugin</li>
+<li>Birthdays are also generated based on shared addressbooks</li>
+</ul>
+<p><strong>For developers</strong></p>
+<ul class="simple">
+<li>New DAV endpoint with a new chunking protocol aiming to solve many issues like timeouts (not used by clients yet)</li>
+<li>New webdav property for share permissions</li>
+<li>Background repair steps can be specified info.xml</li>
+<li>Background jobs (cron) can now be declared in info.xml</li>
+<li>Apps can now define repair steps to run at install/uninstall time</li>
+<li>Export contact images via Sabre DAV plugin</li>
+<li>Sabre DAV’s browser plugin is available in debug mode to allow easier development around webdav</li>
+</ul>
+<p><strong>Technical debt</strong></p>
+<ul class="simple">
+<li>PSR-4 autoloading forced for <code class="docutils literal"><span class="pre">OC\</span></code> and <code class="docutils literal"><span class="pre">OCP\</span></code>, optional for <code class="docutils literal"><span class="pre">OCA\</span></code> docs at <a class="reference external" href="https://doc.owncloud.org/server/latest/developer_manual/app/classloader.html">https://doc.owncloud.org/server/latest/developer_manual/app/classloader.html</a></li>
+<li>More cleanup of the sharing code (ongoing)</li>
+</ul>
+</div>
+<div class="section" id="changes-in-9-0">
+<span id="id65"></span><h2>Changes in 9.0<a class="headerlink" href="#changes-in-9-0" title="Permalink to this headline">¶</a></h2>
+<p>9.0 requires .ico files for favicons. This will change in 9.1, which will use .svg files. See <a class="reference external" href="https://doc.owncloud.org/server/latest/developer_manual/core/theming.html#changing-favicon">Changing favicon</a> in the Developer Manual.</p>
+<p>Home folder rule is enforced in the user_ldap application in new ownCloud installations; see
+<a class="reference internal" href="configuration/user/user_auth_ldap.html"><span class="doc">User Authentication with LDAP</span></a>. This affects ownCloud 8.0.10, 8.1.5 and 8.2.0 and up.</p>
+<p>The Calendar and Contacts apps have been rewritten and the CalDAV and CardDAV backends of these
+apps were merged into ownCloud core. During the upgrade existing Calendars and Addressbooks
+are automatically migrated (except when using the <code class="docutils literal"><span class="pre">IMAP</span> <span class="pre">user</span> <span class="pre">backend</span></code>). As a fallback
+for failed upgrades, when using the <code class="docutils literal"><span class="pre">IMAP</span> <span class="pre">user</span> <span class="pre">backend</span></code> or as an option to test a migration
+<code class="docutils literal"><span class="pre">dav:migrate-calendars</span></code> and/or <code class="docutils literal"><span class="pre">dav:migrate-addressbooks</span></code> scripts are available
+(<strong>only in ownCloud 9.0</strong>) via the <code class="docutils literal"><span class="pre">occ</span></code> command. See <a class="reference internal" href="configuration/server/occ_command.html"><span class="doc">Using occ core commands</span></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">After upgrading to ownCloud 9.0 and <strong>before</strong> continuing to upgrade to 9.1 make sure
+that all of your and your users Calendars and Addressbooks are migrated correctly. Especially
+when using the <code class="docutils literal"><span class="pre">IMAP</span> <span class="pre">user</span> <span class="pre">backend</span></code> (other user backends might be also affected) you need to
+manually run the mentioned <code class="docutils literal"><span class="pre">occ</span></code> migration commands described above.</p>
+</div>
+<p>Updates on systems with large datasets will take longer, due to the addition of checksums to the
+ownCloud database. See <a class="reference external" href="https://github.com/owncloud/core/issues/22747">https://github.com/owncloud/core/issues/22747</a>.</p>
+<p>Linux packages are available from our <a class="reference external" href="https://download.owncloud.org/download/repositories/stable/owncloud/">official download repository</a> .
+New in 9.0: split packages. <code class="docutils literal"><span class="pre">owncloud</span></code> installs ownCloud plus dependencies, including Apache
+and PHP. <code class="docutils literal"><span class="pre">owncloud-files</span></code> installs only ownCloud. This is useful for custom LAMP stacks, and
+allows you to install your own LAMP apps and versions without packaging conflicts with ownCloud.
+See <a class="reference internal" href="installation/linux_installation.html"><span class="doc">Linux Package Manager Installation</span></a>.</p>
+<p>New option for the ownCloud admin to enable or disable sharing on individual external mountpoints
+(see <a class="reference internal" href="configuration/files/external_storage_configuration_gui.html#external-storage-mount-options-label"><span class="std std-ref">Mount Options</span></a>). Sharing on such mountpoints is disabled by default.</p>
+<div class="section" id="enterprise-9-0">
+<h3>Enterprise 9.0<a class="headerlink" href="#enterprise-9-0" title="Permalink to this headline">¶</a></h3>
+<p>owncloud-enterprise packages are no longer available for CentOS 6, RHEL6,
+Debian 7, or any version of Fedora. A new package, owncloud-enterprise-files, is available for all supported platforms, including the above. This new package comes without dependencies, and is installable on a larger number of platforms. System administrators must install their own LAMP stacks and databases. See <a class="reference external" href="https://owncloud.org/blog/time-to-upgrade-to-owncloud-9-0/">https://owncloud.org/blog/time-to-upgrade-to-owncloud-9-0/</a></p>
+</div>
+</div>
+<div class="section" id="changes-in-8-2">
+<span id="id66"></span><h2>Changes in 8.2<a class="headerlink" href="#changes-in-8-2" title="Permalink to this headline">¶</a></h2>
+<p>New location for Linux package repositories; ownCloud admins must manually
+change to the new repos. See <a class="reference internal" href="maintenance/upgrade.html"><span class="doc">How to Upgrade Your ownCloud Server</span></a></p>
+<p>PHP 5.6.11+ breaks the LDAP wizard with a ‘Could not connect to LDAP’ error. See <a class="reference external" href="https://github.com/owncloud/core/issues/20020">https://github.com/owncloud/core/issues/20020</a>.</p>
+<p><code class="docutils literal"><span class="pre">filesystem_check_changes</span></code> in <code class="docutils literal"><span class="pre">config.php</span></code> is set to 0 by default. This
+prevents unnecessary update checks and improves performance. If you are using
+external storage mounts such as NFS on a remote storage server, set this to 1
+so that ownCloud will detect remote file changes.</p>
+<p>XSendFile support has been removed, so there is no longer support for <a class="reference external" href="https://doc.owncloud.org/server/latest/admin_manual/configuration/files/serving_static_files_configuration.html">serving
+static files</a> from your ownCloud server.</p>
+<p>LDAP issue: 8.2 uses the <code class="docutils literal"><span class="pre">memberof</span></code> attribute by default. If this is not
+activated on your LDAP server your user groups will not be detected, and you
+will see this message in your ownCloud log: <code class="docutils literal"><span class="pre">Error</span> <span class="pre">PHP</span> <span class="pre">Array</span> <span class="pre">to</span> <span class="pre">string</span>
+<span class="pre">conversion</span> <span class="pre">at</span> <span class="pre">/var/www/html/owncloud/lib/private/template/functions.php#36</span></code>.
+Fix this by disabling the <code class="docutils literal"><span class="pre">memberof</span></code> attribute on your ownCloud server with
+the <code class="docutils literal"><span class="pre">occ</span></code> command, like this example on Ubuntu Linux:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="nb">set</span><span class="o">-</span><span class="n">config</span> <span class="s2">&quot;s01&quot;</span> <span class="n">useMemberOfToDetectMembership</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Run <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">php</span> <span class="pre">occ</span> <span class="pre">ldap:show-config</span></code> to find the correct <code class="docutils literal"><span class="pre">sNN</span></code>
+value; if there is not one then use empty quotes, <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>. (See
+<a class="reference internal" href="configuration/server/occ_command.html"><span class="doc">Using occ core commands</span></a>.)</p>
+<p>Users of the Linux Package need to update their repository setup as described
+in this <a class="reference external" href="https://owncloud.org/blog/upgrading-to-owncloud-server-8-2/">blogpost</a>.</p>
+</div>
+<div class="section" id="changes-in-8-1">
+<span id="id67"></span><h2>Changes in 8.1<a class="headerlink" href="#changes-in-8-1" title="Permalink to this headline">¶</a></h2>
+<p>Use APCu only if available in version 4.0.6 and higher. If you install an older version,
+you will see a <code class="docutils literal"><span class="pre">APCu</span> <span class="pre">below</span> <span class="pre">version</span> <span class="pre">4.0.6</span> <span class="pre">is</span> <span class="pre">installed,</span> <span class="pre">for</span> <span class="pre">stability</span> <span class="pre">and</span> <span class="pre">performance</span>
+<span class="pre">reasons</span> <span class="pre">we</span> <span class="pre">recommend</span> <span class="pre">to</span> <span class="pre">update</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">newer</span> <span class="pre">APCu</span> <span class="pre">version</span></code> warning on your ownCloud admin page.</p>
+<p>SMB external storage now based on <code class="docutils literal"><span class="pre">php5-libsmbclient</span></code>, which must be downloaded
+from the ownCloud software repositories (<a class="reference external" href="https://software.opensuse.org/download.html?project=isv%3AownCloud%3Acommunity%3A8.1&amp;package=php5-libsmbclient">installation instructions</a>).</p>
+<p>“Download from link” feature has been removed.</p>
+<p>The <code class="docutils literal"><span class="pre">.htaccess</span></code> and <code class="docutils literal"><span class="pre">index.html</span></code> files in the <code class="docutils literal"><span class="pre">data/</span></code> directory are now
+updated after every update. If you make any modifications to these files they
+will be lost after updates.</p>
+<p>The SabreDAV browser at <code class="docutils literal"><span class="pre">/remote.php/webdav</span></code> has been removed.</p>
+<p>Using ownCloud without a <code class="docutils literal"><span class="pre">trusted_domain</span></code> configuration will not work anymore.</p>
+<p>The logging format for failed logins has changed and considers now the proxy
+configuration in <code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+<p>A default set of security and privacy HTTP headers have been added to the
+ownCloud <code class="docutils literal"><span class="pre">.htaccess</span></code> file, and ownCloud administrators may now customize which
+headers are sent.</p>
+<p>More strict SSL certificate checking improves security but can result in
+“cURL error 60: SSL certificate problem: unable to get local issuer certificate”
+errors with certain broken PHP versions. Please verify your SSL setup, update your
+PHP or contact your vendor if you receive these errors.</p>
+<p>The persistent file-based cache (e.g. used by LDAP integration) has been dropped and
+replaced with a memory-only cache, which must be explicitly configured. See
+<a class="reference internal" href="configuration/user/user_auth_ldap.html"><span class="doc">User Authentication with LDAP</span></a>. Memory cache configuration for the
+ownCloud server is no longer automatic, requiring installation of
+your desired cache backend and configuration in
+<code class="docutils literal"><span class="pre">config.php</span></code> (see <a class="reference internal" href="configuration/server/caching_configuration.html"><span class="doc">Memory Caching</span></a>.)</p>
+<p>The <code class="docutils literal"><span class="pre">OC_User_HTTP</span></code> backend has been removed. Administrators are encouraged to use
+the <code class="docutils literal"><span class="pre">user_webdavauth</span></code> application instead.</p>
+<p>ownCloud ships now with its own root certificate bundle derived from Mozilla’s
+root certificates file. The system root certificate bundle will not be used
+anymore for most requests.</p>
+<p>When you upgrade from ownCloud 8.0, with encryption enabled, to 8.1, you must
+enable the new encryption backend and migrate your encryption keys. See
+<a class="reference internal" href="configuration/files/encryption_configuration.html#occ-encryption-label"><span class="std std-ref">Enabling Master Key Based Encryption from the Command-Line</span></a>.</p>
+<p>Encryption can no longer be disabled in ownCloud 8.1. It is planned to re-add
+this feature to the command line client for a future release.</p>
+<p>It is not recommended to upgrade encryption-enabled systems from ownCloud Server 8.0
+to version 8.1.0 as there is a chance the migration will break. We recommend
+migrating to the first bugfix release, ownCloud Server 8.1.1.</p>
+<p>Due to various technical issues, by default desktop sync clients older than
+1.7 are not allowed to connect and sync with the ownCloud server. This is
+configurable via the <code class="docutils literal"><span class="pre">minimum.supported.desktop.version</span></code> switch in
+<code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+<p>Previews are now generated at a maximum size of 2048 x 2048 pixels. This is configurable
+via the <code class="docutils literal"><span class="pre">preview_max_x</span></code> and <code class="docutils literal"><span class="pre">preview_max_y</span></code> switches in <code class="docutils literal"><span class="pre">config.php</span></code>.</p>
+<p>The ownCloud 8 server is not supported on any version of Windows.</p>
+<p>The 8.1.0 release has a minor bug which makes application updates fail at first try. Reload the
+apps page and try again, and the update will succeed.</p>
+<p>The <code class="docutils literal"><span class="pre">forcessl</span></code> option within the <code class="docutils literal"><span class="pre">config.php</span></code> and the <code class="docutils literal"><span class="pre">Enforce</span> <span class="pre">SSL</span></code> option
+within the Admin-Backend was removed. This now needs to be configured like
+described in <a class="reference internal" href="configuration/server/harden_server.html#use-https-label"><span class="std std-ref">Use HTTPS</span></a>.</p>
+<p>WebDAV file locking was removed in ownCloud 8.1 which causes Finder on Mac OS X to mount WebDAV read-only.</p>
+<div class="section" id="enterprise-8-1">
+<h3>Enterprise 8.1<a class="headerlink" href="#enterprise-8-1" title="Permalink to this headline">¶</a></h3>
+<p>The SharePoint Drive application does not verify the SSL certificate of the SharePoint
+server or the ownCloud server, as it is expected that both devices are in the
+same trusted environment.</p>
+</div>
+</div>
+<div class="section" id="changes-in-8-0">
+<span id="id68"></span><h2>Changes in 8.0<a class="headerlink" href="#changes-in-8-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manual-ldap-port-configuration">
+<h3>Manual LDAP Port Configuration<a class="headerlink" href="#manual-ldap-port-configuration" title="Permalink to this headline">¶</a></h3>
+<p>When you are configuring the LDAP user and group backend application, ownCloud
+may not auto-detect the LDAP server’s port number, so you will need to enter it
+manually.</p>
+</div>
+<div class="section" id="no-preview-icon-on-text-files">
+<h3>No Preview Icon on Text Files<a class="headerlink" href="#no-preview-icon-on-text-files" title="Permalink to this headline">¶</a></h3>
+<p>There is no preview icon displayed for text files when the file contains fewer than six characters.</p>
+</div>
+<div class="section" id="remote-federated-cloud-share-cannot-be-reshared-with-local-users">
+<h3>Remote Federated Cloud Share Cannot be Reshared With Local Users<a class="headerlink" href="#remote-federated-cloud-share-cannot-be-reshared-with-local-users" title="Permalink to this headline">¶</a></h3>
+<p>When you mount a Federated Cloud share from a remote ownCloud server, you cannot re-share it with
+your local ownCloud users. (See <a class="reference internal" href="configuration/files/federated_cloud_sharing_configuration.html"><span class="doc">Configuring Federation Sharing</span></a>
+to learn more about federated cloud sharing)</p>
+</div>
+<div class="section" id="manually-migrate-encryption-keys-after-upgrade">
+<h3>Manually Migrate Encryption Keys after Upgrade<a class="headerlink" href="#manually-migrate-encryption-keys-after-upgrade" title="Permalink to this headline">¶</a></h3>
+<p>If you are using the Encryption application and upgrading from older versions of
+ownCloud to ownCloud 8.0, you must manually migrate your encryption keys.
+See <a class="reference internal" href="configuration/files/encryption_configuration.html#occ-encryption-label"><span class="std std-ref">Enabling Master Key Based Encryption from the Command-Line</span></a>.</p>
+</div>
+<div class="section" id="windows-server-not-supported">
+<h3>Windows Server Not Supported<a class="headerlink" href="#windows-server-not-supported" title="Permalink to this headline">¶</a></h3>
+<p>Windows Server is not supported in ownCloud 8.</p>
+</div>
+<div class="section" id="php-5-3-support-dropped">
+<h3>PHP 5.3 Support Dropped<a class="headerlink" href="#php-5-3-support-dropped" title="Permalink to this headline">¶</a></h3>
+<p>PHP 5.3 is not supported in ownCloud 8, and PHP 5.4 or better is required.</p>
+</div>
+<div class="section" id="disable-apache-multiviews">
+<h3>Disable Apache Multiviews<a class="headerlink" href="#disable-apache-multiviews" title="Permalink to this headline">¶</a></h3>
+<p>If Multiviews are enabled in your Apache configuration, this may cause problems
+with content negotiation, so disable Multiviews by removing it from your Apache
+configuration. Look for lines like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Directory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">owncloud</span><span class="o">&gt;</span>
+<span class="n">Options</span> <span class="n">Indexes</span> <span class="n">FollowSymLinks</span> <span class="n">Multiviews</span>
+</pre></div>
+</div>
+<p>Delete <code class="docutils literal"><span class="pre">Multiviews</span></code> and restart Apache.</p>
+</div>
+<div class="section" id="owncloud-does-not-follow-symlinks">
+<h3>ownCloud Does Not Follow Symlinks<a class="headerlink" href="#owncloud-does-not-follow-symlinks" title="Permalink to this headline">¶</a></h3>
+<p>ownCloud’s file scanner does not follow symlinks, which could lead to
+infinite loops. To avoid this do not use soft or hard links in your ownCloud
+data directory.</p>
+</div>
+<div class="section" id="no-commas-in-group-names">
+<h3>No Commas in Group Names<a class="headerlink" href="#no-commas-in-group-names" title="Permalink to this headline">¶</a></h3>
+<p>Creating an ownCloud group with a comma in the group name causes ownCloud to
+treat the group as two groups.</p>
+</div>
+<div class="section" id="hebrew-file-names-too-large-on-windows">
+<h3>Hebrew File Names Too Large on Windows<a class="headerlink" href="#hebrew-file-names-too-large-on-windows" title="Permalink to this headline">¶</a></h3>
+<p>On Windows servers Hebrew file names grow to five times their original size
+after being translated to Unicode.</p>
+</div>
+<div class="section" id="google-drive-large-files-fail-with-500-error">
+<h3>Google Drive Large Files Fail with 500 Error<a class="headerlink" href="#google-drive-large-files-fail-with-500-error" title="Permalink to this headline">¶</a></h3>
+<p>Google Drive tries to download the entire file into memory, then write it to a
+temp file, and then stream it to the client, so very large file downloads from
+Google Drive may fail with a 500 internal server error.</p>
+</div>
+<div class="section" id="encrypting-large-numbers-of-files">
+<h3>Encrypting Large Numbers of Files<a class="headerlink" href="#encrypting-large-numbers-of-files" title="Permalink to this headline">¶</a></h3>
+<p>When you activate the Encryption application on a running server that has large numbers
+of files, it is possible that you will experience timeouts. It is best to
+activate encryption at installation, before accumulating large numbers of files
+on your ownCloud server.</p>
+</div>
+<div class="section" id="enterprise-8-0">
+<h3>Enterprise 8.0<a class="headerlink" href="#enterprise-8-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sharepoint-drive-ssl-not-verified">
+<h4>Sharepoint Drive SSL Not Verified<a class="headerlink" href="#sharepoint-drive-ssl-not-verified" title="Permalink to this headline">¶</a></h4>
+<p>The SharePoint Drive application does not verify the SSL certificate of the SharePoint
+server or the ownCloud server, as it is expected that both devices are in the
+same trusted environment.</p>
+</div>
+<div class="section" id="no-federated-cloud-sharing-with-shibboleth">
+<h4>No Federated Cloud Sharing with Shibboleth<a class="headerlink" href="#no-federated-cloud-sharing-with-shibboleth" title="Permalink to this headline">¶</a></h4>
+<p>Federated Cloud Sharing (formerly Server-to-Server file sharing)does not work
+with Shibboleth .</p>
+</div>
+<div class="section" id="direct-uploads-to-swift-do-not-appear-in-owncloud">
+<h4>Direct Uploads to SWIFT do not Appear in ownCloud<a class="headerlink" href="#direct-uploads-to-swift-do-not-appear-in-owncloud" title="Permalink to this headline">¶</a></h4>
+<p>When files are uploaded directly to a SWIFT share mounted as external storage
+in ownCloud, the files do not appear in ownCloud. However, files uploaded to
+the SWIFT mount through ownCloud are listed correctly in both locations.</p>
+</div>
+<div class="section" id="swift-objectstore-incompatible-with-encryption-app">
+<h4>SWIFT Objectstore Incompatible with Encryption App<a class="headerlink" href="#swift-objectstore-incompatible-with-encryption-app" title="Permalink to this headline">¶</a></h4>
+<p>The current SWIFT implementation is incompatible with any application that uses direct
+file I/O and circumvents the ownCloud virtual filesystem. Using the Encryption
+application on a SWIFT object store incurs twice as many HTTP requests and increases
+latency significantly.</p>
+</div>
+<div class="section" id="application-store-is-back">
+<h4>application Store is Back<a class="headerlink" href="#application-store-is-back" title="Permalink to this headline">¶</a></h4>
+<p>The ownCloud application Store has been re-enabled in ownCloud 8. Note that third-party apps
+are not supported.</p>
+</div>
+</div>
+</div>
+<div class="section" id="changes-in-7-0">
+<span id="id69"></span><h2>Changes in 7.0<a class="headerlink" href="#changes-in-7-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id70">
+<h3>Manual LDAP Port Configuration<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<p>When you are configuring the LDAP user and group backend application, ownCloud
+may not auto-detect the LDAP server’s port number, so you will need to enter it
+manually.</p>
+</div>
+<div class="section" id="ldap-search-performance-improved">
+<h3>LDAP Search Performance Improved<a class="headerlink" href="#ldap-search-performance-improved" title="Permalink to this headline">¶</a></h3>
+<p>Prior to 7.0.4, LDAP searches were substring-based and would match search
+attributes if the substring occurred anywhere in the attribute value. Rather,
+searches are performed on beginning attributes. With 7.0.4, searches will match
+at the beginning of the attribute value only. This provides better performance
+and a better user experience.</p>
+<p>Substring searches can still be performed by prepending the search term with
+“*”.For example, a search for <code class="docutils literal"><span class="pre">te</span></code> will find Terri, but not Nate:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">search</span> <span class="s2">&quot;te&quot;</span>
+</pre></div>
+</div>
+<p>If you want to broaden the search to include
+Nate, then search for <code class="docutils literal"><span class="pre">*te</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">search</span> <span class="s2">&quot;*te&quot;</span>
+</pre></div>
+</div>
+<p>Refine searches by adjusting the <code class="docutils literal"><span class="pre">User</span> <span class="pre">Search</span> <span class="pre">Attributes</span></code> field of the
+Advanced tab in your LDAP configuration on the Admin page. For example, if your
+search attributes are <code class="docutils literal"><span class="pre">givenName</span></code> and <code class="docutils literal"><span class="pre">sn</span></code> you can find users by first name
++ last name very quickly. For example, you’ll find Terri Hanson by searching for
+<code class="docutils literal"><span class="pre">te</span> <span class="pre">ha</span></code>. Trailing whitespaces are ignored.</p>
+</div>
+<div class="section" id="protecting-owncloud-on-iis-from-data-loss">
+<h3>Protecting ownCloud on IIS from Data Loss<a class="headerlink" href="#protecting-owncloud-on-iis-from-data-loss" title="Permalink to this headline">¶</a></h3>
+<p>Under certain circumstances, running your ownCloud server on IIS could be at
+risk of data loss. To prevent this, follow these steps.</p>
+<ul class="simple">
+<li>In your ownCloud server configuration file, <code class="docutils literal"><span class="pre">owncloud\config\config.php</span></code>, set
+<code class="docutils literal"><span class="pre">config_is_read_only</span></code> to true.</li>
+<li>Set the <code class="docutils literal"><span class="pre">config.php</span></code> file to read-only.</li>
+<li>When you make server updates <code class="docutils literal"><span class="pre">config.php</span></code> must be made writeable. When your
+updates are completed re-set it to read-only.</li>
+</ul>
+</div>
+<div class="section" id="antivirus-application-modes">
+<h3>Antivirus Application Modes<a class="headerlink" href="#antivirus-application-modes" title="Permalink to this headline">¶</a></h3>
+<p>The Antivirus application offers three modes for running the ClamAV anti-virus scanner:
+as a daemon on the ownCloud server, a daemon on a remote server, or an
+executable mode that calls <code class="docutils literal"><span class="pre">clamscan</span></code> on the local server. We recommend using
+one of the daemon modes, as they are the most reliable.</p>
+</div>
+<div class="section" id="enable-only-for-specific-groups-fails">
+<h3>“Enable Only for Specific Groups” Fails<a class="headerlink" href="#enable-only-for-specific-groups-fails" title="Permalink to this headline">¶</a></h3>
+<p>Some ownCloud applications have the option to be enabled only for certain
+groups. However, when you select specific groups they do not get access to the
+app.</p>
+</div>
+<div class="section" id="changes-to-file-previews">
+<h3>Changes to File Previews<a class="headerlink" href="#changes-to-file-previews" title="Permalink to this headline">¶</a></h3>
+<p>For security and performance reasons, file previews are available only for
+image files, covers of MP3 files, and text files, and have been disabled for
+all other filetypes. Files without previews are represented by generic icons
+according to their file types.</p>
+</div>
+<div class="section" id="gb-limit-on-sftp-transfers">
+<h3>4GB Limit on SFTP Transfers<a class="headerlink" href="#gb-limit-on-sftp-transfers" title="Permalink to this headline">¶</a></h3>
+<p>Because of limitations in <code class="docutils literal"><span class="pre">phpseclib</span></code>, you cannot upload files larger than
+4GB over SFTP.</p>
+</div>
+<div class="section" id="not-enough-space-available-on-file-upload">
+<h3>“Not Enough Space Available” on File Upload<a class="headerlink" href="#not-enough-space-available-on-file-upload" title="Permalink to this headline">¶</a></h3>
+<p>Setting user quotas to <code class="docutils literal"><span class="pre">unlimited</span></code> on an ownCloud installation that has
+unreliable free disk space reporting– for example, on a shared hosting
+provider– may cause file uploads to fail with a “Not Enough Space Available”
+error. A workaround is to set file quotas for all users instead of
+<code class="docutils literal"><span class="pre">unlimited</span></code>.</p>
+</div>
+<div class="section" id="no-more-expiration-date-on-local-shares">
+<h3>No More Expiration Date On Local Shares<a class="headerlink" href="#no-more-expiration-date-on-local-shares" title="Permalink to this headline">¶</a></h3>
+<p>In older versions of ownCloud, you could set an expiration date on both local
+and public shares. Now you can set an expiration date only on public shares,
+and local shares do not expire when public shares expire.</p>
+</div>
+<div class="section" id="zero-quota-not-read-only">
+<h3>Zero Quota Not Read-Only<a class="headerlink" href="#zero-quota-not-read-only" title="Permalink to this headline">¶</a></h3>
+<p>Setting a user’s storage quota should be the equivalent of read-only, however,
+users can still create empty files.</p>
+</div>
+<div class="section" id="enterprise-7-0">
+<h3>Enterprise 7.0<a class="headerlink" href="#enterprise-7-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id71">
+<h4>No Federated Cloud Sharing with Shibboleth<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h4>
+<p>Federated Cloud Sharing (formerly Server-to-Server file sharing) does not work
+with Shibboleth .</p>
+</div>
+<div class="section" id="windows-network-drive">
+<h4>Windows Network Drive<a class="headerlink" href="#windows-network-drive" title="Permalink to this headline">¶</a></h4>
+<p>Windows Network Drive runs only on Linux servers because it requires the Samba
+client, which is included in all Linux distributions.</p>
+<p><code class="docutils literal"><span class="pre">php5-libsmbclient</span></code> is also required, and there may be issues with older
+versions of <code class="docutils literal"><span class="pre">libsmbclient</span></code>; see Using External Storage &gt; Installing and
+Configuring the Windows Network Drive application in the Enterprise Admin manual for
+more information.</p>
+<p>By default CentOS has activated SELinux, and the <code class="docutils literal"><span class="pre">httpd</span></code> process can not make
+outgoing network connections. This will cause problems with curl, LDAP and samba
+libraries. Again, see Using External Storage &gt; Installing and Configuring the
+Windows Network Drive application in the Enterprise Admin manual for instructions.</p>
+</div>
+<div class="section" id="sharepoint-drive-ssl">
+<h4>Sharepoint Drive SSL<a class="headerlink" href="#sharepoint-drive-ssl" title="Permalink to this headline">¶</a></h4>
+<p>The SharePoint Drive application does not verify the SSL certificate of the SharePoint
+server or the ownCloud server, as it is expected that both devices are in the
+same trusted environment.</p>
+</div>
+<div class="section" id="shibboleth-and-webdav-incompatible">
+<h4>Shibboleth and WebDAV Incompatible<a class="headerlink" href="#shibboleth-and-webdav-incompatible" title="Permalink to this headline">¶</a></h4>
+<p>Shibboleth and standard WebDAV are incompatible, and cannot be used together in
+ownCloud. If Shibboleth is enabled, the ownCloud client uses an extended WebDAV
+protocol</p>
+</div>
+<div class="section" id="no-sqlite">
+<h4>No SQLite<a class="headerlink" href="#no-sqlite" title="Permalink to this headline">¶</a></h4>
+<p>SQLite is no longer an installation option for ownCloud Enterprise Edition, as
+it not suitable for multiple-user installations or managing large numbers of
+files.</p>
+</div>
+<div class="section" id="no-application-store">
+<h4>No Application Store<a class="headerlink" href="#no-application-store" title="Permalink to this headline">¶</a></h4>
+<p>The application Store is disabled for the Enterprise Edition.</p>
+</div>
+<div class="section" id="ldap-home-connector-linux-only">
+<h4>LDAP Home Connector Linux Only<a class="headerlink" href="#ldap-home-connector-linux-only" title="Permalink to this headline">¶</a></h4>
+<p>The LDAP Home Connector application requires Linux (with MySQL, MariaDB,
+or PostgreSQL) to operate correctly.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="index.html" title="Previous Chapter: Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Introduction</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="whats_new_admin.html" title="Next Chapter: What’s New in ownCloud 10.0.10"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">What’s New in... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

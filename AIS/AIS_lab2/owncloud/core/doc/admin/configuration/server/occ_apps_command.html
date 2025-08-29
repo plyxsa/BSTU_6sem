@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Using occ apps commands &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../../_static/" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Configuring the Activity App" href="activity_configuration.html" />
+    <link rel="prev" title="Using occ core commands" href="occ_command.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../database/index.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ldap/ldap_proxy_cache_server_setup.html">How To Install and Configure an LDAP Proxy-Cache Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Server Configuration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="security_setup_warnings.html">Warnings on Admin Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import_ssl_cert.html">Importing System-wide and Personal SSL Certificates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="occ_command.html">Using occ core commands</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using occ apps commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="activity_configuration.html">Configuring the Activity App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="antivirus_configuration.html">Virus Scanner Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="caching_configuration.html">Memory Caching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="background_jobs_configuration.html">Background Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_sample_php_parameters.html">Core Config.php Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="email_configuration.html">Email Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="excluded_blacklisted_files.html">Excluding Directories and Blacklisting Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_sites.html">Linking External Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom_client_repos.html">Custom Client Download Repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="knowledgebase_configuration.html">Knowledge Base Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_configuration.html">Language Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="legal_settings_configuration.html">Legal Settings Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logging_configuration.html">Logging Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="harden_server.html">Hardening and Security Guidance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security/password_policy.html">Password Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security/oauth2.html">OAuth2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverse_proxy_configuration.html">Reverse Proxy Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="thirdparty_php_configuration.html">Using Third Party PHP Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automatic_configuration.html">Automatic Configuration Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oc_server_tuning.html">ownCloud Server Tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index_php_less_urls.html">Enable index.php-less URLs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="occ_command.html" title="Previous Chapter: Using occ core commands"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Using occ cor...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="activity_configuration.html" title="Next Chapter: Configuring the Activity App"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Configuring t... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="using-occ-apps-commands">
+<h1>Using occ apps commands<a class="headerlink" href="#using-occ-apps-commands" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This command reference covers the ownCloud maintained apps commands.</p>
+</div>
+<p>ownCloud’s <code class="docutils literal"><span class="pre">occ</span></code> command (ownCloud console) is ownCloud’s command-line interface.
+You can perform common server operations with <code class="docutils literal"><span class="pre">occ</span></code>, including installing and upgrading ownCloud, managing users and groups, encryption, passwords, and LDAP setting.</p>
+<p><code class="docutils literal"><span class="pre">occ</span></code> is in the <code class="file docutils literal"><span class="pre">owncloud/</span></code> directory; for example <code class="file docutils literal"><span class="pre">/var/www/owncloud</span></code> on Ubuntu Linux.
+<code class="docutils literal"><span class="pre">occ</span></code> is a PHP script.
+<strong>You must run it as your HTTP user</strong> to ensure that your ownCloud files and directories retain the correct permissions.</p>
+<div class="section" id="occ-command-directory">
+<h2>occ Command Directory<a class="headerlink" href="#occ-command-directory" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#ocapps-http-user-label"><span class="std std-ref">Run occ As Your HTTP User</span></a></li>
+<li><a class="reference internal" href="#ocapps-calendar-label"><span class="std std-ref">Calendar Commands</span></a></li>
+<li><a class="reference internal" href="#ocapps-contacts-label"><span class="std std-ref">Contacts Commands</span></a></li>
+<li><a class="reference internal" href="#ocapps-files-primary-s3-label"><span class="std std-ref">S3 Objectstore Commands</span></a></li>
+<li><a class="reference internal" href="#ocapps-ldap-commands-label"><span class="std std-ref">LDAP Commands</span></a></li>
+<li><a class="reference internal" href="#ocapps-market-commands-label"><span class="std std-ref">Market</span></a></li>
+<li><a class="reference internal" href="#ocapps-notifications-commands-label"><span class="std std-ref">Notifications</span></a></li>
+<li><a class="reference internal" href="#ocapps-password-policy-label"><span class="std std-ref">Password Policy</span></a></li>
+<li><a class="reference internal" href="#ocapps-reports-commands-label"><span class="std std-ref">Reports</span></a></li>
+<li><a class="reference internal" href="#ocapps-ransomware-commands-label"><span class="std std-ref">Ransomware Protection</span></a></li>
+<li><a class="reference internal" href="#ocapps-shibboleth-label"><span class="std std-ref">Shibboleth Modes (Enterprise Edition only)</span></a></li>
+<li><a class="reference internal" href="#ocapps-two-factor-auth-label"><span class="std std-ref">Two-factor Authentication</span></a></li>
+</ul>
+</div>
+<div class="section" id="run-occ-as-your-http-user">
+<span id="ocapps-http-user-label"></span><h2>Run occ As Your HTTP User<a class="headerlink" href="#run-occ-as-your-http-user" title="Permalink to this headline">¶</a></h2>
+<p>The HTTP user is different on the various Linux distributions.
+See <a class="reference internal" href="../../installation/source_installation.html#strong-perms-label"><span class="std std-ref">Set Strong Directory Permissions</span></a> to learn how to find your HTTP user.</p>
+<ul class="simple">
+<li>The HTTP user and group in Debian/Ubuntu is www-data.</li>
+<li>The HTTP user and group in Fedora/CentOS is apache.</li>
+<li>The HTTP user and group in Arch Linux is http.</li>
+<li>The HTTP user in openSUSE is wwwrun, and the HTTP group is www.</li>
+</ul>
+<p>If your HTTP server is configured to use a different PHP version than the default (/usr/bin/php), <code class="docutils literal"><span class="pre">occ</span></code> should be run with the same version.
+For example, in CentOS 6.5 with SCL-PHP54 installed, the command looks like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">apache</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">rh</span><span class="o">/</span><span class="n">php54</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">owncloud</span><span class="o">/</span><span class="n">occ</span>
+</pre></div>
+</div>
+<p>The following examples are based on Ubuntu.</p>
+<p>Running <code class="docutils literal"><span class="pre">occ</span></code> with no options lists all commands and options</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span>
+<span class="n">ownCloud</span> <span class="n">version</span> <span class="mf">10.0</span><span class="o">.</span><span class="mi">8</span>
+
+<span class="n">Usage</span><span class="p">:</span>
+ <span class="n">command</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">arguments</span><span class="p">]</span>
+
+<span class="n">Options</span><span class="p">:</span>
+ <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">Display</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span>
+ <span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>           <span class="n">Do</span> <span class="ow">not</span> <span class="n">output</span> <span class="nb">any</span> <span class="n">message</span>
+ <span class="o">-</span><span class="n">V</span><span class="p">,</span> <span class="o">--</span><span class="n">version</span>         <span class="n">Display</span> <span class="n">this</span> <span class="n">application</span> <span class="n">version</span>
+     <span class="o">--</span><span class="n">ansi</span>            <span class="n">Force</span> <span class="n">ANSI</span> <span class="n">output</span>
+     <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">ansi</span>         <span class="n">Disable</span> <span class="n">ANSI</span> <span class="n">output</span>
+ <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">interaction</span>  <span class="n">Do</span> <span class="ow">not</span> <span class="n">ask</span> <span class="nb">any</span> <span class="n">interactive</span> <span class="n">question</span>
+     <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">warnings</span>     <span class="n">Skip</span> <span class="k">global</span> <span class="n">warnings</span><span class="p">,</span> <span class="n">show</span> <span class="n">command</span> <span class="n">output</span> <span class="n">only</span>
+ <span class="o">-</span><span class="n">v</span><span class="o">|</span><span class="n">vv</span><span class="o">|</span><span class="n">vvv</span><span class="p">,</span> <span class="o">--</span><span class="n">verbose</span>  <span class="n">Increase</span> <span class="n">the</span> <span class="n">verbosity</span> <span class="n">of</span> <span class="n">messages</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">normal</span> <span class="n">output</span><span class="p">,</span>
+                       <span class="mi">2</span> <span class="k">for</span> <span class="n">more</span> <span class="n">verbose</span> <span class="n">output</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">debug</span>
+
+<span class="n">Available</span> <span class="n">commands</span><span class="p">:</span>
+ <span class="n">check</span>                 <span class="n">Check</span> <span class="n">dependencies</span> <span class="n">of</span> <span class="n">the</span> <span class="n">server</span> <span class="n">environment</span>
+ <span class="n">help</span>                  <span class="n">Displays</span> <span class="n">help</span> <span class="k">for</span> <span class="n">a</span> <span class="n">command</span>
+ <span class="nb">list</span>                  <span class="n">Lists</span> <span class="n">commands</span>
+ <span class="n">status</span>                <span class="n">Show</span> <span class="n">some</span> <span class="n">status</span> <span class="n">information</span>
+ <span class="n">upgrade</span>               <span class="n">Run</span> <span class="n">upgrade</span> <span class="n">routines</span> <span class="n">after</span> <span class="n">installation</span> <span class="n">of</span>
+                       <span class="n">a</span> <span class="n">new</span> <span class="n">release</span><span class="o">.</span> <span class="n">The</span> <span class="n">release</span> <span class="n">has</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">before</span>
+</pre></div>
+</div>
+<p>This is the same as <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">php</span> <span class="pre">occ</span> <span class="pre">list</span></code>.</p>
+<div class="section" id="general-syntax-help">
+<h3>General syntax help<a class="headerlink" href="#general-syntax-help" title="Permalink to this headline">¶</a></h3>
+<p>Run occ with the <code class="docutils literal"><span class="pre">-h</span></code> option for syntax help</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="display-your-owncloud-version">
+<h3>Display your ownCloud version<a class="headerlink" href="#display-your-owncloud-version" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="o">-</span><span class="n">V</span>
+  <span class="n">ownCloud</span> <span class="n">version</span> <span class="mf">10.0</span><span class="o">.</span><span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="query-your-owncloud-server-status">
+<h3>Query your ownCloud server status<a class="headerlink" href="#query-your-owncloud-server-status" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">status</span>
+  <span class="o">-</span> <span class="n">installed</span><span class="p">:</span> <span class="n">true</span>
+  <span class="o">-</span> <span class="n">version</span><span class="p">:</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">8.5</span>
+  <span class="o">-</span> <span class="n">versionstring</span><span class="p">:</span> <span class="mf">10.0</span><span class="o">.</span><span class="mi">8</span>
+  <span class="o">-</span> <span class="n">edition</span><span class="p">:</span> <span class="n">Community</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-syntax-help">
+<h3>Command syntax help<a class="headerlink" href="#command-syntax-help" title="Permalink to this headline">¶</a></h3>
+<p>Get detailed information on individual commands with the <code class="docutils literal"><span class="pre">help</span></code> command, like this example for the <code class="docutils literal"><span class="pre">maintenance:mode</span></code> command</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="o">--</span><span class="n">help</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">mode</span>
+<span class="n">Usage</span><span class="p">:</span>
+ <span class="n">maintenance</span><span class="p">:</span><span class="n">mode</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+
+<span class="n">Options</span><span class="p">:</span>
+     <span class="o">--</span><span class="n">on</span>              <span class="n">Enable</span> <span class="n">maintenance</span> <span class="n">mode</span>
+     <span class="o">--</span><span class="n">off</span>             <span class="n">Disable</span> <span class="n">maintenance</span> <span class="n">mode</span>
+     <span class="o">--</span><span class="n">output</span><span class="p">[</span><span class="o">=</span><span class="n">OUTPUT</span><span class="p">]</span> <span class="n">Output</span> <span class="nb">format</span> <span class="p">(</span><span class="n">plain</span><span class="p">,</span> <span class="n">json</span> <span class="ow">or</span> <span class="n">json_pretty</span><span class="p">,</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">plain</span><span class="p">)</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="s2">&quot;plain&quot;</span><span class="p">]</span>
+ <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">Display</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span>
+ <span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>           <span class="n">Do</span> <span class="ow">not</span> <span class="n">output</span> <span class="nb">any</span> <span class="n">message</span>
+ <span class="o">-</span><span class="n">V</span><span class="p">,</span> <span class="o">--</span><span class="n">version</span>         <span class="n">Display</span> <span class="n">this</span> <span class="n">application</span> <span class="n">version</span>
+     <span class="o">--</span><span class="n">ansi</span>            <span class="n">Force</span> <span class="n">ANSI</span> <span class="n">output</span>
+     <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">ansi</span>         <span class="n">Disable</span> <span class="n">ANSI</span> <span class="n">output</span>
+ <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">interaction</span>  <span class="n">Do</span> <span class="ow">not</span> <span class="n">ask</span> <span class="nb">any</span> <span class="n">interactive</span> <span class="n">question</span>
+     <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">warnings</span>     <span class="n">Skip</span> <span class="k">global</span> <span class="n">warnings</span><span class="p">,</span> <span class="n">show</span> <span class="n">command</span> <span class="n">output</span> <span class="n">only</span>
+ <span class="o">-</span><span class="n">v</span><span class="o">|</span><span class="n">vv</span><span class="o">|</span><span class="n">vvv</span><span class="p">,</span> <span class="o">--</span><span class="n">verbose</span>  <span class="n">Increase</span> <span class="n">the</span> <span class="n">verbosity</span> <span class="n">of</span> <span class="n">messages</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">normal</span> <span class="n">output</span><span class="p">,</span>
+                       <span class="mi">2</span> <span class="k">for</span> <span class="n">more</span> <span class="n">verbose</span> <span class="n">output</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">debug</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options-and-arguments">
+<h3>Options and Arguments<a class="headerlink" href="#options-and-arguments" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">occ</span></code> has <em>options</em>, <em>commands</em>, and <em>arguments</em>.
+Commands are required.
+Options are optional.
+Arguments can be required <em>or</em> optional.
+The, generic, syntax is</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="n">command</span> <span class="p">[</span><span class="n">arguments</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">status</span></code> command from above has an option to define the output format.</p>
+<p>The default is plain text, but it can also be <code class="docutils literal"><span class="pre">json</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">status</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">json</span>
+<span class="p">{</span><span class="s2">&quot;installed&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;9.0.0.19&quot;</span><span class="p">,</span><span class="s2">&quot;versionstring&quot;</span><span class="p">:</span><span class="s2">&quot;9.0.0&quot;</span><span class="p">,</span><span class="s2">&quot;edition&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>or <code class="docutils literal"><span class="pre">json_pretty</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">status</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="n">json_pretty</span>
+<span class="p">{</span>
+   <span class="s2">&quot;installed&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+   <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.8.5&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;versionstring&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.8&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;edition&quot;</span><span class="p">:</span> <span class="s2">&quot;Community&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This output option is available on all list and list-like commands, which include <code class="docutils literal"><span class="pre">status</span></code>, <code class="docutils literal"><span class="pre">check</span></code>, <code class="docutils literal"><span class="pre">app:list</span></code>, <code class="docutils literal"><span class="pre">config:list</span></code>, <code class="docutils literal"><span class="pre">encryption:status</span></code> and <code class="docutils literal"><span class="pre">encryption:list-modules</span></code>.</p>
+</div>
+<div class="section" id="usage-of-parameters-in-options">
+<h3>Usage of parameters in Options<a class="headerlink" href="#usage-of-parameters-in-options" title="Permalink to this headline">¶</a></h3>
+<p>In case an option requires parameters, following format should be used for short or long Options forms</p>
+<p>The following example command has an option in <code class="docutils literal"><span class="pre">-p</span></code> (short) form and <code class="docutils literal"><span class="pre">--path</span></code> (long) form.</p>
+<p>Parameters for long form options will be written after a blank or equal sign</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">./</span><span class="n">occ</span> <span class="n">files</span><span class="p">:</span><span class="n">scan</span> <span class="o">--</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;user_x/files/folder&quot;</span>
+</pre></div>
+</div>
+<p>Parameters for short form options will be written either directly after the option or after a blank.
+Do not use the equal sign as this could be interpreted as part of the parameter.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">./</span><span class="n">occ</span> <span class="n">files</span><span class="p">:</span><span class="n">scan</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;user_x/files/folder&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="calendar-commands">
+<span id="ocapps-calendar-label"></span><h2>Calendar Commands<a class="headerlink" href="#calendar-commands" title="Permalink to this headline">¶</a></h2>
+<p>For commands for managing the calendar, please see the DAV Command section in the occ core command set.</p>
+</div>
+<div class="section" id="contacts-commands">
+<span id="ocapps-contacts-label"></span><h2>Contacts Commands<a class="headerlink" href="#contacts-commands" title="Permalink to this headline">¶</a></h2>
+<p>For commands for managing contacts, please see the DAV Command section in the occ core command set.</p>
+</div>
+<div class="section" id="s3-objectstore-commands">
+<span id="ocapps-files-primary-s3-label"></span><h2>S3 Objectstore Commands<a class="headerlink" href="#s3-objectstore-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list-objects-buckets-or-versions-of-an-object">
+<h3>List objects, buckets or versions of an object<a class="headerlink" href="#list-objects-buckets-or-versions-of-an-object" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">s3</span><span class="p">:</span><span class="nb">list</span>
+</pre></div>
+</div>
+<p>Arguments:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">bucket</span></code></td>
+<td>Name of the bucket; it`s objects will be listed</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">object</span></code></td>
+<td>Key of the object; it`s versions will be listed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="create-a-bucket-as-necessary-to-be-used">
+<h3>Create a bucket as necessary to be used<a class="headerlink" href="#create-a-bucket-as-necessary-to-be-used" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">s3</span><span class="p">:</span><span class="n">create</span><span class="o">-</span><span class="n">bucket</span>
+</pre></div>
+</div>
+<p>Arguments:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">bucket</span></code></td>
+<td>Name of the bucket to be created</td>
+</tr>
+</tbody>
+</table>
+<p>Options:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">update-configuration</span></code></td>
+<td>If the bucket exists the configuration will be updated</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">accept-warning</span></code></td>
+<td>No warning about the usage of this command will be displayed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="ldap-commands">
+<span id="ocapps-ldap-commands-label"></span><h2>LDAP Commands<a class="headerlink" href="#ldap-commands" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These commands are only available when the “LDAP user and group backend” app
+(<code class="docutils literal"><span class="pre">user_ldap</span></code>) is enabled.</p>
+</div>
+<p>These LDAP commands appear only when you have enabled the LDAP app.
+Then you can run the following LDAP commands with <code class="docutils literal"><span class="pre">occ</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">ldap</span>
+<span class="go"> ldap:check-user               Checks whether a user exists on LDAP.</span>
+<span class="go"> ldap:create-empty-config      Creates an empty LDAP configuration</span>
+<span class="go"> ldap:delete-config            Deletes an existing LDAP configuration</span>
+<span class="go"> ldap:search                   Executes a user or group search</span>
+<span class="go"> ldap:set-config               Modifies an LDAP configuration</span>
+<span class="go"> ldap:show-config              Shows the LDAP configuration</span>
+<span class="go"> ldap:test-config              Tests an LDAP configuration</span>
+<span class="go"> ldap:update-group             Update the specified group membership</span>
+<span class="go">                               Information stored locally</span>
+</pre></div>
+</div>
+<p>Search for an LDAP user, using this syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">search</span> <span class="p">[</span><span class="o">--</span><span class="n">group</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">offset</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">limit</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">]</span> <span class="n">search</span>
+</pre></div>
+</div>
+<p>Searches match at the beginning of the attribute value only.
+This example searches for <code class="docutils literal"><span class="pre">givenNames</span></code> that start with “rob”:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">search</span> <span class="s2">&quot;rob&quot;</span>
+</pre></div>
+</div>
+<p>This will find _robbie_, _roberta_, and _robin_.
+Broaden the search to find, for example, <code class="docutils literal"><span class="pre">jeroboam</span></code> with the asterisk wildcard:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">search</span> <span class="s2">&quot;*rob&quot;</span>
+</pre></div>
+</div>
+<p>User search attributes are set with <code class="docutils literal"><span class="pre">ldap:set-config</span></code> (below).
+For example, if your search attributes are <code class="docutils literal"><span class="pre">givenName</span></code> and <code class="docutils literal"><span class="pre">sn</span></code> you can find users by first name + last name very quickly.
+For example, you’ll find “Terri Hanson” by searching for <code class="docutils literal"><span class="pre">te</span> <span class="pre">ha</span></code>.
+Trailing whitespace is ignored.</p>
+<p>Check if an LDAP user exists.
+This works only if the ownCloud server is connected to an LDAP server.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">check</span><span class="o">-</span><span class="n">user</span> <span class="n">robert</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ldap:check-user</span></code> will not run a check when it finds a disabled LDAP connection.
+This prevents users that exist on disabled LDAP connections from being marked as deleted.
+If you know for sure that the user you are searching for is not in one of the disabled connections, and exists on an active connection, use the <code class="docutils literal"><span class="pre">--force</span></code> option to force it to check all active LDAP connections.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">check</span><span class="o">-</span><span class="n">user</span> <span class="o">--</span><span class="n">force</span> <span class="n">robert</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ldap:create-empty-config</span></code> creates an empty LDAP configuration.
+The first one you create has no <code class="docutils literal"><span class="pre">configID</span></code>, like this example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">create</span><span class="o">-</span><span class="n">empty</span><span class="o">-</span><span class="n">config</span>
+  <span class="n">Created</span> <span class="n">new</span> <span class="n">configuration</span> <span class="k">with</span> <span class="n">configID</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>This is a holdover from the early days, when there was no option to create additional configurations.
+The second, and all subsequent, configurations that you create are automatically assigned IDs.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">create</span><span class="o">-</span><span class="n">empty</span><span class="o">-</span><span class="n">config</span>
+   <span class="n">Created</span> <span class="n">new</span> <span class="n">configuration</span> <span class="k">with</span> <span class="n">configID</span> <span class="s1">&#39;s01&#39;</span>
+</pre></div>
+</div>
+<p>Then you can list and view your configurations:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">show</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+<p>And view the configuration for a single <code class="docutils literal"><span class="pre">configID</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">show</span><span class="o">-</span><span class="n">config</span> <span class="n">s01</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ldap:delete-config</span> <span class="pre">[configID]</span></code> deletes an existing LDAP configuration.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="n">delete</span>  <span class="n">s01</span>
+<span class="n">Deleted</span> <span class="n">configuration</span> <span class="k">with</span> <span class="n">configID</span> <span class="s1">&#39;s01&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">ldap:set-config</span></code> command is for manipulating configurations, like this example that sets search attributes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">ldap</span><span class="p">:</span><span class="nb">set</span><span class="o">-</span><span class="n">config</span> <span class="n">s01</span> <span class="n">ldapAttributesForUserSearch</span>
+<span class="s2">&quot;cn;givenname;sn;displayname;mail&quot;</span>
+</pre></div>
+</div>
+<p>The command takes the following format:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ldap</span><span class="p">:</span><span class="nb">set</span><span class="o">-</span><span class="n">config</span> <span class="o">&lt;</span><span class="n">configID</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">configKey</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">configValue</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>All of the available keys, along with default values for <cite>configValue</cite>, are listed in the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Configuration</th>
+<th class="head">Setting</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>hasMemberOfFilterSupport</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>hasPagedResultSupport</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>homeFolderNamingRule</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>lastJpegPhotoLookup</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>ldapAgentName</td>
+<td><cite>cn=admin,dc=owncloudqa,dc=com</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapAgentPassword</td>
+<td><em>*</em></td>
+</tr>
+<tr class="row-even"><td>ldapAttributesForGroupSearch</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapAttributesForUserSearch</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapBackupHost</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapBackupPort</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapBase</td>
+<td><cite>dc=owncloudqa,dc=com</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapBaseGroups</td>
+<td><cite>dc=owncloudqa,dc=com</cite></td>
+</tr>
+<tr class="row-even"><td>ldapBaseUsers</td>
+<td><cite>dc=owncloudqa,dc=com</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapCacheTTL</td>
+<td>600</td>
+</tr>
+<tr class="row-even"><td>ldapConfigurationActive</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>ldapDynamicGroupMemberURL</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapEmailAttribute</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapExperiencedAdmin</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>ldapExpertUUIDGroupAttr</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapExpertUUIDUserAttr</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapExpertUsernameAttr</td>
+<td>ldapGroupDisplayName             <cite>cn</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapGroupFilter</td>
+<td>ldapGroupFilterGroups</td>
+</tr>
+<tr class="row-even"><td>ldapGroupFilterMode</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>ldapGroupFilterObjectclass</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapGroupMemberAssocAttr</td>
+<td><cite>uniqueMember</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapHost</td>
+<td><cite>ldap://host</cite></td>
+</tr>
+<tr class="row-even"><td>ldapIgnoreNamingRules</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapLoginFilter</td>
+<td><cite>(&amp;((objectclass=inetOrgPerson))(uid=%uid))</cite></td>
+</tr>
+<tr class="row-even"><td>ldapLoginFilterAttributes</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapLoginFilterEmail</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>ldapLoginFilterMode</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>ldapLoginFilterUsername</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>ldapNestedGroups</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>ldapOverrideMainServer</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapPagingSize</td>
+<td>500</td>
+</tr>
+<tr class="row-odd"><td>ldapPort</td>
+<td>389</td>
+</tr>
+<tr class="row-even"><td>ldapQuotaAttribute</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapQuotaDefault</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ldapTLS</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>ldapUserDisplayName</td>
+<td><cite>displayName</cite></td>
+</tr>
+<tr class="row-even"><td>ldapUserDisplayName2</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapUserFilter</td>
+<td><cite>((objectclass=inetOrgPerson))</cite></td>
+</tr>
+<tr class="row-even"><td>ldapUserFilterGroups</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ldapUserFilterMode</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>ldapUserFilterObjectclass</td>
+<td><cite>inetOrgPerson</cite></td>
+</tr>
+<tr class="row-odd"><td>ldapUuidGroupAttribute</td>
+<td><cite>auto</cite></td>
+</tr>
+<tr class="row-even"><td>ldapUuidUserAttribute</td>
+<td><cite>auto</cite></td>
+</tr>
+<tr class="row-odd"><td>turnOffCertCheck</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>useMemberOfToDetectMembership</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal"><span class="pre">ldap:test-config</span></code> tests whether your configuration is correct and can bind to the server.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>sudo -u www-data php occ ldap:test-config s01
+The configuration is valid and the connection could be established!
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">ldap:update-group</span></code> updates the specified group membership information stored locally.</p>
+<p>The command takes the following format:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ldap</span><span class="p">:</span><span class="n">update</span><span class="o">-</span><span class="n">group</span> <span class="o">&lt;</span><span class="n">groupID</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">groupID</span> <span class="o">&lt;</span><span class="n">groupID</span><span class="o">&gt;</span> <span class="o">...&gt;</span>
+</pre></div>
+</div>
+<p>The command allows for running a manual group sync on one or more groups, instead of having to wait for group syncing to occur.
+If users have been added or removed from these groups in LDAP, ownCloud will update its details.
+If a group was deleted in LDAP, ownCloud will also delete the local mapping info about this group.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">New groups in LDAP won’t be synced with this command.
+The LDAP TTL configuration (by default 10 minutes) still applies. This means
+that recently deleted groups from LDAP might be considered as “active” and
+might not be deleted in ownCloud immediately.</p>
+</div>
+<p><strong>Configuring the LDAP Refresh Attribute Interval</strong></p>
+<p>You can configure the LDAP refresh attribute interval, but not with the <code class="docutils literal"><span class="pre">ldap</span></code> commands.
+Instead, you need to use the <code class="docutils literal"><span class="pre">config:app:set</span></code> command, as in the following example, which takes a number of seconds to the <code class="docutils literal"><span class="pre">--value</span></code> switch.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">config</span><span class="p">:</span><span class="n">app</span><span class="p">:</span><span class="nb">set</span> <span class="n">user_ldap</span> <span class="n">updateAttributesInterval</span> <span class="o">--</span><span class="n">value</span><span class="o">=</span><span class="mi">7200</span>
+</pre></div>
+</div>
+<p>In the example above, the interval is being set to 7200 seconds.
+Assuming the above example was used, the command would output the following:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Config value updateAttributesInterval for app user_ldap set to 7200</span>
+</pre></div>
+</div>
+<p>If you want to reset (or unset) the setting, then you can use the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">config</span><span class="p">:</span><span class="n">app</span><span class="p">:</span><span class="n">delete</span> <span class="n">user_ldap</span> <span class="n">updateAttributesInterval</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="market">
+<span id="ocapps-market-commands-label"></span><h2>Market<a class="headerlink" href="#market" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">market</span></code> commands <em>install</em>, <em>uninstall</em>, <em>list</em>, and <em>upgrade</em> applications from <cite>the ownCloud Marketplace</cite>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">market</span>
+<span class="go">  market:install    Install apps from the marketplace. If already installed and</span>
+<span class="go">                    an update is available the update will be installed.</span>
+<span class="go">  market:uninstall  Uninstall apps from the marketplace.</span>
+<span class="go">  market:list       Lists apps as available on the marketplace.</span>
+<span class="go">  market:upgrade    Installs new app versions if available on the marketplace</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The user running the update command, which will likely be your webserver user, requires write permission for the <code class="docutils literal"><span class="pre">/apps</span></code> folder.
+If they don’t have write permission, the command may report that the update was successful, but it may silently fail.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These commands are not available in <cite>single-user (maintenance) mode</cite>.
+For more details please see the Maintenance Commands section in the occ core command set.</p>
+</div>
+<div class="section" id="install-an-application">
+<h3>Install an Application<a class="headerlink" href="#install-an-application" title="Permalink to this headline">¶</a></h3>
+<p>Applications can be installed both from <a class="reference external" href="https://marketplace.owncloud.com/">the ownCloud Marketplace</a> and from a local file archive.</p>
+</div>
+<div class="section" id="install-apps-from-the-marketplace">
+<h3>Install Apps From The Marketplace<a class="headerlink" href="#install-apps-from-the-marketplace" title="Permalink to this headline">¶</a></h3>
+<p>To install an application from the Marketplace, you need to supply the app’s id, which can be found in the app’s Marketplace URL.
+For example, the URL for <em>Two factor backup codes</em> is <a class="reference external" href="https://marketplace.owncloud.com/apps/twofactor_backup_codes">https://marketplace.owncloud.com/apps/twofactor_backup_codes</a>.
+So its app id is <code class="docutils literal"><span class="pre">twofactor_backup_codes</span></code>.</p>
+</div>
+<div class="section" id="install-apps-from-a-file-archive">
+<h3>Install Apps From a File Archive<a class="headerlink" href="#install-apps-from-a-file-archive" title="Permalink to this headline">¶</a></h3>
+<p>To install an application from a local file archive, you need to supply the path to the archive, and that you pass the <code class="docutils literal"><span class="pre">-l</span></code> switch.
+Only <code class="docutils literal"><span class="pre">zip</span></code>, <code class="docutils literal"><span class="pre">gzip</span></code>, and <code class="docutils literal"><span class="pre">bzip2</span></code> archives are supported.</p>
+</div>
+<div class="section" id="usage-example">
+<h3>Usage Example<a class="headerlink" href="#usage-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Install an app from the marketplace.</span>
+<span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">market</span><span class="p">:</span><span class="n">install</span> <span class="n">twofactor_backup_codes</span>
+
+<span class="c1"># Install an app from a local archive.</span>
+<span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">market</span><span class="p">:</span><span class="n">install</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">richdocuments</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="notifications">
+<span id="ocapps-notifications-commands-label"></span><h2>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">¶</a></h2>
+<p>If you want to send notifications to users or groups use the following command.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">notifications</span>
+<span class="go">  notifications:generate   Generates a notification.</span>
+</pre></div>
+</div>
+<p>Options and Arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">notifications</span><span class="p">:</span><span class="n">generate</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span><span class="o">|--</span><span class="n">user</span> <span class="n">USER</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span><span class="o">|--</span><span class="n">group</span> <span class="n">GROUP</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">l</span><span class="o">|--</span><span class="n">link</span> <span class="o">&lt;</span><span class="n">linktext</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">subject</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">message</span><span class="o">&gt;</span><span class="p">]</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">u</span> <span class="o">--</span><span class="n">user</span>              <span class="n">User</span> <span class="nb">id</span> <span class="n">to</span> <span class="n">whom</span> <span class="n">the</span> <span class="n">notification</span> <span class="n">shall</span> <span class="n">be</span> <span class="n">sent</span>
+  <span class="o">-</span><span class="n">g</span> <span class="o">--</span><span class="n">group</span>             <span class="n">Group</span> <span class="nb">id</span> <span class="n">to</span> <span class="n">whom</span> <span class="n">the</span> <span class="n">notification</span> <span class="n">shall</span> <span class="n">be</span> <span class="n">sent</span>
+  <span class="o">-</span><span class="n">l</span> <span class="o">--</span><span class="n">link</span>              <span class="n">A</span> <span class="n">link</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">notification</span>
+
+<span class="n">Arguments</span><span class="p">:</span>
+  <span class="n">subject</span>                <span class="n">The</span> <span class="n">notification</span> <span class="n">subject</span> <span class="o">-</span> <span class="n">maximum</span> <span class="mi">255</span> <span class="n">characters</span>
+  <span class="n">message</span> <span class="n">A</span> <span class="n">more</span> <span class="n">extended</span> <span class="n">message</span> <span class="o">-</span> <span class="n">maximum</span> <span class="mi">4000</span> <span class="n">characters</span>
+  <span class="n">linktext</span>               <span class="n">A</span> <span class="n">link</span> <span class="n">to</span> <span class="n">an</span> <span class="n">HTML</span> <span class="n">page</span>
+</pre></div>
+</div>
+<p>At least one user or group must be set.</p>
+<p>A link can be useful for notifications shown in client apps.</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">notifications</span><span class="p">:</span><span class="n">generate</span> <span class="o">-</span><span class="n">g</span> <span class="n">Office</span> <span class="s2">&quot;Emergeny Alert&quot;</span> <span class="s2">&quot;Rebooting in 5min&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="password-policy">
+<span id="ocapps-password-policy-label"></span><h2>Password Policy<a class="headerlink" href="#password-policy" title="Permalink to this headline">¶</a></h2>
+<p><strong>Command to expire a users password</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">user</span><span class="p">:</span><span class="n">expire</span><span class="o">-</span><span class="n">password</span>
+</pre></div>
+</div>
+<p>Arguments:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">expiredate</span></code></td>
+<td>The date and time when a password expires, e.g. “2019-01-01 14:00:00 CET” or -1 days</td>
+</tr>
+</tbody>
+</table>
+<p>Options:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">-a,</span> <span class="pre">--all</span></code></td>
+<td>Will add password expiry to all known users. uid and group option are discarded if
+the option is provided by user</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">-u,</span> <span class="pre">--uid</span></code></td>
+<td>The user’s uid is used. This option can be used as –uid “Alice” –uid Bob”</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">-g,</span> <span class="pre">--group</span></code></td>
+<td>Add password expiry to user(s) under group(s). This option can be used as –group
+“foo” –group “bar” to add expiry passwords for users in group foo and bar. If
+uid option (eg: –uid “user1”) is passed with group, then uid will also be processed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="reports">
+<span id="ocapps-reports-commands-label"></span><h2>Reports<a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h2>
+<p>If you’re working with ownCloud support and need to send them a configuration summary, you can generate it using the <code class="docutils literal"><span class="pre">configreport:generate</span></code> command.
+This command generates the same JSON-based report as the Admin Config Report, which you can access under <code class="docutils literal"><span class="pre">admin</span> <span class="pre">-&gt;</span> <span class="pre">Settings</span> <span class="pre">-&gt;</span> <span class="pre">Admin</span> <span class="pre">-&gt;</span> <span class="pre">Help</span> <span class="pre">&amp;</span> <span class="pre">Tips</span> <span class="pre">-&gt;</span> <span class="pre">Download</span> <span class="pre">ownCloud</span> <span class="pre">config</span> <span class="pre">report</span></code>.</p>
+<p>From the command-line in the root directory of your ownCloud installation, run it as your webserver user as follows, (assuming your webserver user is <code class="docutils literal"><span class="pre">www-data</span></code>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">configreport</span><span class="p">:</span><span class="n">generate</span>
+</pre></div>
+</div>
+<p>This generates the report and send it to <code class="docutils literal"><span class="pre">STDOUT</span></code>.
+You can optionally pipe the output to a file and then attach it to an email to ownCloud support, by running the following command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">configreport</span><span class="p">:</span><span class="n">generate</span> <span class="o">&gt;</span> <span class="n">generated</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">report</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Alternatively, you could generate the report and email it all in one command, by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">occ</span> <span class="n">configreport</span><span class="p">:</span><span class="n">generate</span> <span class="o">|</span> <span class="n">mail</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;configuration report&quot;</span> \
+    <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">the</span> <span class="n">email</span> <span class="n">address</span> <span class="n">to</span> <span class="n">send</span> <span class="n">from</span><span class="o">&gt;</span> \
+    <span class="n">support</span><span class="nd">@owncloud</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These commands are not available in <a class="reference internal" href="occ_command.html#maintenance-commands-label"><span class="std std-ref">single-user (maintenance) mode</span></a>.</p>
+</div>
+</div>
+<div class="section" id="ransomware-protection">
+<span id="ocapps-ransomware-commands-label"></span><h2>Ransomware Protection<a class="headerlink" href="#ransomware-protection" title="Permalink to this headline">¶</a></h2>
+<p>Use these commands to help users recover from a Ransomware attack.
+You can find more information about the application <a class="reference internal" href="../../enterprise/ransomware-protection/index.html"><span class="doc">in the documentation</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Ransomware Protection (which is an Enterprise app) needs to be installed and enabled to be able to use these commands.</p>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">ransomguard</span><span class="p">:</span><span class="n">scan</span> <span class="o">&lt;</span><span class="n">timestamp</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>     <span class="n">Report</span> <span class="nb">all</span> <span class="n">changes</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">user</span><span class="s1">&#39;s account, starting from timestamp.</span>
+<span class="n">occ</span> <span class="n">ransomguard</span><span class="p">:</span><span class="n">restore</span> <span class="o">&lt;</span><span class="n">timestamp</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>  <span class="n">Revert</span> <span class="nb">all</span> <span class="n">operations</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">user</span> <span class="n">account</span> <span class="n">after</span> <span class="n">a</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">time</span><span class="o">.</span>
+<span class="n">occ</span> <span class="n">ransomguard</span><span class="p">:</span><span class="n">lock</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>                 <span class="n">Set</span> <span class="n">a</span> <span class="n">user</span> <span class="n">account</span> <span class="k">as</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="k">for</span> <span class="n">ownCloud</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">WebDAV</span>
+                                            <span class="n">clients</span> <span class="n">when</span> <span class="n">malicious</span> <span class="n">activity</span> <span class="ow">is</span> <span class="n">suspected</span><span class="o">.</span>
+<span class="n">occ</span> <span class="n">ransomguard</span><span class="p">:</span><span class="n">unlock</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>               <span class="n">Unlock</span> <span class="n">a</span> <span class="n">user</span> <span class="n">account</span> <span class="n">after</span> <span class="n">ransomware</span> <span class="n">issues</span> <span class="n">have</span> <span class="n">been</span> <span class="n">resolved</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shibboleth-modes-enterprise-edition-only">
+<span id="ocapps-shibboleth-label"></span><h2>Shibboleth Modes (Enterprise Edition only)<a class="headerlink" href="#shibboleth-modes-enterprise-edition-only" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">shibboleth:mode</span></code> sets your Shibboleth mode to <code class="docutils literal"><span class="pre">notactive</span></code>,
+<code class="docutils literal"><span class="pre">autoprovision</span></code>, or <code class="docutils literal"><span class="pre">ssoonly</span></code></p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">shibboleth:mode [mode]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These commands are only available when the “Shibboleth user backend” app
+(<code class="docutils literal"><span class="pre">user_shibboleth</span></code>) is enabled.</p>
+</div>
+</div>
+<div class="section" id="two-factor-authentication">
+<span id="ocapps-two-factor-auth-label"></span><h2>Two-factor Authentication<a class="headerlink" href="#two-factor-authentication" title="Permalink to this headline">¶</a></h2>
+<p>If a two-factor provider app is enabled, it is enabled for all users by default (though the provider can decide whether or not the user has to pass the challenge).
+In the case of an user losing access to the second factor (e.g., a lost phone with two-factor SMS verification), the admin can temporarily disable the two-factor check for that user via the occ command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">twofactor</span><span class="p">:</span><span class="n">disable</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To re-enable two-factor authentication again, use the following commmand:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="n">php</span> <span class="n">occ</span> <span class="n">twofactor</span><span class="p">:</span><span class="n">enable</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="occ_command.html" title="Previous Chapter: Using occ core commands"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Using occ cor...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="activity_configuration.html" title="Next Chapter: Configuring the Activity App"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Configuring t... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

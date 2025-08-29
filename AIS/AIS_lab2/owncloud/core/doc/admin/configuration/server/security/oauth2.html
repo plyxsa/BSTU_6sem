@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OAuth2 &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../../../_static/" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Reverse Proxy Configuration" href="../reverse_proxy_configuration.html" />
+    <link rel="prev" title="Password Policy" href="password_policy.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../../../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../../../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../database/index.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ldap/ldap_proxy_cache_server_setup.html">How To Install and Configure an LDAP Proxy-Cache Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Server Configuration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../security_setup_warnings.html">Warnings on Admin Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_ssl_cert.html">Importing System-wide and Personal SSL Certificates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../occ_command.html">Using occ core commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../occ_apps_command.html">Using occ apps commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../activity_configuration.html">Configuring the Activity App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../antivirus_configuration.html">Virus Scanner Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../caching_configuration.html">Memory Caching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../background_jobs_configuration.html">Background Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config_sample_php_parameters.html">Core Config.php Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../email_configuration.html">Email Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../excluded_blacklisted_files.html">Excluding Directories and Blacklisting Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../external_sites.html">Linking External Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../custom_client_repos.html">Custom Client Download Repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../knowledgebase_configuration.html">Knowledge Base Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../language_configuration.html">Language Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../legal_settings_configuration.html">Legal Settings Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logging_configuration.html">Logging Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../harden_server.html">Hardening and Security Guidance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="password_policy.html">Password Policy</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">OAuth2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reverse_proxy_configuration.html">Reverse Proxy Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../thirdparty_php_configuration.html">Using Third Party PHP Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../automatic_configuration.html">Automatic Configuration Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../oc_server_tuning.html">ownCloud Server Tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_php_less_urls.html">Enable index.php-less URLs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/index.html">User Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="password_policy.html" title="Previous Chapter: Password Policy"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Password Policy</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../reverse_proxy_configuration.html" title="Next Chapter: Reverse Proxy Configuration"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Reverse Proxy... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="oauth2">
+<h1>OAuth2<a class="headerlink" href="#oauth2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h2>
+<p>OAuth2 is summarized in <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.1">RFC 6749</a> as follows:</p>
+<blockquote>
+<div>The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf.</div></blockquote>
+<p>Here is an overview of how the process works:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">+----------+</span>
+<span class="o">|</span> <span class="n">Resource</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="n">Owner</span>  <span class="o">|</span>
+<span class="o">|</span>          <span class="o">|</span>
+<span class="o">+----------+</span>
+     <span class="o">^</span>
+     <span class="o">|</span>
+    <span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="o">+----|-----+</span>          <span class="n">Client</span> <span class="n">Identifier</span>      <span class="o">+---------------+</span>
+<span class="o">|</span>         <span class="o">-+----</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">--</span> <span class="o">&amp;</span> <span class="n">Redirection</span> <span class="n">URI</span> <span class="o">----&gt;|</span>               <span class="o">|</span>
+<span class="o">|</span>  <span class="n">User</span><span class="o">-</span>   <span class="o">|</span>                                 <span class="o">|</span> <span class="n">Authorization</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="n">Agent</span>  <span class="o">-+----</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">--</span> <span class="n">User</span> <span class="n">authenticates</span> <span class="o">---&gt;|</span>     <span class="n">Server</span>    <span class="o">|</span>
+<span class="o">|</span>          <span class="o">|</span>                                 <span class="o">|</span>               <span class="o">|</span>
+<span class="o">|</span>         <span class="o">-+----</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="o">--</span> <span class="n">Authorization</span> <span class="n">Code</span> <span class="o">---&lt;|</span>               <span class="o">|</span>
+<span class="o">+-|----|---+</span>                                 <span class="o">+---------------+</span>
+  <span class="o">|</span>    <span class="o">|</span>                                         <span class="o">^</span>      <span class="n">v</span>
+ <span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="n">C</span><span class="p">)</span>                                        <span class="o">|</span>      <span class="o">|</span>
+  <span class="o">|</span>    <span class="o">|</span>                                         <span class="o">|</span>      <span class="o">|</span>
+  <span class="o">^</span>    <span class="n">v</span>                                         <span class="o">|</span>      <span class="o">|</span>
+<span class="o">+---------+</span>                                      <span class="o">|</span>      <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|&gt;---</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">--</span> <span class="n">Authorization</span> <span class="n">Code</span> <span class="o">---------</span><span class="s1">&#39;      |</span>
+<span class="o">|</span>  <span class="n">Client</span> <span class="o">|</span>          <span class="o">&amp;</span> <span class="n">Redirection</span> <span class="n">URI</span>                  <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|</span>                                             <span class="o">|</span>
+<span class="o">|</span>         <span class="o">|&lt;---</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">-----</span> <span class="n">Access</span> <span class="n">Token</span> <span class="o">-------------------</span><span class="s1">&#39;</span>
+<span class="o">+---------+</span>       <span class="p">(</span><span class="n">w</span><span class="o">/</span> <span class="n">Optional</span> <span class="n">Refresh</span> <span class="n">Token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-oauth2-app">
+<h2>The OAuth2 App<a class="headerlink" href="#the-oauth2-app" title="Permalink to this headline">¶</a></h2>
+<p>OAuth2 support is available in ownCloud via <a class="reference external" href="https://marketplace.owncloud.com/apps/oauth2">an OAuth2 application</a> which is available from the ownCloud Marketplace.
+The app aims to:</p>
+<ol class="arabic simple">
+<li>Connect ownCloud clients (both desktop and mobile) in a standardized and secure way.</li>
+<li>Make 3rd party software integrations easier by providing an unified authorization interface.</li>
+</ol>
+<div class="section" id="endpoints">
+<h3>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Description</th>
+<th class="head">URI</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Authorization URL</td>
+<td><code class="docutils literal"><span class="pre">/index.php/apps/oauth2/authorize</span></code></td>
+</tr>
+<tr class="row-odd"><td>Access Token URL</td>
+<td><code class="docutils literal"><span class="pre">/index.php/apps/oauth2/api/v1/token</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="protocol-flow">
+<h3>Protocol Flow<a class="headerlink" href="#protocol-flow" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="client-registration">
+<h4>Client Registration<a class="headerlink" href="#client-registration" title="Permalink to this headline">¶</a></h4>
+<p>The clients first have to be registered in the admin settings: <code class="docutils literal"><span class="pre">/settings/admin?sectionid=authentication</span></code>.
+You need to specify a name for the client (the name is unrelated to the OAuth 2.0 protocol and is just used to recognize it later) and the redirection URI.
+A client identifier and client secret are generated when adding a new client, which both consist of 64 characters.
+For further information about client registration, please refer to <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-2">the official client registration RFC from the IETF</a>.</p>
+</div>
+<div class="section" id="authorization-request">
+<h4>Authorization Request<a class="headerlink" href="#authorization-request" title="Permalink to this headline">¶</a></h4>
+<p>For every registered client an authorization request can be made.
+The client redirects the resource owner to the authorization URL and requests authorization.
+The following URL parameters have to be specified:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="9%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">response_type</span></code></td>
+<td>yes</td>
+<td>Needs to be <cite>code</cite> because at this time only the authorization code flow is implemented.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">client_id</span></code></td>
+<td>yes</td>
+<td>The client identifier obtained when registering the client.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">redirect_uri</span></code></td>
+<td>yes</td>
+<td>The redirection URI specified when registering the client.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">state</span></code></td>
+<td>no</td>
+<td>Can be set by the client “to maintain state between the request and callback”.
+See <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.1">RFC 6749</a> for more information.</td>
+</tr>
+</tbody>
+</table>
+<p>For further information about client registration, please refer to <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.1">the official authorization request RFC from the IETF</a>.</p>
+</div>
+<div class="section" id="authorization-response">
+<h4>Authorization Response<a class="headerlink" href="#authorization-response" title="Permalink to this headline">¶</a></h4>
+<p>After the resource owner’s authorization, the app redirects to the <cite>redirect_uri</cite> specified in the authorization request and adds the authorization code as URL parameter <cite>code</cite>.
+An authorization code is valid for 10 minutes.
+For further information about client registration, please refer to <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.2">the official authorization response RFC from the IETF</a>.</p>
+</div>
+<div class="section" id="access-token-request">
+<h4>Access Token Request<a class="headerlink" href="#access-token-request" title="Permalink to this headline">¶</a></h4>
+<p>With the authorization code, the client can request an access token using the access token URL.
+<a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-2.3">Client authentication</a> is done using basic authentication with the client identifier as username and the client secret as a password.
+The following URL parameters have to be specified:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="30%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">grant_type</span></code></td>
+<td>&#160;</td>
+<td>Either <code class="docutils literal"><span class="pre">authorization_code</span></code> or <code class="docutils literal"><span class="pre">refresh_token</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">code</span></code></td>
+<td>if the grant type
+<cite>authorization_code</cite> is used.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">redirect_uri</span></code></td>
+<td>if the grant type
+<cite>authorization_code</cite> is used.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">refresh_token</span></code></td>
+<td>if the grant type
+<cite>refresh_token</cite> is used.</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>For further information about client registration, please refer to <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.3">the official access token request RFC from the IETF</a>.</p>
+</div>
+<div class="section" id="access-token-response">
+<h4>Access Token Response<a class="headerlink" href="#access-token-response" title="Permalink to this headline">¶</a></h4>
+<p>The app responses to a valid access token request with a JSON response like the following.
+An access token is valid for 1 hour and can be refreshed with a refresh token.</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;access_token&quot;</span> <span class="p">:</span> <span class="s2">&quot;1vtnuo1NkIsbndAjVnhl7y0wJha59JyaAiFIVQDvcBY2uvKmj5EPBEhss0pauzdQ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;token_type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;expires_in&quot;</span> <span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
+    <span class="nt">&quot;refresh_token&quot;</span> <span class="p">:</span> <span class="s2">&quot;7y0wJuvKmj5E1vjVnhlPBEhha59JyaAiFIVQDvcBY2ss0pauzdQtnuo1NkIsbndA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;message_url&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://www.example.org/owncloud/index.php/apps/oauth2/authorization-successful&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For further information about client registration, please refer to <a class="reference external" href="https://tools.ietf.org/html/rfc6749#section-4.1.4">the official access token response RFC from the IETF</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For a succinct explanation of the differences between access tokens and authorization codes, check out <a class="reference external" href="https://stackoverflow.com/a/16341985/222011">this answer on StackOverflow</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To install the application, place the content of the OAuth2 app inside your installation’s <code class="docutils literal"><span class="pre">app</span></code> directory, or use the Market application.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>If you are hosting your ownCloud installation from the Apache web server, then both the <a class="reference external" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> and <a class="reference external" href="http://httpd.apache.org/docs/current/mod/mod_headers.html">mod_headers</a> modules are required to be installed and enabled.</p>
+</div>
+<div class="section" id="basic-configuration">
+<h2>Basic Configuration<a class="headerlink" href="#basic-configuration" title="Permalink to this headline">¶</a></h2>
+<p>To enable token-only based app or client logins in <code class="docutils literal"><span class="pre">config/config.php</span></code> set <code class="docutils literal"><span class="pre">token_auth_enforced</span></code> to <code class="docutils literal"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="restricting-usage">
+<h2>Restricting Usage<a class="headerlink" href="#restricting-usage" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Enterprise installations can limit the access of authorized clients, preventing unwanted clients from connecting.</li>
+</ul>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Since the app handles no user passwords, only master key encryption works (similar to <a class="reference external" href="https://marketplace.owncloud.com/apps/user_shibboleth">the Shibboleth app</a>).</li>
+<li>Clients cannot migrate accounts from Basic Authorization to OAuth2, if they are currently using the <cite>~user_ldap~</cite> backend.</li>
+</ul>
+</div>
+<div class="section" id="connecting-clients-via-oauth2">
+<h2>Connecting Clients via OAuth2<a class="headerlink" href="#connecting-clients-via-oauth2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="revoking-sessions">
+<h2>Revoking Sessions<a class="headerlink" href="#revoking-sessions" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="password_policy.html" title="Previous Chapter: Password Policy"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Password Policy</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../reverse_proxy_configuration.html" title="Next Chapter: Reverse Proxy Configuration"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Reverse Proxy... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

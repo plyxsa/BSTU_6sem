@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Encryption Configuration Quick Guide &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../../_static/" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Encryption Configuration" href="encryption_configuration.html" />
+    <link rel="prev" title="External Storage Authentication mechanisms" href="external_storage/auth_mechanisms.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../database/index.html">Database Configuration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">File Sharing and Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="file_sharing_configuration.html">File Sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="federated_cloud_sharing_configuration.html">Configuring Federation Sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="big_file_upload_configuration.html">Uploading big files &gt; 512MB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="default_files_configuration.html">Providing Default Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_storage_configuration_gui.html">Configuring External Storage (GUI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_storage_configuration.html">Configuring External Storage (Configuration File)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_storage/auth_mechanisms.html">External Storage Authentication mechanisms</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Encryption Configuration Quick Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encryption_configuration.html">Encryption Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="files_locking_transactional.html">Transactional File Locking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="previews_configuration.html">Previews Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_versioning.html">Controlling File Versions and Aging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trashbin_options.html">Managing the Trashbin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ldap/ldap_proxy_cache_server_setup.html">How To Install and Configure an LDAP Proxy-Cache Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/index.html">Server Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="external_storage/auth_mechanisms.html" title="Previous Chapter: External Storage Authentication mechanisms"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; External Stor...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="encryption_configuration.html" title="Next Chapter: Encryption Configuration"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Encryption Co... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="encryption-configuration-quick-guide">
+<h1>Encryption Configuration Quick Guide<a class="headerlink" href="#encryption-configuration-quick-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="encryption-types">
+<h2>Encryption Types<a class="headerlink" href="#encryption-types" title="Permalink to this headline">¶</a></h2>
+<p>ownCloud provides two encryption types:</p>
+<ul class="simple">
+<li><strong>Master Key:</strong> there is only one key (or key pair) and all files are encrypted using that key pair. This is <strong>highly recommended</strong> for <strong>new</strong> instances to avoid <strong>restrictions</strong> in functionality of user key encryption.</li>
+<li><strong>User-specific Key:</strong> every user has their own private/public key pairs; the private key is protected by the user’s password. This <strong>will be removed in future a release</strong>.</li>
+</ul>
+<div class="section" id="master-key">
+<h3>Master Key<a class="headerlink" href="#master-key" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The <strong>recommended</strong> type of encryption.</li>
+<li>Best to activate on new instances with no data.</li>
+<li>If you have existing data, use <strong>encrypt all</strong> command. Depending on the amount of existing data, this operation can take a long time.</li>
+</ul>
+<div class="section" id="activation">
+<h4>Activation<a class="headerlink" href="#activation" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">on</span>
+<span class="n">occ</span> <span class="n">app</span><span class="p">:</span><span class="n">enable</span> <span class="n">encryption</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">enable</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">select</span><span class="o">-</span><span class="n">encryption</span><span class="o">-</span><span class="nb">type</span> <span class="n">masterkey</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">encrypt</span><span class="o">-</span><span class="nb">all</span>
+<span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h4>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">status</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decryption">
+<h4>Decryption<a class="headerlink" href="#decryption" title="Permalink to this headline">¶</a></h4>
+<p>Depending on the amount of existing data, this operation can take a long time.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">on</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">decrypt</span><span class="o">-</span><span class="nb">all</span>
+<span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deactivation">
+<h4>Deactivation<a class="headerlink" href="#deactivation" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">disable</span>
+<span class="c1"># ignore the &quot;already disabled&quot; message</span>
+<span class="n">occ</span> <span class="n">app</span><span class="p">:</span><span class="n">disable</span> <span class="n">encryption</span>
+</pre></div>
+</div>
+<p>If the master key has been compromised or exposed, you can recreate it.
+You will need the current master key for it.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">recreate</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">key</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="user-specific-key">
+<h3>User-Specific Key<a class="headerlink" href="#user-specific-key" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Activation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">on</span>
+<span class="n">occ</span> <span class="n">app</span><span class="p">:</span><span class="n">enable</span> <span class="n">encryption</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">enable</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">select</span><span class="o">-</span><span class="n">encryption</span><span class="o">-</span><span class="nb">type</span> <span class="n">user</span><span class="o">-</span><span class="n">keys</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">encrypt</span><span class="o">-</span><span class="nb">all</span>
+<span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">off</span>
+</pre></div>
+</div>
+<p>After User-specific encryption is enabled, users must log out and log back in to trigger the automatic personal encryption key generation process.</p>
+</div>
+<div class="section" id="recovery-key">
+<h4>Recovery Key<a class="headerlink" href="#recovery-key" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Go to the “_Encryption_” section of your Admin page.</li>
+<li>Set a recovery key password.</li>
+<li>Ask the users to opt-in to the recovery key.</li>
+</ul>
+<p>If a user decides not to opt-in to the recovery key and forgets or loses their password, <strong>the user’s data cannot be decrypted</strong>.
+This leads to <strong>permanent data loss</strong>.</p>
+<p>They need to:</p>
+<ul class="simple">
+<li>Go to the “<strong>Personal</strong>” page</li>
+<li>Enable the Recovery Key</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h4>Status<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">status</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decrypt">
+<h4>Decrypt<a class="headerlink" href="#decrypt" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">on</span>
+<span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">decrypt</span><span class="o">-</span><span class="nb">all</span>
+<span class="c1">#enter **Recovery Key** for **each user**</span>
+<span class="c1"># Recovery Key is a password set by the admin</span>
+<span class="n">occ</span> <span class="n">maintenance</span><span class="p">:</span><span class="n">singleuser</span> <span class="o">--</span><span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h4>Deactivation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">occ</span> <span class="n">encryption</span><span class="p">:</span><span class="n">disable</span>
+<span class="c1"># ignore the &quot;already disabled&quot; message</span>
+<span class="n">occ</span> <span class="n">app</span><span class="p">:</span><span class="n">disable</span> <span class="n">encryption</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="external_storage/auth_mechanisms.html" title="Previous Chapter: External Storage Authentication mechanisms"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; External Stor...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="encryption_configuration.html" title="Next Chapter: Encryption Configuration"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Encryption Co... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

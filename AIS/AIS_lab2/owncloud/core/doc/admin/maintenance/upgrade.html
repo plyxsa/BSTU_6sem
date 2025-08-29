@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>How to Upgrade Your ownCloud Server &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../_static/" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Upgrade ownCloud From Packages" href="package_upgrade.html" />
+    <link rel="prev" title="Backing up ownCloud" href="backup.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Maintenance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="enable_maintenance.html">Maintenance Mode Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backup.html">Backing up ownCloud</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to Upgrade Your ownCloud Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrade-options">Upgrade Options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="package_upgrade.html">Upgrade ownCloud From Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">Upgrading ownCloud with the Updater App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual_upgrade.html">Manual ownCloud Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restore.html">Restoring ownCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migrating.html">Migrating to a Different Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manually-moving-data-folders.html">How To Manually Move a Data Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="backup.html" title="Previous Chapter: Backing up ownCloud"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Backing up ownCloud</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="package_upgrade.html" title="Next Chapter: Upgrade ownCloud From Packages"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Upgrade ownCl... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="how-to-upgrade-your-owncloud-server">
+<h1>How to Upgrade Your ownCloud Server<a class="headerlink" href="#how-to-upgrade-your-owncloud-server" title="Permalink to this headline">¶</a></h1>
+<p>We recommend that you keep your ownCloud server up to date.
+When an update is available for your ownCloud server, you will see a notification at the top of your ownCloud Web interface.
+When you click the notification, it will bring you here.</p>
+<p>Before beginning an upgrade, please keep the following points in mind:</p>
+<ul class="simple">
+<li>Review <a class="reference internal" href="../release_notes.html"><span class="doc">the release notes</span></a> for important information about the needed migration steps during that upgrade to help ensure a smooth upgrade process.</li>
+<li>Skipping major releases is not supported. However <em>you can</em> migrate from 9.0.9 straight to 10.0.</li>
+<li>Downgrading is not supported.</li>
+<li>Upgrading is disruptive, as your ownCloud server will be put into <a class="reference internal" href="../configuration/server/occ_command.html#maintenance-mode-label"><span class="std std-ref">maintenance mode</span></a>.</li>
+<li>Large installations may take several hours to complete the upgrade.</li>
+<li>Downgrading <strong>is not supported</strong> as it risks corrupting your data. If you want to revert to an older ownCloud version, make a new, fresh installation and then restore your data from backup. Before doing this, file a support ticket (if you have paid support) or ask for help in the ownCloud forums to resolve your issue without downgrading.</li>
+</ul>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>We strongly recommend that you always maintain <a class="reference internal" href="backup.html"><span class="doc">regular backups</span></a> as well as make a fresh backup before every upgrade.
+We also recommend that you review any installed third-party apps for compatibility with the new ownCloud release.
+Ensure that they are all disabled before beginning the upgrade.
+After the upgrade is complete re-enable any which are compatible with the new release.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Install unsupported apps at your own risk.</p>
+</div>
+</div>
+<div class="section" id="upgrade-options">
+<h2>Upgrade Options<a class="headerlink" href="#upgrade-options" title="Permalink to this headline">¶</a></h2>
+<p>There are three ways to upgrade your ownCloud server:</p>
+<ol class="arabic simple">
+<li><strong>(Recommended)</strong> Perform a <a class="reference internal" href="manual_upgrade.html"><span class="doc">manual upgrade</span></a>, using <a class="reference external" href="owncloud.org/install/">the latest ownCloud release</a>.</li>
+<li>Use your distribution’s <a class="reference internal" href="package_upgrade.html"><span class="doc">package manager</span></a>, in conjunction with our official ownCloud repositories. <strong>Note:</strong> This approach should not be used unattended nor in clustered setups.</li>
+<li>Use the <a class="reference internal" href="update.html"><span class="doc">Updater App</span></a>. This is needed in scenarios where the admin does not have access to the command line. It is recommended for shared hosting environments and for users who want an easy way to track different release channels.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Enterprise customers will use their Enterprise software repositories to maintain their ownCloud servers, rather than the Open Build Service. Please see <a class="reference internal" href="../enterprise/installation/install.html"><span class="doc">Installing &amp; Upgrading ownCloud Enterprise Edition</span></a> for more information.</p>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="backup.html" title="Previous Chapter: Backing up ownCloud"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Backing up ownCloud</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="package_upgrade.html" title="Next Chapter: Upgrade ownCloud From Packages"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Upgrade ownCl... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

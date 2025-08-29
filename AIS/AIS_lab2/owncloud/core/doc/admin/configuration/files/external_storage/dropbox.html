@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dropbox &#8212; ownCloud 10.0.10 Server Administration Manual 10.0.10 documentation</title>
+    <link rel="stylesheet" href="../../../_static/" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '10.0.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="FTP/FTPS" href="ftp.html" />
+    <link rel="prev" title="Amazon S3" href="amazons3.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body>
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../../../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../../../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../whats_new_admin.html">What’s New in ownCloud 10.0.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../upgrading/index.html">Upgrading</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../database/index.html">Database Configuration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">File Sharing and Management</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../file_sharing_configuration.html">File Sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../federated_cloud_sharing_configuration.html">Configuring Federation Sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big_file_upload_configuration.html">Uploading big files &gt; 512MB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../default_files_configuration.html">Providing Default Files</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../external_storage_configuration_gui.html">Configuring External Storage (GUI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../external_storage_configuration.html">Configuring External Storage (Configuration File)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auth_mechanisms.html">External Storage Authentication mechanisms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../encryption_configuration_quick_guide.html">Encryption Configuration Quick Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../encryption_configuration.html">Encryption Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../files_locking_transactional.html">Transactional File Locking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../previews_configuration.html">Previews Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file_versioning.html">Controlling File Versions and Aging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../trashbin_options.html">Managing the Trashbin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ldap/ldap_proxy_cache_server_setup.html">How To Install and Configure an LDAP Proxy-Cache Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../server/index.html">Server Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user/index.html">User Management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../enterprise/index.html">Enterprise Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appliance/index.html">The ownCloud X Appliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="amazons3.html" title="Previous Chapter: Amazon S3"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Amazon S3</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="ftp.html" title="Next Chapter: FTP/FTPS"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">FTP/FTPS &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="dropbox">
+<h1>Dropbox<a class="headerlink" href="#dropbox" title="Permalink to this headline">¶</a></h1>
+<p>To connect Dropbox to your ownCloud installation requires four steps to be completed.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#dropbox-install-step-one-label"><span class="std std-ref">Install the “External Storage: Dropbox” app from the ownCloud Marketplace</span></a></li>
+<li><a class="reference internal" href="#dropbox-install-step-two-label"><span class="std std-ref">Create a Dropbox app</span></a></li>
+<li><a class="reference internal" href="#dropbox-install-step-three-label"><span class="std std-ref">Create a Dropbox storage share</span></a></li>
+<li><a class="reference internal" href="#dropbox-install-step-four-label"><span class="std std-ref">Use the Dropbox share</span></a></li>
+</ol>
+<div class="section" id="step-one-install-the-external-storage-dropbox-app-from-the-owncloud-marketplace">
+<span id="dropbox-install-step-one-label"></span><h2>Step One - Install the “External Storage: Dropbox” app from the ownCloud Marketplace<a class="headerlink" href="#step-one-install-the-external-storage-dropbox-app-from-the-owncloud-marketplace" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/external-storage-dropbox-highlighted.png" src="../../../_images/external-storage-dropbox-highlighted.png" />
+</div>
+<ol class="arabic simple">
+<li>Click <strong>Market</strong> in the ownCloud web UI dropdown menu on the left side</li>
+<li>Go to the <strong>Storage</strong> category</li>
+<li>select <strong>External Storage: Dropbox</strong> App</li>
+<li>Click <strong>INSTALL</strong></li>
+</ol>
+</div>
+<div class="section" id="step-two-create-a-dropbox-app">
+<span id="dropbox-install-step-two-label"></span><h2>Step Two - Create a Dropbox app<a class="headerlink" href="#step-two-create-a-dropbox-app" title="Permalink to this headline">¶</a></h2>
+<p>Next, you need to create a Dropbox app.
+To do that, <a class="reference external" href="https://www.dropbox.com/developers/apps/create">open the new app creation form</a>, where you see three questions:</p>
+<ol class="arabic simple">
+<li>Choose an API –&gt; “Dropbox API”</li>
+<li>Choose the type of access –&gt; “App folder”</li>
+<li>Name your app</li>
+</ol>
+<p>With all of the required details filled out, click the blue “Create app” button, in the bottom, right-hand corner.
+After you do that, the settings page for the application loads.</p>
+<img alt="Dropbox app configuration settings" src="../../../_images/app-configuration.png" />
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p><strong>Redirect URI</strong>: Here you must enter the exact URL of the page where you configure the storage.</p>
+<p>Examples:</p>
+<p>When configuring as an <strong>admin</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>``http(s)://&lt;&lt;Server_Address&gt;&gt;/index.php/settings/admin?sectionid=storage``
+</pre></div>
+</div>
+<p>When configuring as a <strong>user</strong>:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span>``http(s)://&lt;&lt;Server_Address&gt;&gt;/index.php/settings/personal?sectionid=storage``
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-three-create-a-dropbox-share">
+<span id="dropbox-install-step-three-label"></span><h2>Step Three - Create a Dropbox Share<a class="headerlink" href="#step-three-create-a-dropbox-share" title="Permalink to this headline">¶</a></h2>
+<p>To create a Dropbox share, under “admin -&gt; Settings -&gt; Admin -&gt; Storage”, check the “Enable external storage” checkbox, if it’s not already checked.
+Then, in the dropdown list under “External storage”, click the first “Dropbox” option.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are two Dropbox options in the dropdown list, as Dropbox functionality is currently part of ownCloud’s core.
+However, the internal Dropbox functionality should be removed in ownCloud 10.0.4.</p>
+</div>
+<p>Then, you need to provide a name for the folder in the “Folder name” field, and a “client key” and “client secret”, located in the “Configuration” column.
+The client key and client secret values are the “App key” and “App secret” fields which you saw earlier in your Dropbox app’s configuration settings page.</p>
+<p>After you have added these three settings, click “Grant access”.
+ownCloud then interacts with Dropbox’s API to set up the new shared folder.
+If the process is successful, a green circle icon appears, at the far left-hand side of the row, next to the folder’s name.</p>
+<img alt="A Dropbox share successfully created." src="../../../_images/successful-connection-to-dropbox.png" />
+<div class="section" id="other-options">
+<h3>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
+<p>If you want to restrict access to the share to a select list of users and groups, you can add them to the field in the “Available for” column.</p>
+</div>
+</div>
+<div class="section" id="step-four-using-the-dropbox-share">
+<span id="dropbox-install-step-four-label"></span><h2>Step Four - Using the Dropbox Share<a class="headerlink" href="#step-four-using-the-dropbox-share" title="Permalink to this headline">¶</a></h2>
+<p>After a Dropbox-backed share is created, a new folder is available under “All Files”.
+It has the name that you gave it when you created the share, and it is represented by an external share folder icon, as in the image below.</p>
+<img alt="A Dropbox share successfully created." src="../../../_images/successful-connection-to-dropbox.png" />
+<p>This links to a new folder in your Dropbox account, under “Dropbox &gt; Apps”, with the name of the Dropbox app that you created.</p>
+<img alt="A new Dropbox share is available." src="../../../_images/dropbox-share-available.png" />
+<p>Now, if you add files and folders in either the new Dropbox folder or the new ownCloud folder, after being synced, they will be visible inside the other.</p>
+<img alt="The Dropbox Apps folders." src="../../../_images/dropbox-apps-folders.png" />
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="amazons3.html" title="Previous Chapter: Amazon S3"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Amazon S3</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="ftp.html" title="Next Chapter: FTP/FTPS"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">FTP/FTPS &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>
