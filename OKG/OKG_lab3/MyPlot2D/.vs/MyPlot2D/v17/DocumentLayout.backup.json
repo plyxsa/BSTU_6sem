@@ -1,0 +1,329 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MyPlot2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\ChildView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\CMatrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MainFrm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\LibChart2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\LibChart2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\plyxs\\Downloads\\LibChart2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MyPlot2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.rc||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MyPlot2D.rc||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MyPlot2DView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{149AB0FF-5BF1-E764-64DF-0FD8F6DE4EFA}|MyPlot2D\\MyPlot2D.vcxproj|solutionrelative:MyPlot2D\\MyPlot2DView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyPlot2D.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\MyPlot2D.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.cpp",
+              "RelativeToolTip": "MyPlot2D\\MyPlot2D.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-10T17:00:32.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Resource.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\resource.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\resource.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\resource.h",
+              "RelativeToolTip": "MyPlot2D\\resource.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T21:34:30.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChildView.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\ChildView.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.cpp",
+              "RelativeToolTip": "MyPlot2D\\ChildView.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAEAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T21:33:50.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainFrm.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\MainFrm.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.cpp",
+              "RelativeToolTip": "MyPlot2D\\MainFrm.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T19:00:32.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LibChart2D.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\LibChart2D.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.cpp",
+              "RelativeToolTip": "MyPlot2D\\LibChart2D.cpp",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T19:20:22.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LibChart2D.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\LibChart2D.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\LibChart2D.h",
+              "RelativeToolTip": "MyPlot2D\\LibChart2D.h",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABgAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:15:37.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChildView.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\ChildView.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\ChildView.h",
+              "RelativeToolTip": "MyPlot2D\\ChildView.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T18:56:16.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CMatrix.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\CMatrix.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.h",
+              "RelativeToolTip": "MyPlot2D\\CMatrix.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:15:59.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "framework.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\framework.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\framework.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\framework.h",
+              "RelativeToolTip": "MyPlot2D\\framework.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T18:58:42.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainFrm.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\MainFrm.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MainFrm.h",
+              "RelativeToolTip": "MyPlot2D\\MainFrm.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T18:54:25.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CMatrix.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\CMatrix.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\CMatrix.cpp",
+              "RelativeToolTip": "MyPlot2D\\CMatrix.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T18:55:51.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LibChart2D.h",
+              "DocumentMoniker": "C:\\Users\\plyxs\\Downloads\\LibChart2D.h",
+              "ToolTip": "C:\\Users\\plyxs\\Downloads\\LibChart2D.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:48:52.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MyPlot2D.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\MyPlot2D.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.h",
+              "RelativeToolTip": "MyPlot2D\\MyPlot2D.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:14:21.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "pch.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\pch.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.h",
+              "RelativeToolTip": "MyPlot2D\\pch.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:14:14.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "targetver.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\targetver.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\targetver.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\targetver.h",
+              "RelativeToolTip": "MyPlot2D\\targetver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T19:12:15.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MyPlot2DView.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\MyPlot2DView.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.cpp",
+              "RelativeToolTip": "MyPlot2D\\MyPlot2DView.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T19:17:38.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MyPlot2D.rc",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.rc",
+              "RelativeDocumentMoniker": "MyPlot2D\\MyPlot2D.rc",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2D.rc",
+              "RelativeToolTip": "MyPlot2D\\MyPlot2D.rc",
+              "ViewState": "AgIAAIEAAAAAAAAAAAD4v5IAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-03T19:25:37.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.cpp",
+              "RelativeDocumentMoniker": "MyPlot2D\\pch.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\pch.cpp",
+              "RelativeToolTip": "MyPlot2D\\pch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-03T19:01:57.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MyPlot2DView.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.h",
+              "RelativeDocumentMoniker": "MyPlot2D\\MyPlot2DView.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab3\\MyPlot2D\\MyPlot2D\\MyPlot2DView.h",
+              "RelativeToolTip": "MyPlot2D\\MyPlot2DView.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-03T18:57:01.769Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

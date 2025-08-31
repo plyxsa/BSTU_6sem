@@ -1,0 +1,13 @@
+﻿  ChildView.cpp
+D:\Uni\OKG\OKG_lab3\MyPlot2D\MyPlot2D\ChildView.cpp(89,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/ChildView.cpp")
+  
+D:\Uni\OKG\OKG_lab3\MyPlot2D\MyPlot2D\ChildView.cpp(113,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/ChildView.cpp")
+  
+  MainFrm.cpp
+  MyPlot2D.cpp
+  MyPlot2DDoc.cpp
+  MyPlot2DView.cpp
+  Создание кода...
+  MyPlot2D.vcxproj -> D:\Uni\OKG\OKG_lab3\MyPlot2D\x64\Debug\MyPlot2D.exe
