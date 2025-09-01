@@ -1,0 +1,29 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Lab04.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  ChildView.cpp
+  LibBlade.cpp
+  Создание кода...
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(138,33): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(138,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(138,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(138,20): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(143,37): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(143,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(143,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+D:\Uni\OKG\OKG_lab5\OKG_lab5\Lab01\LibBlade.cpp(143,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibBlade.cpp")
+  
+  Lab01.vcxproj -> D:\Uni\OKG\OKG_lab5\OKG_lab5\x64\Debug\Lab03.exe
