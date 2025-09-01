@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-01</title>
+    <style>
+        body { font-family: sans-serif; }
+        #messages div { margin-bottom: 5px; padding: 5px; border: 1px solid #eee; }
+        .client-msg { background-color: #e0f7fa; }
+        .server-msg { background-color: #fff9c4; }
+        .info-msg { font-style: italic; color: #777; }
+    </style>
+</head>
+<body>
+    <h1>10-01</h1>
+    <button id="startWS">startWS</button>
+    <div id="messages"></div>
+
+    <script>
+        const startButton = document.getElementById('startWS');
+        const messagesDiv = document.getElementById('messages');
+        const WS_URL = 'ws://localhost:4000';
+
+        let socket = null;
+        let clientIntervalId = null;
+        let timeoutId = null;
+        let clientN = 0;
+
+        function logMessage(message, type = 'info') {
+            console.log(message);
+            const div = document.createElement('div');
+            div.textContent = message;
+            div.classList.add(type + '-msg');
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function startWebSocketConnection() {
+            if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {
+                logMessage('WebSocket connection already open or connecting.', 'info');
+                // Эффект при многократном нажатии: Prevent multiple connections
+                return;
+            }
+
+            logMessage('Attempting to connect to ' + WS_URL, 'info');
+            socket = new WebSocket(WS_URL);
+            clientN = 0;
+
+            socket.onopen = () => {
+                logMessage('WebSocket connection opened.', 'info');
+                startButton.disabled = true
+
+                // Периодически каждые 3 сек. отправлять сообщения
+                clientIntervalId = setInterval(() => {
+                    clientN++;
+                    const message = `10-01-client: ${clientN}`;
+                    if (socket.readyState === WebSocket.OPEN) {
+                        logMessage(`Sending: ${message}`, 'client');
+                        socket.send(message);
+                    } else {
+                        logMessage('Socket not open, cannot send.', 'info');
+                        stopClientTasks();
+                    }
+                }, 3000);
+
+                // Остановить передачу через 25 сек и закрыть WS-соединение
+                timeoutId = setTimeout(() => {
+                    logMessage('25 second timeout reached. Closing connection.', 'info');
+                    stopClientTasks();
+                }, 25000); // 25 seconds
+            };
+
+            // Отображать сообщения принятые от сервера
+            socket.onmessage = (event) => {
+                logMessage(`Received: ${event.data}`, 'server');
+            };
+
+            socket.onclose = (event) => {
+                logMessage(`WebSocket connection closed. Code: ${event.code}, Reason: ${event.reason || 'N/A'}`, 'info');
+                clearTimers(); 
+                socket = null;
+                startButton.disabled = false;
+            };
+
+            socket.onerror = (error) => {
+                logMessage('WebSocket error: ' + error.message, 'info');
+                console.error('WebSocket Error:', error);
+                clearTimers();
+                socket = null;
+                startButton.disabled = false;
+            };
+        }
+
+        function clearTimers() {
+            if (clientIntervalId) {
+                clearInterval(clientIntervalId);
+                clientIntervalId = null;
+                logMessage('Client message interval cleared.', 'info');
+            }
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+                timeoutId = null;
+                logMessage('Client timeout cleared.', 'info');
+
+            }
+        }
+
+        function stopClientTasks() {
+             clearTimers();
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                 socket.close(1000, "Client initiated close after timeout");
+            }
+        }
+
+        startButton.addEventListener('click', startWebSocketConnection);
+
+    </script>
+</body>
+</html>

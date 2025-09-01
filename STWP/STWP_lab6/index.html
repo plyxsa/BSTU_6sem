@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Отправка Email</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Отправка Email</h1>
+
+  <form action="/send-email" method="post">
+    <label for="senderEmail">Email отправителя:</label>
+    <input type="email" id="senderEmail" name="senderEmail" required><br><br>
+
+    <label for="recipientEmail">Email получателя (для отображения):</label>
+    <input type="email" id="recipientEmail" name="recipientEmail" required><br><br>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <script>
+    // JavaScript для отправки формы POST запросом
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+      const formData = new URLSearchParams(new FormData(form));
+
+      try {
+        const response = await fetch('/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: formData.toString()
+        });
+
+        if (response.ok) {
+          const html = await response.text();
+          document.body.innerHTML = html; // Заменяем содержимое страницы на ответ сервера
+        } else {
+          console.error('Ошибка при отправке:', response.status);
+          alert('Произошла ошибка при отправке формы.');
+        }
+      } catch (error) {
+        console.error('Ошибка сети:', error);
+        alert('Произошла ошибка сети при отправке формы.');
+      }
+    });
+  </script>
+
+</body>
+</html>

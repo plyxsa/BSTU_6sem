@@ -1,0 +1,21 @@
+{
+  "name": "m0603-pol-lop",
+  "version": "1.0.4",
+  "description": "Модуль Node.js для отправки email с использованием Nodemailer",
+  "main": "m0603.js",
+  "type": "module",
+  "author": "Lopatniuk Polina",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.10.0",
+    "dotenv": "^16.4.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "email",
+    "nodemailer",
+    "sendmail"
+  ]
+}

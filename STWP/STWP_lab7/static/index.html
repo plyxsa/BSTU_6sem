@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 07 - Static Server Test</title>
+    <link rel="stylesheet" href="styles/style.css"> 
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <h1>Lab 07 - Static File Server</h1>
+
+    <h2>Resources Loaded via HTML Tags:</h2>
+
+    <p>PNG Image:</p>
+    <img src="/images/image.png" alt="Test PNG Image" width="100">
+
+    <p>MP4 Video:</p>
+    <video controls width="320" height="240">
+        <source src="/videos/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <p>DOCX Document:</p>
+    <a href="/docs/document.docx" download>Download document.docx</a>
+
+    <h2>Resources Loaded via Fetch API (JavaScript):</h2>
+
+    <div>
+        <button id="fetch-json">Fetch JSON Data</button>
+        <pre id="json-output">JSON content will appear here...</pre>
+    </div>
+
+    <div>
+        <button id="fetch-xml">Fetch XML Data</button>
+        <pre id="xml-output">XML content will appear here...</pre>
+    </div>
+
+</body>
+</html>

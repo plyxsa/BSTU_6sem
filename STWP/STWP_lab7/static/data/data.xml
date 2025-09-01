@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <message>This is XML data</message>
+    <timestamp>2023-10-27T10:05:00Z</timestamp>
+    <items>
+        <item id="A">Alpha</item>
+        <item id="B">Bravo</item>
+    </items>
+</data>

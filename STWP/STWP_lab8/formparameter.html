@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 09 - Параметры формы</title>
+</head>
+<body>
+    <h1>Отправка параметров формы (POST)</h1>
+    <form method="POST" action="/formparameter">
+        <p>Текст: <input type="text" name="text_param" value="Привет"></p>
+        <p>Число: <input type="number" name="num_param" value="123"></p>
+        <p>Дата: <input type="date" name="date_param"></p>
+        <p>Чекбокс 1: <input type="checkbox" name="chk_param1" value="on" checked></p>
+        <p>Чекбокс 2: <input type="checkbox" name="chk_param2" value="selected"></p>
+        <p>Радио 1 (Группа 1): <input type="radio" name="radio_group1" value="r1" checked></p>
+        <p>Радио 2 (Группа 1): <input type="radio" name="radio_group1" value="r2"></p>
+        <p>Текстовая область:<br><textarea name="textarea_param" rows="4" cols="50">Текст по умолчанию</textarea></p>
+        <p>
+            <input type="submit" name="submit_btn" value="Отправить 1">
+            <input type="submit" name="submit_btn" value="Отправить 2">
+        </p>
+    </form>
+</body>
+</html>

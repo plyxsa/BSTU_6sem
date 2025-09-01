@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Фамилия, имя, отчество:</h1>
+    <p id="fullname"></p>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "http://localhost:5000/api/name",
+                type: "GET",
+                success: function(data) {
+                    $("#fullname").text(data);
+                },
+                error: function() {
+                    $("#fullname").text("Ошибка загрузки данных");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

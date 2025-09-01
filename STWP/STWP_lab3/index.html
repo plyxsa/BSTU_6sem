@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Fetch</title>
+    <script>
+        async function fetchFactorials() {
+            let startTime = Date.now();
+            let results = document.getElementById('results');
+
+            for (let x = 1; x <= 20; x++) {
+                let response = await fetch('/fact?k=' + x);
+                let data = await response.json();
+                let elapsedTime = Date.now() - startTime;
+                let resultText = `${x}. Результат: ${elapsedTime}-${data.k}/${data.fact}`;
+                let li = document.createElement('li');
+                li.textContent = resultText;
+                results.appendChild(li);
+            }
+
+            let totalTime = Date.now() - startTime;
+            document.getElementById('time').textContent = 'Общее время: ' + totalTime + ' мс';
+        }
+
+        window.onload = fetchFactorials;
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+    <h2 id="time"></h2>
+</body>
+</html>

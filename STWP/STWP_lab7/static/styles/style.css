@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: darkblue;
+}
+pre {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
+}
