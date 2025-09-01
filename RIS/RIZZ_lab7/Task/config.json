@@ -1,0 +1,13 @@
+{
+    "cbb_servers": [
+      {"ip": "192.168.1.101", "port": 5555},
+      {"ip": "192.168.1.103", "port": 5555},
+      {"ip": "192.168.1.104", "port": 5555}
+    ],
+    "proxy_listen_ip": "0.0.0.0",
+    "proxy_listen_port": 5556,
+    "health_check_interval_ms": 5000,
+    "health_check_failures_allowed": 3,
+    "election_timeout_ms": 2000,
+    "coordinator_timeout_ms": 1500
+  }

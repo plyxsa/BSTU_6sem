@@ -1,0 +1,14 @@
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source1Service\Source1Service\obj\Debug\net8.0\staticwebassets.build.json
+D:\Uni\RIZZ\RIZZ_lab5\Source2Service\Source2Service\obj\Debug\net8.0\staticwebassets.build.json

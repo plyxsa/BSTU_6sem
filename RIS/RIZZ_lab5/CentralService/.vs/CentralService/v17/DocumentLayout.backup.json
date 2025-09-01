@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\services\\pushreplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\services\\pushreplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\data\\centraldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\data\\centraldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\services\\replicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\services\\replicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\models\\telemetrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\models\\telemetrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|d:\\uni\\rizz\\rizz_lab5\\centralservice\\centralservice\\controllers\\telemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF135A4-E361-4A91-A93B-2185F9137EBF}|CentralService\\CentralService.csproj|solutionrelative:centralservice\\controllers\\telemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PushReplicationService.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Services\\PushReplicationService.cs",
+              "RelativeDocumentMoniker": "CentralService\\Services\\PushReplicationService.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Services\\PushReplicationService.cs",
+              "RelativeToolTip": "CentralService\\Services\\PushReplicationService.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAgwJYAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:14:13.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TelemetryController.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Controllers\\TelemetryController.cs",
+              "RelativeDocumentMoniker": "CentralService\\Controllers\\TelemetryController.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Controllers\\TelemetryController.cs",
+              "RelativeToolTip": "CentralService\\Controllers\\TelemetryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:44:19.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReplicationService.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Services\\ReplicationService.cs",
+              "RelativeDocumentMoniker": "CentralService\\Services\\ReplicationService.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Services\\ReplicationService.cs",
+              "RelativeToolTip": "CentralService\\Services\\ReplicationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T22:01:32.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Program.cs",
+              "RelativeDocumentMoniker": "CentralService\\Program.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Program.cs",
+              "RelativeToolTip": "CentralService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:32:11.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\appsettings.json",
+              "RelativeDocumentMoniker": "CentralService\\appsettings.json",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\appsettings.json",
+              "RelativeToolTip": "CentralService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-07T21:30:14.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CentralDbContext.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Data\\CentralDbContext.cs",
+              "RelativeDocumentMoniker": "CentralService\\Data\\CentralDbContext.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Data\\CentralDbContext.cs",
+              "RelativeToolTip": "CentralService\\Data\\CentralDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:28:12.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TelemetryData.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Models\\TelemetryData.cs",
+              "RelativeDocumentMoniker": "CentralService\\Models\\TelemetryData.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\CentralService\\CentralService\\Models\\TelemetryData.cs",
+              "RelativeToolTip": "CentralService\\Models\\TelemetryData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:18:42.051Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

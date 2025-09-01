@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\controllers\\telemetrypushcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\controllers\\telemetrypushcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\controllers\\telemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\controllers\\telemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\data\\source2dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\data\\source2dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\models\\receivedtelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\models\\receivedtelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\services\\sourcedatageneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\services\\sourcedatageneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|d:\\uni\\rizz\\rizz_lab5\\source2service\\source2service\\models\\telemetrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9B0D4-3829-41C4-98CD-5EDC6DBC1BB7}|Source2Service\\Source2Service.csproj|solutionrelative:source2service\\models\\telemetrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelemetryPushController.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Controllers\\TelemetryPushController.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Controllers\\TelemetryPushController.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Controllers\\TelemetryPushController.cs",
+              "RelativeToolTip": "Source2Service\\Controllers\\TelemetryPushController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T20:14:17.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReceivedTelemetry.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Models\\ReceivedTelemetry.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Models\\ReceivedTelemetry.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Models\\ReceivedTelemetry.cs",
+              "RelativeToolTip": "Source2Service\\Models\\ReceivedTelemetry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T19:04:24.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Source2Service\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Source2Service\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-09T08:49:40.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\appsettings.json",
+              "RelativeDocumentMoniker": "Source2Service\\appsettings.json",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\appsettings.json",
+              "RelativeToolTip": "Source2Service\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-07T21:49:57.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Program.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Program.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Program.cs",
+              "RelativeToolTip": "Source2Service\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:49:52.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Source2DbContext.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Data\\Source2DbContext.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Data\\Source2DbContext.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Data\\Source2DbContext.cs",
+              "RelativeToolTip": "Source2Service\\Data\\Source2DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:47:55.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelemetryController.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Controllers\\TelemetryController.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Controllers\\TelemetryController.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Controllers\\TelemetryController.cs",
+              "RelativeToolTip": "Source2Service\\Controllers\\TelemetryController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:45:33.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SourceDataGeneratorService.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Services\\SourceDataGeneratorService.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Services\\SourceDataGeneratorService.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Services\\SourceDataGeneratorService.cs",
+              "RelativeToolTip": "Source2Service\\Services\\SourceDataGeneratorService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwBoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:52:59.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TelemetryData.cs",
+              "DocumentMoniker": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Models\\TelemetryData.cs",
+              "RelativeDocumentMoniker": "Source2Service\\Models\\TelemetryData.cs",
+              "ToolTip": "D:\\Uni\\RIZZ\\RIZZ_lab5\\Source2Service\\Source2Service\\Models\\TelemetryData.cs",
+              "RelativeToolTip": "Source2Service\\Models\\TelemetryData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:48:18.252Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

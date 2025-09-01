@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "Source1Service.Controllers.TelemetryController",
+    "Method": "GetTelemetryData",
+    "RelativePath": "api/Telemetry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "since",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Source1Service.Models.TelemetryData, Source1Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Source1Service.Controllers.TelemetryPushController",
+    "Method": "ReceivePushData",
+    "RelativePath": "api/telemetry/push",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "receivedData",
+        "Type": "System.Collections.Generic.List\u00601[[Source1Service.Models.TelemetryData, Source1Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
