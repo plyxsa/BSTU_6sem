@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\OKG\\OKG_lab8\\8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\LibGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibSurface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\LibSurface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\Lab06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\Lab06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Lab06.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\Lab06.cpp",
+              "RelativeDocumentMoniker": "Lab01\\Lab06.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\Lab06.cpp",
+              "RelativeToolTip": "Lab01\\Lab06.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-13T06:51:44.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CMatrix.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\CMatrix.cpp",
+              "RelativeDocumentMoniker": "Lab01\\CMatrix.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\CMatrix.cpp",
+              "RelativeToolTip": "Lab01\\CMatrix.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-13T06:49:54.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LibSurface.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibSurface.cpp",
+              "RelativeDocumentMoniker": "Lab01\\LibSurface.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibSurface.cpp",
+              "RelativeToolTip": "Lab01\\LibSurface.cpp",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAwwCoBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-12T21:20:12.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChildView.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\ChildView.cpp",
+              "RelativeDocumentMoniker": "Lab01\\ChildView.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\ChildView.cpp",
+              "RelativeToolTip": "Lab01\\ChildView.cpp",
+              "ViewState": "AgIAAMEAAAAAAAAAAIAwwM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-13T06:46:10.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainFrm.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\MainFrm.cpp",
+              "RelativeDocumentMoniker": "Lab01\\MainFrm.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\MainFrm.cpp",
+              "RelativeToolTip": "Lab01\\MainFrm.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-13T06:43:15.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibGraph.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibGraph.cpp",
+              "RelativeDocumentMoniker": "Lab01\\LibGraph.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab8\\8\\Lab01\\LibGraph.cpp",
+              "RelativeToolTip": "Lab01\\LibGraph.cpp",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwHMBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-12T21:19:33.502Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
