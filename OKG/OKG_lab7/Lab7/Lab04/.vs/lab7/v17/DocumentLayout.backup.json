@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|solutionrelative:Win32Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|solutionrelative:Win32Project1\\CPyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|solutionrelative:Win32Project1\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|solutionrelative:Win32Project1\\CMatrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D4FDDF0-4F3D-4257-94E2-B7724F9E91CE}|Win32Project1\\Win32Project1.vcxproj|solutionrelative:Win32Project1\\CPyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CMatrix.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.cpp",
+              "RelativeDocumentMoniker": "Win32Project1\\CMatrix.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.cpp",
+              "RelativeToolTip": "Win32Project1\\CMatrix.cpp",
+              "ViewState": "AgIAAJgBAAAAAAAAAAAAAKQBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-05T21:19:38.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CPyramid.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.h",
+              "RelativeDocumentMoniker": "Win32Project1\\CPyramid.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.h",
+              "RelativeToolTip": "Win32Project1\\CPyramid.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-05T21:19:28.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CMatrix.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.h",
+              "RelativeDocumentMoniker": "Win32Project1\\CMatrix.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CMatrix.h",
+              "RelativeToolTip": "Win32Project1\\CMatrix.h",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAjwDsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-05T21:19:13.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CPyramid.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.cpp",
+              "RelativeDocumentMoniker": "Win32Project1\\CPyramid.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\CPyramid.cpp",
+              "RelativeToolTip": "Win32Project1\\CPyramid.cpp",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAKwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T05:13:12.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\main.cpp",
+              "RelativeDocumentMoniker": "Win32Project1\\main.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab7\\Lab7\\Lab04\\Win32Project1\\main.cpp",
+              "RelativeToolTip": "Win32Project1\\main.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T06:29:25.736Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
