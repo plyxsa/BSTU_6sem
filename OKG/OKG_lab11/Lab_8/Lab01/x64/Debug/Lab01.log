@@ -1,0 +1,18 @@
+﻿  LibGraph.cpp
+D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\resource.h(17,9): warning C4005: ID_Lines_Bezier3: изменение макроопределения
+  (компиляция исходного файла "/LibGraph.cpp")
+      D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\resource.h(13,9):
+      см. предыдущее определение "ID_Lines_Bezier3"
+  
+D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\resource.h(18,9): warning C4005: ID_LINES_BEZIER3: изменение макроопределения
+  (компиляция исходного файла "/LibGraph.cpp")
+      D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\resource.h(15,9):
+      см. предыдущее определение "ID_LINES_BEZIER3"
+  
+D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\LibGraph.cpp(139,14): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibGraph.cpp")
+  
+D:\Uni\OKG\OKG_lab11\Lab_8\Lab01\LibGraph.cpp(145,9): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "/LibGraph.cpp")
+  
+  Lab01.vcxproj -> D:\Uni\OKG\OKG_lab11\Lab_8\x64\Debug\Lab09.exe

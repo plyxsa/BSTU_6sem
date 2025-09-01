@@ -1,0 +1,25 @@
+﻿  main.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(152,20): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(155,21): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(215,20): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(218,21): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(245,20): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(248,21): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\CMainWnd.h(86,18): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+D:\Uni\OKG\OKG_lab10\Lab10\Lab07\LibSurface.h(198,1): warning C4715: CPlot3D::GetNumberRegion: значение возвращается не при всех путях выполнения
+  Lab07.vcxproj -> D:\Uni\OKG\OKG_lab10\Lab10\Debug\Lab07.exe

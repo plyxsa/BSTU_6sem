@@ -1,0 +1,212 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\LibGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\ChildView.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\MainFrm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\Lab09.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\CMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab01.rc||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\Lab01.rc||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\ChildView.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\Lab09.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\res\\Lab01.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\res\\Lab01.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\CMatrix.h||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E8CFCB29-F57D-47D1-9EB8-1875288A266C}|Lab01\\Lab01.vcxproj|solutionrelative:Lab01\\LibGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Lab01.rc",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab01.rc",
+              "RelativeDocumentMoniker": "Lab01\\Lab01.rc",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab01.rc",
+              "RelativeToolTip": "Lab01\\Lab01.rc",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAmwFoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-27T05:26:45.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Lab01.ico - Icon [48x48, 4 \u0431\u0438\u0442, BMP]",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\res\\Lab01.ico",
+              "RelativeDocumentMoniker": "Lab01\\res\\Lab01.ico",
+              "ToolTip": "D:\\6sem_BSTU\\OKG\\Lab11\\Lab_8\\Lab01\\res\\Lab01.ico - Icon [48x48, 4 \u0431\u0438\u0442, BMP]",
+              "RelativeToolTip": "..\\..\\..\\..\\6sem_BSTU\\OKG\\Lab11\\Lab_8\\Lab01\\res\\Lab01.ico - Icon [48x48, 4 \u0431\u0438\u0442, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-05-26T14:46:55.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Lab09.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.h",
+              "RelativeDocumentMoniker": "Lab01\\Lab09.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.h",
+              "RelativeToolTip": "Lab01\\Lab09.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T13:44:28.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChildView.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.h",
+              "RelativeDocumentMoniker": "Lab01\\ChildView.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.h",
+              "RelativeToolTip": "Lab01\\ChildView.h",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwCkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T11:07:45.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainFrm.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\MainFrm.cpp",
+              "RelativeDocumentMoniker": "Lab01\\MainFrm.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\MainFrm.cpp",
+              "RelativeToolTip": "Lab01\\MainFrm.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAF0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T10:33:24.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Lab09.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.cpp",
+              "RelativeDocumentMoniker": "Lab01\\Lab09.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\Lab09.cpp",
+              "RelativeToolTip": "Lab01\\Lab09.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAC8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T09:02:37.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibGraph.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.cpp",
+              "RelativeDocumentMoniker": "Lab01\\LibGraph.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.cpp",
+              "RelativeToolTip": "Lab01\\LibGraph.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T10:10:56.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChildView.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.cpp",
+              "RelativeDocumentMoniker": "Lab01\\ChildView.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\ChildView.cpp",
+              "RelativeToolTip": "Lab01\\ChildView.cpp",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwDkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T10:24:55.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CMatrix.cpp",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.cpp",
+              "RelativeDocumentMoniker": "Lab01\\CMatrix.cpp",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.cpp",
+              "RelativeToolTip": "Lab01\\CMatrix.cpp",
+              "ViewState": "AgIAAFsBAAAAAAAAAAAIwHQBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T10:33:06.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Resource.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\resource.h",
+              "RelativeDocumentMoniker": "Lab01\\resource.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\resource.h",
+              "RelativeToolTip": "Lab01\\resource.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-27T05:26:47.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LibGraph.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.h",
+              "RelativeDocumentMoniker": "Lab01\\LibGraph.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\LibGraph.h",
+              "RelativeToolTip": "Lab01\\LibGraph.h",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwC8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T11:06:17.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CMatrix.h",
+              "DocumentMoniker": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.h",
+              "RelativeDocumentMoniker": "Lab01\\CMatrix.h",
+              "ToolTip": "D:\\Uni\\OKG\\OKG_lab11\\Lab_8\\Lab01\\CMatrix.h",
+              "RelativeToolTip": "Lab01\\CMatrix.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T13:27:23.253Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
