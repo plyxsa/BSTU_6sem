@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.28)
+
+project(Lab3_CMake)
+set(LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+	add_subdirectory(LPVLib)
+    add_subdirectory(Lab-03a)
+    add_subdirectory(LPVDLib)
+    add_subdirectory(LPVDLib++)
+    add_subdirectory(Lab-03b-Explicit)
+    add_subdirectory(Lab-03b-Implicit)
+
+    set_target_properties(LPVDLib++ PROPERTIES LINKER_LANGUAGE CXX)
+    set_target_properties(Lab-03b-Explicit PROPERTIES WIN32_EXECUTABLE FALSE)
+    set_target_properties(Lab-03b-Implicit PROPERTIES WIN32_EXECUTABLE FALSE)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+set(LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
+
+    add_subdirectory(LPV_Lib)
+	add_subdirectory(Lab-03a)
+	add_subdirectory(LibLPVd)
+    add_subdirectory(Lab-03c)
+endif()

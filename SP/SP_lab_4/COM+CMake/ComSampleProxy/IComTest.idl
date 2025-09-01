@@ -1,0 +1,31 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    object,
+    uuid(C0C62619-3BC1-4095-9B9A-84503E37DAA5),
+    version(1.0),
+    helpstring("IComTest interface")
+]
+interface IComTest : IUnknown
+{
+    HRESULT WhoAmI([out] LPWSTR* pwszWhoAmI);
+};
+
+[
+    object,
+    // Tools -> Create GUID -> Registry Format -> Copy
+    uuid(5DBBB794-81EC-44D8-97BD-C25B949EF887),
+    version(1.0),
+    helpstring("ILPV interface for Lab 1 calculations")
+]
+interface ILPV : IUnknown
+{
+    // Принимает 'x' на вход, возвращает результаты через указатели
+    HRESULT CalculatePowers(
+        [in] double x,
+        [out] double* pX2,
+        [out] double* pX5,
+        [out] double* pX17
+    );
+};

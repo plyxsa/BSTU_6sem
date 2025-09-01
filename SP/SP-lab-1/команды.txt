@@ -1,0 +1,30 @@
+clang -E Lab-01C.c -o Lab-01C.pre.c
+
+clang -fsyntax-only -Xclang -dump-tokens Lab-01C.c
+
+clang -fsyntax-only -Xclang -ast-dump Lab-01C.c
+
+clang -S -emit-llvm Lab-01C.c -o Lab-01C.ll
+
+clang -S -O3 -emit-llvm Lab-01C.c -o Lab-01C_opt.ll
+
+clang -S Lab-01C.c -o Lab-01C.s
+
+clang -c Lab-01C.c -o Lab-01C.o
+
+clang Lab-01C.o -o Lab-01C.exe
+
+csc Lab-01CS.cs
+
+./Lab-01CS.cs 
+
+
+cmake .. -T ClangCL
+
+make
+
+cmake -B build -G "Unix Makefiles" -DCMAKE_C_COMPILER=clang
+
+cd build
+ 
+make

@@ -1,0 +1,201 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "LPVLib",
+					"jsonFile" : "directory-LPVLib-Debug-ba222643dd8336ef3a06.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "LPVLib",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Lab-03a",
+					"jsonFile" : "directory-Lab-03a-Debug-0557e7c43efdc6ba13c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Lab-03a",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "LPVDLib",
+					"jsonFile" : "directory-LPVDLib-Debug-6a4f4c4738d2fe1e9994.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "LPVDLib",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "LPVDLib++",
+					"jsonFile" : "directory-LPVDLib++-Debug-1aa6fae22c460d6e2426.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "LPVDLib++",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Lab-03b-Explicit",
+					"jsonFile" : "directory-Lab-03b-Explicit-Debug-451b03e369f7d0956b45.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Lab-03b-Explicit",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "Lab-03b-Implicit",
+					"jsonFile" : "directory-Lab-03b-Implicit-Debug-5e50cd2a0cff4881afa3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Lab-03b-Implicit",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "Lab3_CMake",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "LPVDLib::@8fe870fe4bcaf35cd0f0",
+					"jsonFile" : "target-LPVDLib-Debug-23e38698d1cecbcf3dab.json",
+					"name" : "LPVDLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "LPVDLib++::@a5302c3209fcd5feaee4",
+					"jsonFile" : "target-LPVDLib++-Debug-958475f4eb63b158e6dd.json",
+					"name" : "LPVDLib++",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "LPVLib::@cf60d6f459e5d0fccffa",
+					"jsonFile" : "target-LPVLib-Debug-2a44bf332c3c0155a27c.json",
+					"name" : "LPVLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Lab-03a::@ccdd9419d90e5095c104",
+					"jsonFile" : "target-Lab-03a-Debug-8f661a16d9ea154e235c.json",
+					"name" : "Lab-03a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Lab-03b-Explicit::@de5d4b004cbcdf1a8093",
+					"jsonFile" : "target-Lab-03b-Explicit-Debug-acbee114398fd490f2e6.json",
+					"name" : "Lab-03b-Explicit",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "Lab-03b-Implicit::@6927c186b67bc69954bb",
+					"jsonFile" : "target-Lab-03b-Implicit-Debug-7b2cafceaa8e892ddbc3.json",
+					"name" : "Lab-03b-Implicit",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Uni/SP/SP_lab_3/Lab3_CMake/out/build/x64-Debug",
+		"source" : "D:/Uni/SP/SP_lab_3/Lab3_CMake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

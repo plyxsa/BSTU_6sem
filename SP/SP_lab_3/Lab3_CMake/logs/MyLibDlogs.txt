@@ -1,0 +1,53 @@
+[02:07:08] DLL loaded
+[02:07:08] lpv_bsearch_r called
+[02:07:08] lpv_bsearch_r: element found
+[02:07:08] DLL unloaded
+[02:24:45] DLL loaded
+[02:24:45] DLL unloaded
+[02:26:00] DLL loaded
+[02:26:00] lpv_bsearch called
+[02:26:00] lpv_bsearch: element found
+[02:26:00] DLL unloaded
+[02:26:11] DLL loaded
+[02:26:11] lpv_bsearch_r called
+[02:26:11] lpv_bsearch_r: element found
+[02:26:11] DLL unloaded
+[03:57:27] DLL loaded
+[03:57:27] lpv_bsearch_r called
+[03:57:27] lpv_bsearch_r: element found
+[03:57:27] DLL unloaded
+[03:57:33] DLL loaded
+[03:57:33] DLL unloaded
+[03:58:01] DLL loaded
+[03:58:01] lpv_bsearch called
+[03:58:01] lpv_bsearch: element found
+[03:58:01] DLL unloaded
+[11:40:40] DLL loaded
+[11:41:31] DLL unloaded
+[11:41:51] DLL loaded
+[11:43:02] Thread attached
+[11:43:02] DLL unloaded
+[10:19:41] DLL loaded
+[10:19:41] DLL unloaded
+[10:20:07] DLL loaded
+[10:20:07] DLL unloaded
+[10:20:27] DLL loaded
+[10:20:27] DLL unloaded
+[10:20:35] DLL loaded
+[10:20:35] DLL unloaded
+[10:20:39] DLL loaded
+[10:20:40] DLL unloaded
+[10:20:45] DLL loaded
+[10:20:45] DLL unloaded
+[10:21:27] DLL loaded
+[10:21:27] lpv_bsearch_r called
+[10:21:27] lpv_bsearch_r: element found
+[10:21:27] DLL unloaded
+[10:21:30] DLL loaded
+[10:21:30] lpv_bsearch_r called
+[10:21:30] lpv_bsearch_r: element found
+[10:21:30] DLL unloaded
+[10:27:08] DLL loaded
+[10:27:08] lpv_bsearch_r called
+[10:27:08] lpv_bsearch_r: element found
+[10:27:08] DLL unloaded

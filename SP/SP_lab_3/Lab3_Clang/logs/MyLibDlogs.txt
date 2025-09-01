@@ -1,0 +1,14 @@
+[02:07:08] DLL loaded
+[02:07:08] lpv_bsearch_r called
+[02:07:08] lpv_bsearch_r: element found
+[02:07:08] DLL unloaded
+[02:24:45] DLL loaded
+[02:24:45] DLL unloaded
+[02:26:00] DLL loaded
+[02:26:00] lpv_bsearch called
+[02:26:00] lpv_bsearch: element found
+[02:26:00] DLL unloaded
+[02:26:11] DLL loaded
+[02:26:11] lpv_bsearch_r called
+[02:26:11] lpv_bsearch_r: element found
+[02:26:11] DLL unloaded

@@ -1,0 +1,4 @@
+D:/Uni/SP/SP_lab_5/SP_lab5/build/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/build/CMakeFiles/ZERO_CHECK.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/build/DemoService/CMakeFiles/DemoService.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/build/ServiceCtl/CMakeFiles/ServiceCtl.dir

@@ -1,0 +1,8 @@
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/DemoService/CMakeFiles/DemoService.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/DemoService/CMakeFiles/edit_cache.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/DemoService/CMakeFiles/rebuild_cache.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/ServiceCtl/CMakeFiles/ServiceCtl.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/ServiceCtl/CMakeFiles/edit_cache.dir
+D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug/ServiceCtl/CMakeFiles/rebuild_cache.dir

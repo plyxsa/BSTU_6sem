@@ -1,0 +1,5 @@
+LIBRARY MyLibDD
+ EXPORTS
+     iterative_bsearch = lpv_bsearch @1       
+     recursive_bsearch = lpv_bsearch_r @2 
+     lib_array @3 

@@ -1,0 +1,5 @@
+LIBRARY LPVDLib
+EXPORTS
+    iterative_bsearch = lpv_bsearch @1       
+    lpv_bsearch_r @2 NONAME
+    lib_array @3 DATA

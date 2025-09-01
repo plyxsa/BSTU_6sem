@@ -1,0 +1,11 @@
+D:/Uni/SP/SP_lab_2/Lab2/build/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/CMakeFiles/ZERO_CHECK.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02a/CMakeFiles/Lab-02a.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02a/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02b/CMakeFiles/Lab-02b.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02b/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/Lab-02c-1/CMakeFiles/Lab-02c-1.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/Lab-02c-1/CMakeFiles/ALL_BUILD.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/Lab-02c-2/CMakeFiles/Lab-02c-2.dir
+D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/Lab-02c-2/CMakeFiles/ALL_BUILD.dir

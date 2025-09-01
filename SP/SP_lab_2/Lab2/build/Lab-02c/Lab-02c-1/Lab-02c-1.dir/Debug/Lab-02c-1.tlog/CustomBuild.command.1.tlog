@@ -1,0 +1,10 @@
+^D:\UNI\SP\SP_LAB_2\LAB2\LAB-02C\LAB-02C-1\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Uni/SP/SP_lab_2/Lab2 -BD:/Uni/SP/SP_lab_2/Lab2/build --check-stamp-file D:/Uni/SP/SP_lab_2/Lab2/build/Lab-02c/Lab-02c-1/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

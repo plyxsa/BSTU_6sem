@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "DemoService",
+					"jsonFile" : "directory-DemoService-Debug-6e4c9cd41d697373e5ed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "DemoService",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "ServiceCtl",
+					"jsonFile" : "directory-ServiceCtl-Debug-f2b00b98782932e8ed78.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ServiceCtl",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "SP_lab5",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "DemoService::@8042db46e1cdfbb73fc1",
+					"jsonFile" : "target-DemoService-Debug-914c013207e50f61dcae.json",
+					"name" : "DemoService",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ServiceCtl::@b1b629bd8680598b0d4e",
+					"jsonFile" : "target-ServiceCtl-Debug-4704154f1807d80e6fa0.json",
+					"name" : "ServiceCtl",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Uni/SP/SP_lab_5/SP_lab5/out/build/x64-Debug",
+		"source" : "D:/Uni/SP/SP_lab_5/SP_lab5"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

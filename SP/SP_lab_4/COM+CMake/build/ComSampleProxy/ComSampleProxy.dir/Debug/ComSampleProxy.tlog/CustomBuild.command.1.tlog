@@ -1,0 +1,24 @@
+^D:\UNI\SP\SP_LAB_4\COM+CMAKE\BUILD\CMAKEFILES\39D44F9FE2D731318CA21C535FC804B4\ICOMTEST_I.C.RULE
+setlocal
+cd D:\Uni\SP\SP_lab_4\COM+CMake\build\ComSampleProxy\Generated
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+midl /header IComTest_h.h D:/Uni/SP/SP_lab_4/COM+CMake/ComSampleProxy/IComTest.idl
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\UNI\SP\SP_LAB_4\COM+CMAKE\COMSAMPLEPROXY\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Uni/SP/SP_lab_4/COM+CMake -BD:/Uni/SP/SP_lab_4/COM+CMake/build --check-stamp-file D:/Uni/SP/SP_lab_4/COM+CMake/build/ComSampleProxy/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

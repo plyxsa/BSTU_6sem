@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Uni\SP\SP_lab_4\COM+CMake\build\ComSampleProxy\Generated\IComTest_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Uni\SP\SP_lab_4\COM+CMake\build\ComSampleProxy\Generated\IComTest_p.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Uni\SP\SP_lab_4\COM+CMake\build\ComSampleProxy\Generated\dlldata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Uni\SP\SP_lab_4\COM+CMake\build\CMakeFiles\39d44f9fe2d731318ca21c535fc804b4\IComTest_i.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Uni\SP\SP_lab_4\COM+CMake\ComSampleProxy\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{41C72602-03BE-3462-9BCE-0A391E9F73F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7CABC56E-B556-3483-ACE4-67EA77315BAB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

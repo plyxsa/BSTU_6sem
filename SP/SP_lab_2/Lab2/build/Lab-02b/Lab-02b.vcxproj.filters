@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Uni\SP\SP_lab_2\Lab2\Lab-02b\src\Lab-02b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Uni\SP\SP_lab_2\Lab2\Lab-02b\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A5E59F3A-543C-3C4E-8805-0B24A490D17C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
