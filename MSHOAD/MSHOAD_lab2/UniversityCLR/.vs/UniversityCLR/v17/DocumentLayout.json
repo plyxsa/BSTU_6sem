@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA04DACF-7F61-42C0-A533-EA6E90780EA4}|UniversityCLR\\UniversityCLR.csproj|d:\\uni\\mshoad\\mshoad-lab2\\universityclr\\universityclr\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA04DACF-7F61-42C0-A533-EA6E90780EA4}|UniversityCLR\\UniversityCLR.csproj|solutionrelative:universityclr\\fileoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA04DACF-7F61-42C0-A533-EA6E90780EA4}|UniversityCLR\\UniversityCLR.csproj|D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\universityclr\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA04DACF-7F61-42C0-A533-EA6E90780EA4}|UniversityCLR\\UniversityCLR.csproj|solutionrelative:universityclr\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileOperations.cs",
+              "DocumentMoniker": "D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\UniversityCLR\\FileOperations.cs",
+              "RelativeDocumentMoniker": "UniversityCLR\\FileOperations.cs",
+              "ToolTip": "D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\UniversityCLR\\FileOperations.cs",
+              "RelativeToolTip": "UniversityCLR\\FileOperations.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wCgAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:50:40.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\UniversityCLR\\Class1.cs",
+              "RelativeDocumentMoniker": "UniversityCLR\\Class1.cs",
+              "ToolTip": "D:\\Uni\\MSHOAD\\MSHOAD-lab2\\UniversityCLR\\UniversityCLR\\Class1.cs",
+              "RelativeToolTip": "UniversityCLR\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:50:06.732Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

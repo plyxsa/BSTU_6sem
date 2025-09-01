@@ -1,0 +1,129 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cdedb8c3-d19c-426b-ad9a-a8ca03772c8b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Data Warehouse</ID>
+  <Name>Data Warehouse</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Data Warehouse</DataSourceID>
+  <Schema>
+    <xs:schema id="Data_x0020_Warehouse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Data_x0020_Warehouse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="081e36f2-2475-41c4-9c49-2d3104d0e39b">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Student" msprop:DbTableName="Dim_Student" msprop:FriendlyName="Dim_Student" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="96999275-3d23-4ee5-b77b-6b86b99088e7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StudentID" msprop:FriendlyName="StudentID" msprop:DbColumnName="StudentID" msprop:design-time-name="aace892c-6136-4780-9948-9f543b6fcb98" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="95125354-6203-44a1-aced-9fd983b9f9a5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Faculty" msprop:FriendlyName="Faculty" msprop:DbColumnName="Faculty" msprop:design-time-name="c66e0067-8d29-4ef5-98e1-970fc8a21437">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YearOfEnrollment" msprop:FriendlyName="YearOfEnrollment" msprop:DbColumnName="YearOfEnrollment" msprop:design-time-name="978813e4-e3ae-4314-95c4-55ffcda62fd2" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Course" msprop:DbTableName="Dim_Course" msprop:FriendlyName="Dim_Course" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="db0cbc20-d74c-47bf-9338-0b56f2efb608">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CourseID" msprop:FriendlyName="CourseID" msprop:DbColumnName="CourseID" msprop:design-time-name="73ecf9d8-3255-4323-8080-3422e6333437" type="xs:int" />
+                  <xs:element name="CourseName" msprop:FriendlyName="CourseName" msprop:DbColumnName="CourseName" msprop:design-time-name="f0983f4d-94a4-478a-aac1-b0e62dcc76b4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Department" msprop:FriendlyName="Department" msprop:DbColumnName="Department" msprop:design-time-name="55e37469-ceb0-4cb8-95b8-22e2e4d8a966">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Credits" msprop:FriendlyName="Credits" msprop:DbColumnName="Credits" msprop:design-time-name="1a5f672c-0c8e-404d-bd82-f4ea6f04f50f" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Grades" msprop:DbTableName="Fact_Grades" msprop:FriendlyName="Fact_Grades" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="b4199b5d-907f-4aef-8b2a-1d38c25752a6">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ID" msprop:DbColumnName="ID" msprop:design-time-name="99fd0abf-89d9-4d14-bf85-de76cb040449" type="xs:int" />
+                  <xs:element name="StudentID" msprop:FriendlyName="StudentID" msprop:DbColumnName="StudentID" msprop:design-time-name="a90a26c9-f647-4fd8-bd7f-ceb98c6de4dc" type="xs:int" />
+                  <xs:element name="CourseID" msprop:FriendlyName="CourseID" msprop:DbColumnName="CourseID" msprop:design-time-name="81336be5-092c-442a-9eac-e4c629b5065a" type="xs:int" />
+                  <xs:element name="SemesterID" msprop:FriendlyName="SemesterID" msprop:DbColumnName="SemesterID" msprop:design-time-name="177958b0-fde7-4036-a45a-564934bc20f6" type="xs:int" />
+                  <xs:element name="Grade" msprop:FriendlyName="Grade" msprop:DbColumnName="Grade" msprop:design-time-name="73d59e5a-84e1-4e0d-8cf5-ba26125f2cb6" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Student" />
+          <xs:field xpath="StudentID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Course_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Course" />
+          <xs:field xpath="CourseID" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Grades_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Grades" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Grad__Stude__3B75D760" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Grades" />
+          <xs:field xpath="StudentID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Grad__Cours__3C69FB99" refer="dbo_Dim_Course_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Grades" />
+          <xs:field xpath="CourseID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Data_x0020_Warehouse xmlns="" />
+  </Schema>
+</DataSourceView>

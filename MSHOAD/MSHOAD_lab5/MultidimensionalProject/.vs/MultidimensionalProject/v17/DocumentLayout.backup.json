@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Data Warehouse.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|solutionrelative:MultidimensionalProject\\Data Warehouse.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Course.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|solutionrelative:MultidimensionalProject\\Dim Course.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Student.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{2C767EB4-C4EB-4100-81F2-A5C9C9F73951}|MultidimensionalProject\\MultidimensionalProject.dwproj|solutionrelative:MultidimensionalProject\\Dim Student.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Data Warehouse.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Data Warehouse.cube",
+              "RelativeDocumentMoniker": "MultidimensionalProject\\Data Warehouse.cube",
+              "ToolTip": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Data Warehouse.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "MultidimensionalProject\\Data Warehouse.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-24T21:08:11.43Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dim Course.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Course.dim",
+              "RelativeDocumentMoniker": "MultidimensionalProject\\Dim Course.dim",
+              "ToolTip": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Course.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "MultidimensionalProject\\Dim Course.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-24T20:50:20.088Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dim Student.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Student.dim",
+              "RelativeDocumentMoniker": "MultidimensionalProject\\Dim Student.dim",
+              "ToolTip": "D:\\Uni\\MSHOAD\\MSHOAD_lab5\\MultidimensionalProject\\MultidimensionalProject\\Dim Student.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "MultidimensionalProject\\Dim Student.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-24T20:49:58.195Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

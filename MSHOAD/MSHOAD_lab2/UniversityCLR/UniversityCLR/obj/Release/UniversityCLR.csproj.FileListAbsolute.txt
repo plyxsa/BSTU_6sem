@@ -1,0 +1,6 @@
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\bin\Release\UniversityCLR.dll
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\bin\Release\UniversityCLR.pdb
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\obj\Release\UniversityCLR.csproj.AssemblyReference.cache
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\obj\Release\UniversityCLR.csproj.CoreCompileInputs.cache
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\obj\Release\UniversityCLR.dll
+D:\Uni\MSHOAD\MSHOAD-lab2\UniversityCLR\UniversityCLR\obj\Release\UniversityCLR.pdb

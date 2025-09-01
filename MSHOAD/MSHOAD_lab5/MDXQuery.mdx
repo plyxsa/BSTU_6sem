@@ -1,0 +1,59 @@
+--- 1 Числовые
+WITH 
+MEMBER [Measures].[Max Grade] AS
+    Max(
+        [Dim Student].[Student ID].MEMBERS,
+        [Measures].[Grade]                  
+    )
+SELECT
+    [Measures].[Max Grade] ON COLUMNS,
+    [Dim Course].[Course Name].MEMBERS ON ROWS
+FROM [Data Warehouse]
+
+--- 2 Обработки строковых значений
+WITH 
+MEMBER [Measures].[Фамилия] AS
+    Mid(
+        [Dim Student].[Name].CurrentMember.Name,
+        InStr([Dim Student].[Name].CurrentMember.Name, " ") + 1,
+        100
+    ),
+    FORMAT_STRING = "String"
+
+SELECT
+    [Measures].[Фамилия] ON COLUMNS,
+    [Dim Student].[Name].MEMBERS ON ROWS
+FROM [Data Warehouse]
+
+--- 3 Для наборов
+WITH 
+SET [Top Students] AS
+    TopCount(
+        [Dim Student].[Name].MEMBERS,
+        3,
+        Avg(
+            [Dim Course].[Course Name].MEMBERS,
+            [Measures].[Grade]
+        )
+    )
+SELECT
+    [Measures].[Grade] ON COLUMNS,
+    [Top Students] ON ROWS
+FROM [Data Warehouse];
+
+--- 4 Для элемента измерения
+WITH 
+MEMBER [Measures].[Course Name] AS 
+    [Dim Course].[Course Name].CURRENTMEMBER.NAME
+SELECT 
+    [Measures].[Course Name] ON COLUMNS,
+    [Dim Course].[Course ID].MEMBERS ON ROWS
+FROM [Data Warehouse];
+
+--- 5 Для иерархий
+WITH 
+MEMBER [Measures].[HierarchyLevelCount] AS 
+    [Dim Student].[Faculty].LEVELS.Count
+SELECT 
+    { [Measures].[HierarchyLevelCount] } ON COLUMNS
+FROM [Data Warehouse];
